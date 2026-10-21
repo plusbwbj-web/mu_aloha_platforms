@@ -1,0 +1,33 @@
+﻿name: Build SM-T733 Tested UEFI
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      WM_CI_BUILD: "true"
+
+    steps:
+      - name: Checkout tested source
+        uses: actions/checkout@v4
+
+      - name: Verify source commit
+        run: |
+          git rev-parse HEAD
+
+      - name: Build SM-T733 UEFI
+        run: |
+          bash scripts/ci_setup.sh
+          ./build_uefi.py -d samsung-gts7fewifi
+
+      - name: Upload UEFI artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: uefi-images-samsung-gts7fewifi-tested
+          path: Build/*/ci_artifacts
+          if-no-files-found: error
