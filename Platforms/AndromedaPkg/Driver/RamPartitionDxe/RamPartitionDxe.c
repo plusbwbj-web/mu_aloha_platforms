@@ -182,24 +182,25 @@ SpiltAndAddRamPartitions(
     IN EFI_PHYSICAL_ADDRESS Base, IN UINT64 Length, IN UINT64 ArmAttributes,
     IN EFI_MEMORY_TYPE EfiMemoryType)
 {
-  EFI_STATUS Status = EFI_SUCCESS;
+  EFI_STATUS Status;
+  EFI_STATUS FirstError = EFI_SUCCESS;
+  UINT64     ChunkLength;
 
-  if (Length > SIZE_2GB) {
-    for (UINT16 parts = Length / SIZE_2GB; parts > 0; parts--) {
-      Status = AddRamPartition(Base, SIZE_2GB, ArmAttributes, EfiMemoryType);
-      Base   = Base + SIZE_2GB;
+  if ((Length == 0) || (Base > MAX_UINT64 - Length)) {
+    return EFI_INVALID_PARAMETER;
+  }
+
+  while (Length != 0) {
+    ChunkLength = (Length > SIZE_2GB) ? SIZE_2GB : Length;
+    Status = AddRamPartition(Base, ChunkLength, ArmAttributes, EfiMemoryType);
+    if (EFI_ERROR(Status) && !EFI_ERROR(FirstError)) {
+      FirstError = Status;
     }
-    Status =
-        AddRamPartition(Base, Length % SIZE_2GB, ArmAttributes, EfiMemoryType);
-    goto exit;
+    Base += ChunkLength;
+    Length -= ChunkLength;
   }
 
-  if (Length <= SIZE_2GB) {
-    Status = AddRamPartition(Base, Length, ArmAttributes, EfiMemoryType);
-  }
-
-exit:
-  return Status;
+  return FirstError;
 }
 
 //
@@ -211,6 +212,7 @@ RamPartitionDxeInitialize(
     IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *SystemTable)
 {
   EFI_STATUS                       Status = EFI_SUCCESS;
+  EFI_STATUS                       FirstError = EFI_SUCCESS;
   UINT32                           i, NumPartitionEntries = 0;
   PARM_MEMORY_REGION_DESCRIPTOR_EX MemoryDescriptorEx =
       gExtendedMemoryDescriptorEx;
@@ -236,14 +238,29 @@ RamPartitionDxeInitialize(
         (EFI_D_INFO, "AvailableLength: 0x%016lx \n",
          RamPartitionEntries[i].AvailableLength));
 
+    if ((RamPartitionEntries[i].AvailableLength == 0) ||
+        (RamPartitionEntries[i].Base >
+         MAX_UINT64 - RamPartitionEntries[i].AvailableLength)) {
+      Status = EFI_INVALID_PARAMETER;
+      goto exit;
+    }
+
     // Update the first low DDR region.
     if (RamPartitionEntries[i].Base == GENERIC_RAM_BASE) {
+      if (RamPartitionEntries[i].AvailableLength + GENERIC_RAM_BASE <=
+          MemoryDescriptorEx[0].Address) {
+        Status = EFI_INVALID_PARAMETER;
+        goto exit;
+      }
       MemoryDescriptorEx[0].Length =
           RamPartitionEntries[i].AvailableLength + GENERIC_RAM_BASE - MemoryDescriptorEx[0].Address;
-      SpiltAndAddRamPartitions(
+      Status = SpiltAndAddRamPartitions(
           MemoryDescriptorEx[0].Address, MemoryDescriptorEx[0].Length,
           MemoryDescriptorEx[0].ArmAttributes,
           MemoryDescriptorEx[0].MemoryType);
+      if (EFI_ERROR(Status) && !EFI_ERROR(FirstError)) {
+        FirstError = Status;
+      }
       continue;
     }
 
@@ -251,6 +268,10 @@ RamPartitionDxeInitialize(
     // Here we only consider the size of the area as 0x40000000.
     // Memory range: 0x40000000-0x80000000
     if (RamPartitionEntries[i].Base == 0x40000000) {
+      if (Index >= ARRAY_SIZE(gExtendedMemoryDescriptorEx)) {
+        Status = EFI_OUT_OF_RESOURCES;
+        goto exit;
+      }
       MemoryDescriptorEx[Index].Address = 0x40000000;
       MemoryDescriptorEx[Index].Length  = 0x40000000;
       Index++;
@@ -263,6 +284,10 @@ RamPartitionDxeInitialize(
     if ((RamPartitionEntries[i].Base < 0x180000000) &&
         ((RamPartitionEntries[i].Base +
           RamPartitionEntries[i].AvailableLength) > 0x180000000)) {
+      if (Index >= ARRAY_SIZE(gExtendedMemoryDescriptorEx)) {
+        Status = EFI_OUT_OF_RESOURCES;
+        goto exit;
+      }
       MemoryDescriptorEx[Index].Address = 0x180000000;
       MemoryDescriptorEx[Index].Length =
           RamPartitionEntries[i].Base + RamPartitionEntries[i].AvailableLength -
@@ -276,20 +301,28 @@ RamPartitionDxeInitialize(
           RamPartitionEntries[i].AvailableLength) <= 0x180000000))
       continue;
 
+    if (Index >= ARRAY_SIZE(gExtendedMemoryDescriptorEx)) {
+      Status = EFI_OUT_OF_RESOURCES;
+      goto exit;
+    }
     MemoryDescriptorEx[Index].Address = RamPartitionEntries[i].Base;
     MemoryDescriptorEx[Index].Length  = RamPartitionEntries[i].AvailableLength;
     Index++;
   }
 
-  Index = 1;
-  while (MemoryDescriptorEx[Index].Length != 0) {
-    ASSERT(Index < MAX_ARM_MEMORY_REGION_DESCRIPTOR_COUNT);
-    SpiltAndAddRamPartitions(
-        MemoryDescriptorEx[Index].Address, MemoryDescriptorEx[Index].Length,
-        MemoryDescriptorEx[Index].ArmAttributes,
-        MemoryDescriptorEx[Index].MemoryType);
-    Index++;
+  for (UINTN ExtendedIndex = 1; ExtendedIndex < Index; ExtendedIndex++) {
+    Status = SpiltAndAddRamPartitions(
+        MemoryDescriptorEx[ExtendedIndex].Address,
+        MemoryDescriptorEx[ExtendedIndex].Length,
+        MemoryDescriptorEx[ExtendedIndex].ArmAttributes,
+        MemoryDescriptorEx[ExtendedIndex].MemoryType);
+    if (EFI_ERROR(Status) && !EFI_ERROR(FirstError)) {
+      FirstError = Status;
+    }
   }
+  Status = FirstError;
+
+exit:
   FreePool(RamPartitionEntries);
   return Status;
 }

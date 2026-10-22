@@ -1,0 +1,59 @@
+test_real_mkbootimg_v0_fixture_passes (test_artifact_validator.ArtifactValidatorTests.test_real_mkbootimg_v0_fixture_passes) ... ok
+test_rejects_bad_gzip_crc (test_artifact_validator.ArtifactValidatorTests.test_rejects_bad_gzip_crc) ... ok
+test_rejects_bad_gzip_magic (test_artifact_validator.ArtifactValidatorTests.test_rejects_bad_gzip_magic) ... ok
+test_rejects_blockmap_that_does_not_cover_fv (test_artifact_validator.ArtifactValidatorTests.test_rejects_blockmap_that_does_not_cover_fv) ... ok
+test_rejects_changed_load_address (test_artifact_validator.ArtifactValidatorTests.test_rejects_changed_load_address) ... ok
+test_rejects_changed_os_metadata (test_artifact_validator.ArtifactValidatorTests.test_rejects_changed_os_metadata) ... ok
+test_rejects_checksum_correct_fv_header_without_blockmap (test_artifact_validator.ArtifactValidatorTests.test_rejects_checksum_correct_fv_header_without_blockmap) ... ok
+test_rejects_invalid_fv_checksum_after_repacking (test_artifact_validator.ArtifactValidatorTests.test_rejects_invalid_fv_checksum_after_repacking) ... ok
+test_rejects_invalid_fv_revision_with_valid_checksum (test_artifact_validator.ArtifactValidatorTests.test_rejects_invalid_fv_revision_with_valid_checksum) ... ok
+test_rejects_malformed_source_dtb_totalsize (test_artifact_validator.ArtifactValidatorTests.test_rejects_malformed_source_dtb_totalsize) ... ok
+test_rejects_missing_blockmap_terminator (test_artifact_validator.ArtifactValidatorTests.test_rejects_missing_blockmap_terminator) ... ok
+test_rejects_nonzero_header_padding (test_artifact_validator.ArtifactValidatorTests.test_rejects_nonzero_header_padding) ... ok
+test_rejects_nonzero_image_id_tail (test_artifact_validator.ArtifactValidatorTests.test_rejects_nonzero_image_id_tail) ... ok
+test_rejects_nonzero_kernel_padding (test_artifact_validator.ArtifactValidatorTests.test_rejects_nonzero_kernel_padding) ... ok
+test_rejects_out_of_bounds_fv_after_repacking (test_artifact_validator.ArtifactValidatorTests.test_rejects_out_of_bounds_fv_after_repacking) ... ok
+test_rejects_reserved_fv_byte_with_valid_checksum (test_artifact_validator.ArtifactValidatorTests.test_rejects_reserved_fv_byte_with_valid_checksum) ... ok
+test_rejects_stale_independent_fd (test_artifact_validator.ArtifactValidatorTests.test_rejects_stale_independent_fd) ... ok
+test_rejects_truncated_header (test_artifact_validator.ArtifactValidatorTests.test_rejects_truncated_header) ... ok
+test_rejects_truncated_image (test_artifact_validator.ArtifactValidatorTests.test_rejects_truncated_image) ... ok
+test_rejects_unexpected_board (test_artifact_validator.ArtifactValidatorTests.test_rejects_unexpected_board) ... ok
+test_rejects_unexpected_trailer (test_artifact_validator.ArtifactValidatorTests.test_rejects_unexpected_trailer) ... ok
+test_rejects_unterminated_gzip_member (test_artifact_validator.ArtifactValidatorTests.test_rejects_unterminated_gzip_member) ... ok
+test_rejects_wrong_android_image_id (test_artifact_validator.ArtifactValidatorTests.test_rejects_wrong_android_image_id) ... ok
+test_rejects_wrong_appended_dtb (test_artifact_validator.ArtifactValidatorTests.test_rejects_wrong_appended_dtb) ... ok
+test_rejects_wrong_fd_length (test_artifact_validator.ArtifactValidatorTests.test_rejects_wrong_fd_length) ... ok
+test_bootpack_override_changes_android_metadata_only (test_postbuild_validation.PostBuildValidationTests.test_bootpack_override_changes_android_metadata_only) ... /workspace/mu_aloha_platforms/PythonLibs/PostBuild.py:160: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmp0dkunlsr/Build/KodiakPkg/bootpayload.bin'>
+  mkbootimg.main(paras)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/mu_aloha_platforms/PythonLibs/PostBuild.py:160: ResourceWarning: unclosed file <_io.BufferedWriter name='/tmp/tmp0dkunlsr/Build/KodiakPkg/samsung-gts7fewifi.img'>
+  mkbootimg.main(paras)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_rejects_invalid_shim_magic (test_postbuild_validation.PostBuildValidationTests.test_rejects_invalid_shim_magic) ... ok
+test_rejects_oversized_fd (test_postbuild_validation.PostBuildValidationTests.test_rejects_oversized_fd) ... ok
+test_rejects_stale_shim_copy_size (test_postbuild_validation.PostBuildValidationTests.test_rejects_stale_shim_copy_size) ... ok
+test_rejects_stale_shim_destination (test_postbuild_validation.PostBuildValidationTests.test_rejects_stale_shim_destination) ... ok
+test_rejects_truncated_fd (test_postbuild_validation.PostBuildValidationTests.test_rejects_truncated_fd) ... ok
+test_rejects_truncated_shim_header (test_postbuild_validation.PostBuildValidationTests.test_rejects_truncated_shim_header) ... ok
+test_rejects_unaligned_entry_or_wrapped_range (test_postbuild_validation.PostBuildValidationTests.test_rejects_unaligned_entry_or_wrapped_range) ... ok
+test_rejects_zero_or_partial_copy_extent (test_postbuild_validation.PostBuildValidationTests.test_rejects_zero_or_partial_copy_extent) ... ok
+test_valid_small_payload_is_visible_to_mkbootimg (test_postbuild_validation.PostBuildValidationTests.test_valid_small_payload_is_visible_to_mkbootimg) ... /workspace/mu_aloha_platforms/PythonLibs/PostBuild.py:160: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmppn4s4nqp/Build/KodiakPkg/bootpayload.bin'>
+  mkbootimg.main(paras)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/mu_aloha_platforms/PythonLibs/PostBuild.py:160: ResourceWarning: unclosed file <_io.BufferedWriter name='/tmp/tmppn4s4nqp/Build/KodiakPkg/samsung-gts7fewifi.img'>
+  mkbootimg.main(paras)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_valid_uncompressed_payload_preserves_bytes (test_postbuild_validation.PostBuildValidationTests.test_valid_uncompressed_payload_preserves_bytes) ... /workspace/mu_aloha_platforms/PythonLibs/PostBuild.py:160: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmp0mrwgg_a/Build/KodiakPkg/bootpayload.bin'>
+  mkbootimg.main(paras)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/mu_aloha_platforms/PythonLibs/PostBuild.py:160: ResourceWarning: unclosed file <_io.BufferedWriter name='/tmp/tmp0mrwgg_a/Build/KodiakPkg/samsung-gts7fewifi.img'>
+  mkbootimg.main(paras)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 2.914s
+
+OK

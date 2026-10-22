@@ -13,6 +13,7 @@ import os
 import json
 import mkbootimg
 import shlex
+import struct
 
 
 class Bootimg:
@@ -42,6 +43,8 @@ class Bootimg:
         with open(os.path.join(root_dir, 'build_cfg', platform.lower()+'.json'), 'r') as cfg_file:
             cfg = json.load(cfg_file)
             self.parseConfiguration(cfg)
+            self.uefi_base = int(cfg['bootshim']['UEFI_BASE'], 0)
+            self.uefi_size = int(cfg['bootshim']['UEFI_SIZE'], 0)
 
         # Fill paths and other vars
         self.device_name = device_name
@@ -105,42 +108,53 @@ class Bootimg:
             args.extend(["--dtb", self.dtb_path])
         return args
 
+    def _validateBootPayload(self, bootshim_data, fd_data):
+        # BootShim copies 16 bytes per iteration and jumps to UEFI_BASE. A
+        # stale shim or mismatched FD must not become a candidate boot image.
+        if self.uefi_base < 0 or self.uefi_base % 4:
+            raise ValueError("UEFI_BASE must be an aligned AArch64 entry address")
+        if self.uefi_size <= 0 or self.uefi_size % 16:
+            raise ValueError("UEFI_SIZE must be a positive multiple of 16")
+        if self.uefi_base + self.uefi_size > 1 << 64:
+            raise ValueError("UEFI destination range exceeds the address space")
+        if len(bootshim_data) < 64 or bootshim_data[56:60] != b'ARM\x64':
+            raise ValueError("BootShim is missing its ARM64 Image header")
+        shim_base, shim_size = struct.unpack_from('<QQ', bootshim_data, 8)
+        if (shim_base, shim_size) != (self.uefi_base, self.uefi_size):
+            raise ValueError("BootShim base/size does not match the target build configuration")
+        if len(fd_data) != self.uefi_size:
+            raise ValueError(
+                f"UEFI FD length {len(fd_data)} does not match UEFI_SIZE {self.uefi_size}")
+
     def makeAndroidImage(self):
         '''
         Boot Payload:
             | BootShim.bin | SMXXXX_EFI.fd |
         '''
         logging.info("Generating bootpayload.bin")
+        with open(self.bootshim_path, 'rb') as bootshim_file:
+            bootshim_data = bootshim_file.read()
+        with open(self.fd_path, 'rb') as fd_file:
+            fd_data = fd_file.read()
+        self._validateBootPayload(bootshim_data, fd_data)
+        payload_data = bootshim_data + fd_data
+
+        if self.kernel_compressed:
+            logging.info("Compressing kernel...")
+            payload_data = gzip.compress(payload_data, 9)
+
+        # For v0/v1 the Android DTB follows the (possibly compressed) kernel.
+        if self.header_version < 2:
+            with open(self.dtb_path, 'rb') as dtb:
+                logging.info("Writing DTB...")
+                payload_data += dtb.read()
+
         with open(self.bootpayload_path, 'wb') as payload_file:
-            payload_data = bytes()
-
-            # Read bootshim
-            with open(self.bootshim_path, 'rb') as bootshim_file:
-                logging.info("Writing BootShim...")
-                payload_data += bootshim_file.read()
-
-            # Read UEFI FD
-            with open(self.fd_path, 'rb') as fd_file:
-                logging.info("Writing UEFI...")
-                payload_data += fd_file.read()
-
-            # Process kernel compress if asked
-            if self.kernel_compressed:
-                logging.info("Compressing kernel...")
-                payload_data = gzip.compress(payload_data, 9)
-
-            # If we are using v0/v1,
-            # dtb should be attached after kernel.
-            if self.header_version < 2:
-                with open(self.dtb_path, 'rb') as dtb:
-                    logging.info("Writing DTB...")
-                    payload_data += dtb.read()
-
-            # Write to payload.
             payload_file.write(payload_data)
 
-            # Pack boot image.
-            logging.info("Writing " + self.device_name + '.img')
-            paras = self.generateMkbootimgParameters()
-            logging.info(f"Packing boot with \"{shlex.join(paras)}\"")
-            mkbootimg.main(paras)
+        # Close the writer before mkbootimg reopens the payload, including for
+        # small payloads that have not filled Python's buffered writer.
+        logging.info("Writing " + self.device_name + '.img')
+        paras = self.generateMkbootimgParameters()
+        logging.info(f"Packing boot with \"{shlex.join(paras)}\"")
+        mkbootimg.main(paras)

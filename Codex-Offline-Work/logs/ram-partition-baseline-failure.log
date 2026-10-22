@@ -1,0 +1,2 @@
+Baseline actual-C exact 4GiB split test expected failure: exit -6
+old: /tmp/tmppnsd_uay/old.c:369: main: Assertion `SpiltAndAddRamPartitions(0x180000000ULL,0x100000000ULL,0,1)==EFI_SUCCESS' failed.

@@ -1,0 +1,246 @@
+diff --git a/Platforms/AndromedaPkg/Driver/RamPartitionDxe/RamPartitionDxe.c b/Platforms/AndromedaPkg/Driver/RamPartitionDxe/RamPartitionDxe.c
+index 9fd719a3..728dd49d 100644
+--- a/Platforms/AndromedaPkg/Driver/RamPartitionDxe/RamPartitionDxe.c
++++ b/Platforms/AndromedaPkg/Driver/RamPartitionDxe/RamPartitionDxe.c
+@@ -182,24 +182,25 @@ SpiltAndAddRamPartitions(
+     IN EFI_PHYSICAL_ADDRESS Base, IN UINT64 Length, IN UINT64 ArmAttributes,
+     IN EFI_MEMORY_TYPE EfiMemoryType)
+ {
+-  EFI_STATUS Status = EFI_SUCCESS;
++  EFI_STATUS Status;
++  EFI_STATUS FirstError = EFI_SUCCESS;
++  UINT64     ChunkLength;
+ 
+-  if (Length > SIZE_2GB) {
+-    for (UINT16 parts = Length / SIZE_2GB; parts > 0; parts--) {
+-      Status = AddRamPartition(Base, SIZE_2GB, ArmAttributes, EfiMemoryType);
+-      Base   = Base + SIZE_2GB;
+-    }
+-    Status =
+-        AddRamPartition(Base, Length % SIZE_2GB, ArmAttributes, EfiMemoryType);
+-    goto exit;
++  if ((Length == 0) || (Base > MAX_UINT64 - Length)) {
++    return EFI_INVALID_PARAMETER;
+   }
+ 
+-  if (Length <= SIZE_2GB) {
+-    Status = AddRamPartition(Base, Length, ArmAttributes, EfiMemoryType);
++  while (Length != 0) {
++    ChunkLength = (Length > SIZE_2GB) ? SIZE_2GB : Length;
++    Status = AddRamPartition(Base, ChunkLength, ArmAttributes, EfiMemoryType);
++    if (EFI_ERROR(Status) && !EFI_ERROR(FirstError)) {
++      FirstError = Status;
++    }
++    Base += ChunkLength;
++    Length -= ChunkLength;
+   }
+ 
+-exit:
+-  return Status;
++  return FirstError;
+ }
+ 
+ //
+@@ -211,6 +212,7 @@ RamPartitionDxeInitialize(
+     IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *SystemTable)
+ {
+   EFI_STATUS                       Status = EFI_SUCCESS;
++  EFI_STATUS                       FirstError = EFI_SUCCESS;
+   UINT32                           i, NumPartitionEntries = 0;
+   PARM_MEMORY_REGION_DESCRIPTOR_EX MemoryDescriptorEx =
+       gExtendedMemoryDescriptorEx;
+@@ -236,14 +238,29 @@ RamPartitionDxeInitialize(
+         (EFI_D_INFO, "AvailableLength: 0x%016lx \n",
+          RamPartitionEntries[i].AvailableLength));
+ 
++    if ((RamPartitionEntries[i].AvailableLength == 0) ||
++        (RamPartitionEntries[i].Base >
++         MAX_UINT64 - RamPartitionEntries[i].AvailableLength)) {
++      Status = EFI_INVALID_PARAMETER;
++      goto exit;
++    }
++
+     // Update the first low DDR region.
+     if (RamPartitionEntries[i].Base == GENERIC_RAM_BASE) {
++      if (RamPartitionEntries[i].AvailableLength + GENERIC_RAM_BASE <=
++          MemoryDescriptorEx[0].Address) {
++        Status = EFI_INVALID_PARAMETER;
++        goto exit;
++      }
+       MemoryDescriptorEx[0].Length =
+           RamPartitionEntries[i].AvailableLength + GENERIC_RAM_BASE - MemoryDescriptorEx[0].Address;
+-      SpiltAndAddRamPartitions(
++      Status = SpiltAndAddRamPartitions(
+           MemoryDescriptorEx[0].Address, MemoryDescriptorEx[0].Length,
+           MemoryDescriptorEx[0].ArmAttributes,
+           MemoryDescriptorEx[0].MemoryType);
++      if (EFI_ERROR(Status) && !EFI_ERROR(FirstError)) {
++        FirstError = Status;
++      }
+       continue;
+     }
+ 
+@@ -251,6 +268,10 @@ RamPartitionDxeInitialize(
+     // Here we only consider the size of the area as 0x40000000.
+     // Memory range: 0x40000000-0x80000000
+     if (RamPartitionEntries[i].Base == 0x40000000) {
++      if (Index >= ARRAY_SIZE(gExtendedMemoryDescriptorEx)) {
++        Status = EFI_OUT_OF_RESOURCES;
++        goto exit;
++      }
+       MemoryDescriptorEx[Index].Address = 0x40000000;
+       MemoryDescriptorEx[Index].Length  = 0x40000000;
+       Index++;
+@@ -263,6 +284,10 @@ RamPartitionDxeInitialize(
+     if ((RamPartitionEntries[i].Base < 0x180000000) &&
+         ((RamPartitionEntries[i].Base +
+           RamPartitionEntries[i].AvailableLength) > 0x180000000)) {
++      if (Index >= ARRAY_SIZE(gExtendedMemoryDescriptorEx)) {
++        Status = EFI_OUT_OF_RESOURCES;
++        goto exit;
++      }
+       MemoryDescriptorEx[Index].Address = 0x180000000;
+       MemoryDescriptorEx[Index].Length =
+           RamPartitionEntries[i].Base + RamPartitionEntries[i].AvailableLength -
+@@ -276,20 +301,28 @@ RamPartitionDxeInitialize(
+           RamPartitionEntries[i].AvailableLength) <= 0x180000000))
+       continue;
+ 
++    if (Index >= ARRAY_SIZE(gExtendedMemoryDescriptorEx)) {
++      Status = EFI_OUT_OF_RESOURCES;
++      goto exit;
++    }
+     MemoryDescriptorEx[Index].Address = RamPartitionEntries[i].Base;
+     MemoryDescriptorEx[Index].Length  = RamPartitionEntries[i].AvailableLength;
+     Index++;
+   }
+ 
+-  Index = 1;
+-  while (MemoryDescriptorEx[Index].Length != 0) {
+-    ASSERT(Index < MAX_ARM_MEMORY_REGION_DESCRIPTOR_COUNT);
+-    SpiltAndAddRamPartitions(
+-        MemoryDescriptorEx[Index].Address, MemoryDescriptorEx[Index].Length,
+-        MemoryDescriptorEx[Index].ArmAttributes,
+-        MemoryDescriptorEx[Index].MemoryType);
+-    Index++;
++  for (UINTN ExtendedIndex = 1; ExtendedIndex < Index; ExtendedIndex++) {
++    Status = SpiltAndAddRamPartitions(
++        MemoryDescriptorEx[ExtendedIndex].Address,
++        MemoryDescriptorEx[ExtendedIndex].Length,
++        MemoryDescriptorEx[ExtendedIndex].ArmAttributes,
++        MemoryDescriptorEx[ExtendedIndex].MemoryType);
++    if (EFI_ERROR(Status) && !EFI_ERROR(FirstError)) {
++      FirstError = Status;
++    }
+   }
++  Status = FirstError;
++
++exit:
+   FreePool(RamPartitionEntries);
+   return Status;
+ }
+diff --git a/PythonLibs/PostBuild.py b/PythonLibs/PostBuild.py
+index ae454eda..0a70c508 100755
+--- a/PythonLibs/PostBuild.py
++++ b/PythonLibs/PostBuild.py
+@@ -13,6 +13,7 @@ import os
+ import json
+ import mkbootimg
+ import shlex
++import struct
+ 
+ 
+ class Bootimg:
+@@ -42,6 +43,8 @@ class Bootimg:
+         with open(os.path.join(root_dir, 'build_cfg', platform.lower()+'.json'), 'r') as cfg_file:
+             cfg = json.load(cfg_file)
+             self.parseConfiguration(cfg)
++            self.uefi_base = int(cfg['bootshim']['UEFI_BASE'], 0)
++            self.uefi_size = int(cfg['bootshim']['UEFI_SIZE'], 0)
+ 
+         # Fill paths and other vars
+         self.device_name = device_name
+@@ -105,42 +108,53 @@ class Bootimg:
+             args.extend(["--dtb", self.dtb_path])
+         return args
+ 
++    def _validateBootPayload(self, bootshim_data, fd_data):
++        # BootShim copies 16 bytes per iteration and jumps to UEFI_BASE. A
++        # stale shim or mismatched FD must not become a candidate boot image.
++        if self.uefi_base < 0 or self.uefi_base % 4:
++            raise ValueError("UEFI_BASE must be an aligned AArch64 entry address")
++        if self.uefi_size <= 0 or self.uefi_size % 16:
++            raise ValueError("UEFI_SIZE must be a positive multiple of 16")
++        if self.uefi_base + self.uefi_size > 1 << 64:
++            raise ValueError("UEFI destination range exceeds the address space")
++        if len(bootshim_data) < 64 or bootshim_data[56:60] != b'ARM\x64':
++            raise ValueError("BootShim is missing its ARM64 Image header")
++        shim_base, shim_size = struct.unpack_from('<QQ', bootshim_data, 8)
++        if (shim_base, shim_size) != (self.uefi_base, self.uefi_size):
++            raise ValueError("BootShim base/size does not match the target build configuration")
++        if len(fd_data) != self.uefi_size:
++            raise ValueError(
++                f"UEFI FD length {len(fd_data)} does not match UEFI_SIZE {self.uefi_size}")
++
+     def makeAndroidImage(self):
+         '''
+         Boot Payload:
+             | BootShim.bin | SMXXXX_EFI.fd |
+         '''
+         logging.info("Generating bootpayload.bin")
++        with open(self.bootshim_path, 'rb') as bootshim_file:
++            bootshim_data = bootshim_file.read()
++        with open(self.fd_path, 'rb') as fd_file:
++            fd_data = fd_file.read()
++        self._validateBootPayload(bootshim_data, fd_data)
++        payload_data = bootshim_data + fd_data
++
++        if self.kernel_compressed:
++            logging.info("Compressing kernel...")
++            payload_data = gzip.compress(payload_data, 9)
++
++        # For v0/v1 the Android DTB follows the (possibly compressed) kernel.
++        if self.header_version < 2:
++            with open(self.dtb_path, 'rb') as dtb:
++                logging.info("Writing DTB...")
++                payload_data += dtb.read()
++
+         with open(self.bootpayload_path, 'wb') as payload_file:
+-            payload_data = bytes()
+-
+-            # Read bootshim
+-            with open(self.bootshim_path, 'rb') as bootshim_file:
+-                logging.info("Writing BootShim...")
+-                payload_data += bootshim_file.read()
+-
+-            # Read UEFI FD
+-            with open(self.fd_path, 'rb') as fd_file:
+-                logging.info("Writing UEFI...")
+-                payload_data += fd_file.read()
+-
+-            # Process kernel compress if asked
+-            if self.kernel_compressed:
+-                logging.info("Compressing kernel...")
+-                payload_data = gzip.compress(payload_data, 9)
+-
+-            # If we are using v0/v1,
+-            # dtb should be attached after kernel.
+-            if self.header_version < 2:
+-                with open(self.dtb_path, 'rb') as dtb:
+-                    logging.info("Writing DTB...")
+-                    payload_data += dtb.read()
+-
+-            # Write to payload.
+             payload_file.write(payload_data)
+ 
+-            # Pack boot image.
+-            logging.info("Writing " + self.device_name + '.img')
+-            paras = self.generateMkbootimgParameters()
+-            logging.info(f"Packing boot with \"{shlex.join(paras)}\"")
+-            mkbootimg.main(paras)
++        # Close the writer before mkbootimg reopens the payload, including for
++        # small payloads that have not filled Python's buffered writer.
++        logging.info("Writing " + self.device_name + '.img')
++        paras = self.generateMkbootimgParameters()
++        logging.info(f"Packing boot with \"{shlex.join(paras)}\"")
++        mkbootimg.main(paras)
