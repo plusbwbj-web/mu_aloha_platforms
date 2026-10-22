@@ -47,6 +47,8 @@ jobs:
           mkdir -p /workspace
           test ! -e /workspace/mu_aloha_platforms
           ln -s "$GITHUB_WORKSPACE" /workspace/mu_aloha_platforms
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config --global --add safe.directory /workspace/mu_aloha_platforms
           git rev-parse HEAD
           mkdir -p /workspace/.cloud-setup/logs
 
