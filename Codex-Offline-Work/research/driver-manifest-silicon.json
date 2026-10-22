@@ -1,0 +1,3582 @@
+{
+  "source_root": "/workspace/.cloud-setup/references/windows_silicon_qcom_yupik",
+  "commit": "7fb2696f2337d3fa49a6bfd1adc526aa4cc2ebd4",
+  "inf_count": 140,
+  "inf": [
+    {
+      "path": "Drivers/Audio/ADCM/qcadcm7280.inf",
+      "sha256": "d9b272afd18c303e8d766f564c9e4e9641ee51181200d247304ec2b33f579f0d",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcadcm7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "feccd3958a7b9ac7fa5aaf564b0d92816a98430b24868ad21081b70239d3f795"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Audio/AudMiniport/qcaudminiport_Base7280.inf",
+      "sha256": "7a625fbc7e93ecd78d468a8e45d231e00f1f82792e7d30c824282ced9b1dacfd",
+      "class": "MEDIA",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcaudminiport7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "ff4e7aa59edc86b93128d76658e6928273d4588db9fbc43fa1dbee74a50b084f"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 3,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Audio/Device/qcaucd7280.inf",
+      "sha256": "9c86644cd66fcb629fd384641a8a26d7fe7fef8dad06aa9255f9416d0419c246",
+      "class": "Media",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcaucd7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "6e55d92c4bcfc555d9b753341489aa3431b9a50b2e5d68c65b89d08f4b89c69e"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Audio/ListenSoundModel/QCListenSM_swc7280.inf",
+      "sha256": "1217639651b93e9d775ba97d81b0aae3db9d2998a07a1267094ceb985778bc87",
+      "class": "SoftwareComponent",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QCListenSM_swc7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "04fcf6019dab3afc8ea1905940602b038c2917e1e290a6dd57f8c4112310881c"
+        }
+      ],
+      "hardware_ids": [
+        "SWC\\VEN_QCOM&DEV_QCListenSoundModel&PLAT_7280"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Audio/Orientation/AudioService7280.inf",
+      "sha256": "21fc15f9ead380828021061b9c62d4069dd80d75f25a8db39462c5148e7c8e0f",
+      "class": "SYSTEM",
+      "driver_version": "09/01/2017, 1.0.6200.0000",
+      "provider": "Qualcomm Technologies Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "AudioService.cat",
+          "present_in_git_tree": true,
+          "sha256": "a218ce97f3af25e08822faa7b2f15a25ee35a3b0773ea09ab0ff40010012691a"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0AD2"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Audio/RPC/ADSPRPC/qcadsprpc7280.inf",
+      "sha256": "3a855aa202fb59820669445448462a6a2e6e77e92c208ae303b860201039b499",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcadsprpc7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "2f78f16ada898c6c0d623fbdf92a90ea5e86c53b14eead8cbcd85d640b08c78a"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A5C"
+      ],
+      "source_payload_basename_count": 7,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Audio/RPC/ADSPRPCD/qcadsprpcd7280.inf",
+      "sha256": "970a12324b71aa210bab657362aa198c92ba77d8750718507df2145519b75169",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcadsprpcd7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "d80c038d79b793afe51b76f7c57cfb263e0e4abbc06b3681c9a81391c5f0d611"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A82"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Audio/SlimBus/qcslimbus7280.inf",
+      "sha256": "da7f5a573f17432f5f29466105d80b8a93b8e44469cdccf0cadbcff666472e1e",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcslimbus7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "0e8ae9d690cbe054fba5b5189085c5002270f29037c9d1c23ecb437c26908467"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Battery/BatteryCurrentLimiter/qcfgbcl7280.inf",
+      "sha256": "8338e70d10fa160f42ca3b67e1043f55166052ace7207a10501ea3c0102d999b",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcfgbcl7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "acf620650a6cec86e8b99cc42a6153fd4050a9608f026bd456e08e035368c7f3"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A77",
+        "ACPI\\VEN_QCOM&DEV_0A77"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Battery/BatteryMiniclass/qcbattminiclass7280.inf",
+      "sha256": "f26367a9d8c4dd4c85182b52020a3aae8fc855b179610f3ad0cfa19ad50f372d",
+      "class": "Battery",
+      "driver_version": "12/16/2024, 1.0.4195.6500",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcbattminiclass7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "3157eb10c7e33a6c503b043bf2ace102e4d3a79adf4d127fe6ff85d4285cb3bf"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A2A"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Bluetooth/AddVSCRegistry/qcbtaddvscregistry7280.inf",
+      "sha256": "97d743348c7ea5edf21c1fda9e843d2cc155144f640f508367792f2916702c0d",
+      "class": "Bluetooth",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile.nt",
+          "declared_name": "qcbtaddvscregistry7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "8292691e67fd8b66882d93dcdc0525f422589bb1a8fa09fafb40b36473cf7cae"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Bluetooth/BTFMUART_HSP/qcbtfmuart_hsp7280.inf",
+      "sha256": "16936ef84520795696ad159ff3f27400765290ec5c2957888cffadad58c7c198",
+      "class": "Bluetooth",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Atheros Communications Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile.nt",
+          "declared_name": "qcbtfmuart_hsp7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "aca60b21c4f7dea8914a1d163e98a309e68f249ff10cbbc02d16559fa19bcd2b"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A6B&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A6B&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 4,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Camera/AVStream/qccamavs7280.inf",
+      "sha256": "6f543eb3b00900bd2e19e20fe9322cdc3d0103767481f8572f2b4330db009da4",
+      "class": "CAMERA",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccamavs7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "d512dc3862c33e3f7992973e03ccc65897b444a6228cf53e9481ca87d43edf30"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 7,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Camera/AuxiliarySensor/qccamauxsensor7280.inf",
+      "sha256": "b44f163eb197fbfda9f6ca1a9da69105c90ca848fd5bc8ba8d64ff5bbe6975ee",
+      "class": "Camera",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccamauxsensor7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "136fce1cc79130b1f755ce0e32e6e63c30fb79a0071574e15c022dff4a570f52"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A99",
+        "ACPI\\VEN_QCOM&DEV_0A99"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Camera/Flash/qccamflash7280.inf",
+      "sha256": "2ed9fce24e61a8375be96435f6a891ed63ceec17ecdffc271eaf26a3a8a928a9",
+      "class": "Camera",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccamflash7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "b1ea28b7ea78772f6c34e071996d2875a4e4c95cf76962a758ce31cae6d7582a"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A27"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Camera/FrontSensor/qccamfrontsensor7280.inf",
+      "sha256": "0846952b7be84a6fa2f51dfb3cc6313b0f45713353fe58e6a51be1ec43e3c262",
+      "class": "Camera",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccamfrontsensor7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "16ed43a8bc6d73bb68e2c8ab30b6e1388a8664fd2c442cd880116a9772fa5d31"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A06",
+        "ACPI\\VEN_QCOM&DEV_0A06"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Camera/ISP/qccamisp7280.inf",
+      "sha256": "f9c39f78c23ad536448d71ef8b590b52fa884d68e57e69a1ea897100b8a52760",
+      "class": "Camera",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccamisp7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "81865208287c382833025ebba08b8de911fdb58145a72dbc07a30b6f9ebc1220"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A25"
+      ],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Camera/JPEGEncoder/qccamjpege7280.inf",
+      "sha256": "575f4488e5f615a3daffb1d5bc1dff86bc688cbcccec9471fdcc50fb296488bc",
+      "class": "Camera",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccamjpege7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "b1ef123094059218753aa60cfbce4896960ca48397280fb74a489aa2724b41b6"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A33"
+      ],
+      "source_payload_basename_count": 5,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Camera/MIPICSI/qccammipicsi7280.inf",
+      "sha256": "24a06aea98d949bffa2c26e76c9d3846545b254b1c57b544888fe03e2889b88c",
+      "class": "Camera",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccammipicsi7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "b6b1e496761ef24323c04b3cb80106096021f835ac9c4ac53543a6f26d3f1453"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A98"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Camera/Platform/qccamplatform7280.inf",
+      "sha256": "538271a3ca7549cddbf5294917ff79e7f57fead66b5a0ec9c62e6a0520f60de3",
+      "class": "Camera",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccamplatform7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "73af976a8546637e796048a014635133525934425c753bc62f322ca3ce3eb6da"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A32"
+      ],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/5GNRCoexistenceManager/qc5gnrcoexmgr7280.inf",
+      "sha256": "3f6490eefb534210506f9d93d412660ee5468a9598ec1d95462c2baf6cc91b66",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qc5gnrcoexmgr7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "0e9630d554177656b59cb55e24a055b21e06585b9917761771317b2931f513ab"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0AD6"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/CCID/qcccidbridge7280.inf",
+      "sha256": "9c68c3bf99151c237976c09e4b647c92938f347f5ee84ad73d89b01ff2251613",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcccidbridge7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "34f816e67bdd7aa17384ab08096421e35a9ce77d4ef0b3ea5c8a2e35c559c9c9"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0AA2"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/DPL/qcdplbridge7280.inf",
+      "sha256": "b4152f1cc3d8aa6ecc46b8627890c0fcb31054b1923ba737c4b046c643bc994c",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcdplbridge7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "fed47ea05bf4eae0216f83d81eb912f2ed8cc86b1878bad46ad21fe5b0e5e7a9"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A70"
+      ],
+      "source_payload_basename_count": 3,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/DataBus/qcdatabus7280.inf",
+      "sha256": "0a3b96f3ced190aee029529ac4fb7ba07095668901f277ce28077fed24035622",
+      "class": "SYSTEM",
+      "driver_version": "09/08/2020, 1.0.10730.0000",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcdatabus7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "42a3e12d22ca8ba85f8c68b8307f345263731fc6ed9af6467270b97c4f10e0fa"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0AFF"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/DeepStandby/qcdeepstandbymdm7280.inf",
+      "sha256": "fba600ac059a847a271053f4701cf4b2cf46a6210465e49ac6a41ff27e1579bd",
+      "class": "System",
+      "driver_version": "07/27/2022, 1.0.3545.0600",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcdeepstandbymdm7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "31c49b32a7945fd29728392c46863bf776c33a9d941546875f71366ee4bb742e"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM06CD"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/DiagBridge/QCDiagBridge.inf",
+      "sha256": "d50c13da05d3ee3088dd2e8b1b2123b8f7070a1a03560d046bbf120b40ed210d",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QCDiagBridge.cat",
+          "present_in_git_tree": true,
+          "sha256": "4a335a0e056bf32eba9c40ebd8f18ac98bd21f8efe9b68157f187c72ac089cd3"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM06DE",
+        "ACPI\\VEN_QCOM&DEV_06DE&SUBSYS_AGN00000",
+        "ACPI\\VEN_QCOM&DEV_06DE&SUBSYS_CDPS8180",
+        "ACPI\\VEN_QCOM&DEV_06DE&SUBSYS_CLS07180",
+        "ACPI\\VEN_QCOM&DEV_06DE&SUBSYS_CLS08180",
+        "ACPI\\VEN_QCOM&DEV_06DE&SUBSYS_IDP07180",
+        "ACPI\\VEN_QCOM&DEV_06DE&SUBSYS_IDPS7180",
+        "ACPI\\VEN_QCOM&DEV_06DE&SUBSYS_MTP08180"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/DiagCSI/qcdiagcsi7280.inf",
+      "sha256": "3978169994d20f99b222521501466d90c6ca37f7ed75de387ffa0c5f464140fb",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QCDIAGCSI7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "ab1219005461dc81bd4a1fc8cda59d27669715db555757cc678a31119e676ad5"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A12"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/DiagRouter/qcdiagrouter7280.inf",
+      "sha256": "a55a13043fa7cceab7ecd8d55ad47e92d5cb5007016a9210e09475e080016bd8",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QCDIAGROUTER7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "da5f6cd0d59b05856e30dc824322ecfa04a96274f6e0ff01cbad317a97071482"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A13"
+      ],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/IPA/qcipa7280.inf",
+      "sha256": "750d61f9acee3d6a7a5ffac3c579dcda647d9cedbde350878e8e58cd7bc83fc6",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcipa7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "344ad264b01614e352a0b22eb6956f86544350b7107f788c9c5b219f763d7f2c"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A6A"
+      ],
+      "source_payload_basename_count": 3,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/IPCRouter/qcipcrouter7280.inf",
+      "sha256": "fb3f73219801887469aae1565549bc59323198f82338a9bb261eecbe7945ee6b",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcipcrouter7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "a54772bb57cb0ce481a54205cc0af42945ffb843e82fcace2b880b7ad08e0311"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A0D"
+      ],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/LinkLocal/qclinklocal.wp7280.inf",
+      "sha256": "bc2bab97a540df62030939dfa1c14c9196f2c1c062264e691e142cd3f6d371b3",
+      "class": "Net",
+      "driver_version": "09/08/2020, 1.0.10730.0000",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qclinklocal7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "ab1c70588c64234e82626f7f5bac5a1f33d8f4d82946c9217f8c1f8c9e9b51f3"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/MBBNetAdapter/qcmbbnetadapter7280.inf",
+      "sha256": "dba3f908121f9d8b36f54e05c8916fa3a6850d55703a27de02b88d1d6d3ac930",
+      "class": "Net",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcmbbnetadapter7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "89d5b26ca5a61157ee1b932e5d7c2debacbcc48887bd7882a50b2302d2bef2fd"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/ModemBridge/qcmbrg7280.inf",
+      "sha256": "a9406e7e75e96829bce8063ad2ea606ceb86e607ed84d712e41a21f36ced34d8",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcmbrg7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "d70cf44948a5b85300c8c99197c27dbd403f61c52bbcbf6737d8d0a34ef9f5ac"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A07"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/PSAutoReg/qcpsautoreg7280.inf",
+      "sha256": "b0d1a0db99b02783b5c7804f314d7d533a13f6f7702272d3e55d2d1737fdf929",
+      "class": "SYSTEM",
+      "driver_version": "07/27/2022, 1.0.3545.0600",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcpsautoreg7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "59b929320d1111aaa6abb839006722e1769a5844e80659b47ec9bca4032da237"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0AE1"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/RemoteAT/qcremoteat7280.inf",
+      "sha256": "5b1b5d3feb3f705fb771fa59516473edef2e972957f1cd87389b24c2702aeeb2",
+      "class": "System",
+      "driver_version": "07/27/2022, 1.0.3545.0600",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcremoteat7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "71932f236980b77c611e5115787036977fbc05386295a780233577866e99d021"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A08"
+      ],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/RemoteFS/ExternalFS1FS2/qcremotefs7280.inf",
+      "sha256": "195ad99d33a8a2ff687e225bc6efd033d7a9dc2e88f5c68917b88aabb5aa5166",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcremotefs7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "6a937b97985ac75bb58823f8bde374be752e99182244641d34b9bdf7c7e49554"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A15"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/RemoteFS/Normal/qcremotefs7280.inf",
+      "sha256": "195ad99d33a8a2ff687e225bc6efd033d7a9dc2e88f5c68917b88aabb5aa5166",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcremotefs7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "55fec1e8114443e921de17388dd0f81797b0b4d47a72eb30e68ee0d89d44d2fe"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A15"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/RemoteFS/ReadOnlyFS1FS2/qcremotefs7280.inf",
+      "sha256": "195ad99d33a8a2ff687e225bc6efd033d7a9dc2e88f5c68917b88aabb5aa5166",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcremotefs7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "9c07089a5cc9d20b71bce03c56c4ab7252e7f31d06a064b9e3eafb1b45ac3a03"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A15"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/RevRmnet/qcrevrmnet7280.inf",
+      "sha256": "d8962899c4e78cf27227db6336111ebae863ec8a92c6afe57d81b15fb4761129",
+      "class": "NetTrans",
+      "driver_version": "02/13/2022, 1.0.1720.0000",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "revrmnet7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "6eab80ef9ab2a0694578bb8664e7d3130aae61b1645c448f371048661447630e"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0AF8"
+      ],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/RmNetBridge/qcrmnetbridge7280.inf",
+      "sha256": "dbc667e285d907f60b94069b115331ba8b566c4f97feb46e2d99cdd31713006c",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcrmnetbridge7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "089b1694cf28caefd19ccd53bf1a6c08a796fb943043dcf6046935a5fa723301"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A95"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Cellular/ThermalMDM/qcthermalmdm7280.inf",
+      "sha256": "cf408c5b474f6aec0029f6b1adee2b2fc86c5ada8e2f089cc087a5f97a9bfae4",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm(R) Modem Thermal Manager Driver",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcthermalmdm7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "b0b9a2c9352dcd21ed952117634f12d5ba3793e6db9980d9ea2c4154b13c2099"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM04B4",
+        "ACPI\\QCOM04B5",
+        "ACPI\\QCOM04B6",
+        "ACPI\\QCOM04B7",
+        "ACPI\\QCOM04B8",
+        "ACPI\\QCOM04B9",
+        "ACPI\\QCOM04BA",
+        "ACPI\\QCOM04BB",
+        "ACPI\\QCOM04BC",
+        "ACPI\\QCOM04BD",
+        "ACPI\\QCOM04BE",
+        "ACPI\\QCOM04BF",
+        "ACPI\\QCOM04C0",
+        "ACPI\\QCOM04C1",
+        "ACPI\\QCOM04C2",
+        "ACPI\\QCOM04C3",
+        "ACPI\\QCOM04C4",
+        "ACPI\\QCOM04C5",
+        "ACPI\\QCOM04C6",
+        "ACPI\\QCOM04C7",
+        "ACPI\\QCOM04C8",
+        "ACPI\\QCOM04C9",
+        "ACPI\\QCOM04CA",
+        "ACPI\\QCOM04CB",
+        "ACPI\\QCOM04CC",
+        "ACPI\\QCOM04CD",
+        "ACPI\\QCOM04CE",
+        "ACPI\\QCOM06D4"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/FMRadio/qcfmtransport7280.inf",
+      "sha256": "4b5678342dc0144fed52ff03ad228079239e150604dc76a7675270de5a0b4866",
+      "class": "System",
+      "driver_version": "01/04/2018, 1.0.7900.0000",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcfmtransport7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "4969b38648951bd7c0828d59668b16277902c500c616607d563585c7d85686b6"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM056F"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/GPS/qcgnss7280.inf",
+      "sha256": "e341f65b297f77a74dc201f33edbea91244601554ba1246957d0a6d914b84742",
+      "class": "Sensor",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcgnss.cat",
+          "present_in_git_tree": true,
+          "sha256": "e16e020b3a2835232a1b29750f6a46b1be0aca14217722e8bb2a0583850fd683"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A6C"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Graphics/DXKM/qcdx7280.inf",
+      "sha256": "ec4e273fc5dcd9abea91ba805bbaf021fc7419b068944eb556b4bcb9fea3885d",
+      "class": "Display",
+      "driver_version": "06/12/2024, 30.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcdx7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "a0c27ec0e71be19e6bab6d2b95fd49313acf8b40116302a3fbe0ea6f96d193a1"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A36",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0100",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0110",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0112",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0113",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0201",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0202",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0205",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0210",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0212",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0310",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0313",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0410",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0411",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0900",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0910",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0912",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0A01",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0A02",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0A05",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0A10",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0A12",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0B10",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0B13",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0C10",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0C11"
+      ],
+      "source_payload_basename_count": 40,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/HALs/WatchDog/HalExtQCWdogTimer7280.inf",
+      "sha256": "0817d60bc572a3605078b8274427a82f590f34832df31f374e49d417394cd45e",
+      "class": "Computer",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "HalExtQCWdogTimer.cat",
+          "present_in_git_tree": true,
+          "sha256": "e8c031dbcb15d127cd351b66be1008eefa7bb733f4a1b7a73424c90ce459c159"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A04"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SAR/qSarMgr.inf",
+      "sha256": "9196be45ead97aab08e1082ebec446e85c10694f9fe15541a9cad75ea2e26ab4",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qSarMgr.cat",
+          "present_in_git_tree": true,
+          "sha256": "651d362ab253367b362cac37bff0e7d956eae6755ed21aceb1b84e91eb6d3923"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM06E2"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/ACPI/qcabd.inf",
+      "sha256": "439cb3253fb05ca218299581b6ce5729d55f2e26d4678d22993e4a5a58d81d67",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcabd.cat",
+          "present_in_git_tree": true,
+          "sha256": "3916f04a117468e725551d13c94d732f531edf684ad0eacc43644888291a60c2"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0427"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/Buses/GLINK/qcglink7280.inf",
+      "sha256": "92caf4dcb7ec4cff14a2b79efff94229b9d37a8de7b6a262dd40ed96fccdd0d4",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcglink7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "4bb06f335e08fa6d46e27e3ef0685d3714d50243d961edfc89015bf68f8f2a77"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A84"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/Buses/GPI/qcgpi7280.inf",
+      "sha256": "b0a9a479975a58f3372ce1101045ea9b5fc4f0f492aeefe0cd130babcc06bc81",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcgpi7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "f35aa33f0f4d7bb3913fb460ba4d29508ddc61297fac66bae252b8554b007984"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A88"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/Diagnostic/QWPP/qwpp7280.inf",
+      "sha256": "57796ee167785bd1945555ce5175623c520b8a6848df9e29723792031f5ae112",
+      "class": "SYSTEM",
+      "driver_version": "08/30/2021, 1.0.10790.0000",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qwpp7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "93f7a066b87eee0799b46b572b1b3485a1c4ce2a02151611dc3b12fab1e08c67"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A79"
+      ],
+      "source_payload_basename_count": 3,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/GPIO/qcgpio7280.inf",
+      "sha256": "f09c945a828cb6bb8f775fe8afd3aaba71a2a23d4bb3ce807b05bf64ab301a94",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcgpio.cat",
+          "present_in_git_tree": true,
+          "sha256": "16d8c189461280392a481b20980587fab28de344d749aa8cb82d36bfab3236ae"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A0C"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/HexagonLoader/PIL/qcpil.inf",
+      "sha256": "0a651370519790fc23e7691b6ad45652fff9fcce96e0d279d56c7134b61783b0",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcpil.cat",
+          "present_in_git_tree": true,
+          "sha256": "2c95a534a2b7523017b091c5be4aae73ca58b7a80a5c81ef2ac912a5572c720e"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM06E0"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/HexagonLoader/SecureKernel/QcSkExt7280.inf",
+      "sha256": "2ee2cdad2e5306a2c97a2a902d5e00d570f4d4567a58d9f3d611957122b9dd64",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QcSkExt7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "165491061b66357beeb6faaf05b892fa9ca5bcb661f60df524302a5520670fad"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0AAC"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/I2C/qci2c7280.inf",
+      "sha256": "0b0fe42ab59c17cf7b9933716a2c4bd98c5ae8c8fd4a90a2d490d58285fc9dd9",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qci2c7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "5c65b6a978e86e519f69290c44500032256e26aaeabd80a31688d7975602d0c8"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A10"
+      ],
+      "source_payload_basename_count": 3,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/IOMMU/qciommu.inf",
+      "sha256": "14d21ded3b24a7121d1a4325dd4b8573a302715b786653befcb3e16f77d0ba59",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qciommu.cat",
+          "present_in_git_tree": true,
+          "sha256": "c338d974248bda3a2b962cb856abf2dd28979fe395ea42589283023e945f8ebe"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM068F"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/IPCC/qcipcc7280.inf",
+      "sha256": "e0f471061afa4f887d6752a6283a181ec29e0bc5e02ac9ad497f41c8a1f27fa5",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcipcc7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "35eff9ad32a95a38aad2ed8c61f5e4c28fb3d41caed72caa0698367f7ef448ae"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM06C2"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/LED/qchwnled7280.inf",
+      "sha256": "95ce7b7e08f0406ed8a2f8961ffa66783b149585b94e23648754d1b789ed0645",
+      "class": "HIDClass",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies Inc",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qchwnled7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "d3dc3157bacb4f543a85b8461b70c47860c5fb9adedee8e913aa421e5d573e74"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A68"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/PCIe/qcppx7280.inf",
+      "sha256": "e7717609db681d18ea7903e06fb484865c492b6f0296eec9e9e80b30f3ad1fd9",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcppx7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "8ce65fa97194593bd7c5d24d584554180c64c59f5443c72049a6b5833597761a"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A96"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/PMIC/Apps/QcPmicApps7280.inf",
+      "sha256": "9b390dc4eaa9ae143bb6ae0d2a9c59d03bfd87d02b7525b9f36f648a04b95ccc",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcpmicapps7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "02a68ede99b5cd783a7d7c99be9273389cbefedbc2553c23c17215cd63232824"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A2C",
+        "ACPI\\VEN_QCOM&DEV_0A2C"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/PMIC/Core/qcpmic7280.inf",
+      "sha256": "28a2dd4d6fe9e83f5daab1ec6022f91d499714d3df86b8bd2cb93dd4adf79756",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcpmic7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "a0add29e6e4bbfd7b94c40c85f3de45a57f97a2c8061ddf78176e5bd03a8c702"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A2B",
+        "ACPI\\QCOM0AD3"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/PMIC/GLINK/QcPmicGlink7280.inf",
+      "sha256": "0e3087990a0c0ae113918aa3c8da81f80f67203ab408ada46e290bde6302bea8",
+      "class": "System",
+      "driver_version": "12/16/2024, 1.0.4195.6500",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcpmicglink7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "1078293a79a6bb265ed9958f1c7b5d32b4dae1d292df3b1ccf317eb0f1444fc4"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A8E"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/PMIC/GPIO/qcpmicgpio7280.inf",
+      "sha256": "afb6b99fb235ce07ecbecf934c14bfc4c0fb6a3a84fb792fe0324ecd66ed7014",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcpmicgpio7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "4e18724140ad0fd6e8b47340bca807b9b9d3294e96f6a209576e420a261e115b"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A2D"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/PowerManagement/qcpep.wd7280.inf",
+      "sha256": "659be82e2ea2fa415e7859f0f89da5ed6b784565b5f02190d4d6c82c457a152e",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcpep.wd7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "eca194adf610fe824d2127757da7ec98e35f0e90bedc15849b925f23576919bb"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A17",
+        "ACPI\\QCOM0A4B",
+        "ACPI\\QCOM0A4C",
+        "ACPI\\QCOM0A51",
+        "ACPI\\QCOM0A57",
+        "ACPI\\QCOM0A58",
+        "ACPI\\QCOM0A59",
+        "ACPI\\QCOM0A5A",
+        "ACPI\\QCOM0A5F",
+        "ACPI\\QCOM0A61",
+        "ACPI\\QCOM0A63",
+        "ACPI\\QCOM0A91",
+        "ACPI\\QCOM0A92",
+        "ACPI\\QCOM0ABF",
+        "ACPI\\QCOM0AC8",
+        "ACPI\\QCOM0AC9",
+        "ACPI\\QCOM0ACB",
+        "ACPI\\QCOM0AD4",
+        "ACPI\\VEN_QCOM&DEV_0A17&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A17&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/PowerManagement/qcpep.wp7280.inf",
+      "sha256": "da8588efdfbf3919c9ce855a2aed7d4a3e7e200be02fa0283505867ada5a8968",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcpep.wp7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "c18e58403a515a57114de62c18fa8aafaf10d2c49d3d2622795984939c4ff232"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A17",
+        "ACPI\\QCOM0A4B",
+        "ACPI\\QCOM0A4C",
+        "ACPI\\QCOM0A51",
+        "ACPI\\QCOM0A57",
+        "ACPI\\QCOM0A58",
+        "ACPI\\QCOM0A59",
+        "ACPI\\QCOM0A5A",
+        "ACPI\\QCOM0A5F",
+        "ACPI\\QCOM0A61",
+        "ACPI\\QCOM0A63",
+        "ACPI\\QCOM0A91",
+        "ACPI\\QCOM0A92",
+        "ACPI\\QCOM0ABF",
+        "ACPI\\QCOM0AC8",
+        "ACPI\\QCOM0AC9",
+        "ACPI\\QCOM0ACB",
+        "ACPI\\QCOM0AD4",
+        "ACPI\\VEN_QCOM&DEV_0A17&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A17&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/Provisioning/QcSOCPartition.inf",
+      "sha256": "64c5215c20173e0e904f8bc7f80e57b5bd3b875b9aa8794aadc30f60ec247c0d",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QcSOCPartition.cat",
+          "present_in_git_tree": true,
+          "sha256": "d238568cc04de1fa2261681e0b1f9e42d2454864211851fc644eea66f4937b11"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM06DD"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/ResetPower/CrashDumpInjector/qccdi7280.inf",
+      "sha256": "d18de41da0e2271dc202f2d1f7d7b7dbc14157bed5bf4ca68a7310ddac6f72de",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccdi7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "e00240fd8502cdd0a5466818bf85722f8bb1071ad312258a8203f5125944a341"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A2F"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/ResetPower/ResetProtectionEnabler/qcrpen.inf",
+      "sha256": "6205794e11ef1c9257fb6984423da7b5b86dabd47e0c6491405abbcc96ba9317",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcrpen.cat",
+          "present_in_git_tree": true,
+          "sha256": "a7d594de9be1f7be40b7422738f7fc7f5a83c36ff2b102f932f6d87f602321ce"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM06E1"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/SMMU/qcsmmu7280.inf",
+      "sha256": "775775217f2e8c1d769a8eec8ccc0d60493025e31b285b30fd1ec4f43367db28",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcsmmu7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "6b56ada37565fa4c22bf9a3657d82d5af55299d0f30b82c7cdd779e03cbf372c"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A09"
+      ],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/SPI/qcspi7280.inf",
+      "sha256": "e2bd65ed8ec12c0423a44bac3726297637ffedf8efb0bcb68a49eaa0529a3ed8",
+      "class": "System",
+      "driver_version": "05/15/2024, 1.0.4035.6900",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcspi7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "a18e0d260cc49f10b862deb980cbd076ffbd97bf4379a7420a26f0b4a73575d0"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A0E"
+      ],
+      "source_payload_basename_count": 3,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/SPMI/qcspmi7280.inf",
+      "sha256": "839b48beca95b0b946dd76db8bb81b65ce68ee645be66b287f75059fe37e8b37",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcspmi7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "95d145603fd24a474c77dc4bc1c7e445f222dd07412624d1d34d05f1e9916923"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A0B"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/System/BusAccessModule/qckmbam7280.inf",
+      "sha256": "129f0b615bf003d6e5970c76443b299d6527f1f3e3af1d3c45d3007c8a3cc94e",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qckmBam7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "18012b4a036c0d1ea9a7dd0b64d5626ad7d298feb38eae3a2ec12efedb0a444f"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A0A"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/System/CacheController/qcsyscache7280.inf",
+      "sha256": "d4cf8e09d5c456b0d4e0d7166d8cd446063b86491322faa27e577becfa91d80a",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcsyscache7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "7fdbd64dbd79c7e85fbdd7cabd3c2978d4f6fd870bb650a0252eb25303be5c5c"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A83"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/System/SCM/qcscm.inf",
+      "sha256": "c72e42f65eb73714e802ca1e9275d6f450967d4379c3b0f393db9bccd53ab225",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcscm.cat",
+          "present_in_git_tree": true,
+          "sha256": "b92d7ae50e9ffc4bbcd0721a2a1b27f4147d52aeda26df64489c9df23669c3f2"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM04DD"
+      ],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/System/SecApp/qcsecapp.inf",
+      "sha256": "c8cd04baf023b311c8e65c8789203e1fd42b69c1f6894154df1cdc126841b9b6",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcsecapp.cat",
+          "present_in_git_tree": true,
+          "sha256": "d3360582bf54578c65e14ac440386a887722ca29151c0d8f446e45bf00f05900"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0AE3"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/TrEE/QcTrEE.inf",
+      "sha256": "4c1fcba366d7ef219a298dcaa2b86e818e1fd91b0d39103a9193a4a063391f1e",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QcTrEE.cat",
+          "present_in_git_tree": true,
+          "sha256": "63f76731e1bf6ff9d1ef718c9425ba22745dd96258494a47b247c0266824f195"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM04DE"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/Transports/QcTftpKmdf.inf",
+      "sha256": "5f5d1f9434eeab4b79e6e159a6d87809480744c94ad4a6d06241c76ca652d40d",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QcTftpKmdf.cat",
+          "present_in_git_tree": true,
+          "sha256": "83aab8062760842bc861fd38d2ac58088929a3a047df0d2a0536788fb28ca820"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM06DC"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/UART/qcuart7280.inf",
+      "sha256": "78adb1e0ccd4ca44b77c02b3c074c0662f8f411c2055bca8de3256e9a2282a14",
+      "class": "Ports",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcuart7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "191f19c3fa0fcef8728d2e1185afc1292f6104e75269d00ca6f050756f6a9b0f"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A16"
+      ],
+      "source_payload_basename_count": 5,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SOC/VoltageCurrentMonitoring/qcadc7280.inf",
+      "sha256": "35b133b6336c8d2618812ef19a9f188914131a63b909c012533351aaa781f07e",
+      "class": "System",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcadc7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "5aee6807352b12d5f407872af82a0f40f2b159a7532d0e34eb8d1cd339e1febe"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A11"
+      ],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Sensors/SSC/qcSensors.inf",
+      "sha256": "e7df3db5c1277ae56eeebf033da4eae8887e97b0f836a3c2a3c5a6a4d19d4cc3",
+      "class": "Sensor",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcSensors.cat",
+          "present_in_git_tree": true,
+          "sha256": "be4296e26a2ed708a7d847dda28f538f0ffaa4560c2633382c7ba3168492f09c"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A67"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Shutdown/qcshutdownsvc.inf",
+      "sha256": "7d567033c3846fb5c22ecbde685501ffcedaa576a047b90a0f223070cb787c5c",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcshutdownSvc.cat",
+          "present_in_git_tree": true,
+          "sha256": "dfbb3814f35249249909ce07c2a916bbdf12fa5d961c605508a3b6ed21c6bde8"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM06DB"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Subsystems/ADSPDaemon/qcadspdaemon7280.inf",
+      "sha256": "6ba7b2f2e031ed3e3d0a76c25924e48e2130e6d6bb0bc6d176fb52d49aaded9b",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcadspdaemon7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "0f5e7cfefcb32016e36221bb0ddb0a725c9654c0edb3e7fcb6be19abcf9dedaf"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0AE5"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Subsystems/CombinedSubsystem/qcsubsys7280.inf",
+      "sha256": "67cff23d4fd2a961968f58e647375ffa25d50ba44c8b21e838a4692edebd202e",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 2.0.4056.4400",
+      "provider": "Qualcomm Technologies, Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcsubsys7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "a752de7f14b8a5f06bb7fb5001d46821f97ba7af2d86e3355a5252ffb43e3e79"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A1B",
+        "ACPI\\QCOM0A1C",
+        "ACPI\\QCOM0A1E",
+        "ACPI\\QCOM0A20",
+        "ACPI\\QCOM0AB0",
+        "ACPI\\QCOM0AE2"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Subsystems/ProtectionDomainServiceRegistry/qcpdsr.inf",
+      "sha256": "e9e2b03a6141f07544ffb2788b482e458a0c089ecfb612735225c42f55a6e806",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcpdsr.cat",
+          "present_in_git_tree": true,
+          "sha256": "f9caa2b690256a6ddd7020d81dd58f8f562b8d7a6cb30f077611226d373ac3ac"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM06DF"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Subsystems/ThermalMgr/qcSubsysThermalMgr.inf",
+      "sha256": "d80bc35eb3bed536a32e431a6dcc3f1af9bf969ee6ddcdb94deacda6d71865fc",
+      "class": "SYSTEM",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcSubsysThermalMgr.cat",
+          "present_in_git_tree": true,
+          "sha256": "8460a3a546ba5306430c54a5ab3f3bc920b858954d9e0af308f7898f9d073b97"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM06E5",
+        "ACPI\\QCOMFFE0"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/USB/UCSI/qcusbcucsi7280.inf",
+      "sha256": "23abbef00fdebf9da923a9f4a285902c9934d5273b8f260dc9fec19c2a5f2f5e",
+      "class": "USBDevice",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcusbcucsi7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "0db80882e3cfb6119ff2341f0494747d1776c0cd7075aa3ad38efa35963e7c5b"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0AA4"
+      ],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/USBFn/Interfaces/ufnserialcomposite.inf",
+      "sha256": "3e188e28275c506514623c42d23f19f2f6b6f70eee79fac2c53a1937dc6af213",
+      "class": "Ports",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QCComposite.cat",
+          "present_in_git_tree": true,
+          "sha256": "1009ccf23bbeca1936061992bc0dd281f538b6c2b8497afff90cb5a06cc3c0cd"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/USBFn/SuperSpeedFilter/QcUsbFnSsFilter7280.inf",
+      "sha256": "f9611a7b3c3ad0970f03b2f7cf028a39eead2be89c8be1929e4d83ac8a42156a",
+      "class": "USBDevice",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QcUsbFnSsFilter7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "6c2856560b50567bcd90a2438a50bfa93f9d12299ad5f80bd6ea7cfb8762802d"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/USBHost/QcXhciFilter7280.inf",
+      "sha256": "4130a8043baec6abbf88a0cf1fdfd8e8cffb4e1deddfe0281396f455cfa10c9a",
+      "class": "USB",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QcXhciFilter7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "7cd69596a24cf03de2b8ade8619d1c16c6caf436a6ac64965e8107c24603ed51"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A24",
+        "ACPI\\QCOM0AA1"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/WLAN/Core/qcwlan7280.inf",
+      "sha256": "e6248e14004ec9733ca6c468ebd085bd478b0da77dd29367823f48d827844ffc",
+      "class": "Net",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Communications Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcwlan7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "f7befa671064f0d26fd292d5611b48e8b09600851f1b89e001778b4dc9ad571f"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 9,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Audio/ACDB/IDP/qcacsp_idp7280.inf",
+      "sha256": "e8b0abfd611c74fd9dcd884f6b085fc32e80089ab8473108118049629c019755",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcacsp7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "16b7f48f9fd2c52e9fbd3252839294ee4fb279c4d4a6d6d147f287cb6c05c232"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 5,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Audio/ACDB/QRD/qcacsp_qrd7280.inf",
+      "sha256": "7e4932f23c015a32c17bf2b69cd8a862a98ab3a4d41e0b7f5dc1bd3acd7b9589",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcacsp7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "e5c69b5a01a4cc5bcf5c6034e4a087f2dec57bd63b4545e0fc283ebb9515faa8"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 5,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Audio/AudMiniport/IDP/qcaudminiportIDP_Extension7280.inf",
+      "sha256": "482621e0546461f0aa158a280557b5909b66e9af14fc46f2ea68a5e9f47c0fa3",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcaudminiportIDP_Extension7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "4cf86310114cbc898738aeddd20a7c7abfbc8391ec5c0ce8597db11d34066bd3"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Audio/AudMiniport/QRD/qcaudminiportQRD_Extension7280.inf",
+      "sha256": "5adf8d288b94cb6df1edcbb46e30faf40abb7e60bf254143fbb9b6e5ce7f935f",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcaudminiportQRD_Extension7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "0cbee887c3a317487fbfe7739535d042fb84d2cbf2c544408f4e9562331d2431"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Audio/Device/IDP/qcaucd_ext_idp7280.inf",
+      "sha256": "63a6b9ace527170f8bfbe973db9cc05c7758f46fc396b0b834b7f75fd4b0e13e",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcaucd_ext_IDP_7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "1171829ad7d4adfd39bacb31878a0a227cdaab06ef9a0eea6551bb938b096986"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Audio/Device/QRD/qcaucd_ext_qrd7280.inf",
+      "sha256": "aac79f821e88c356e708ce37bbb3fb9f1446dcef6c8ee4e1d23ba597a7b494f3",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcaucd_ext_QRD_7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "14eacb54d0717973d41e40467eb084e1cbef46d93b4151cb0360608de3e38a9b"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Audio/ListenSoundModel/Calibration/QCListenSM_swc_ext7280.inf",
+      "sha256": "c498ed2c777e701a5cb2f4606cced3c72b4aa2c81d04013a90aa85e86e8c9520",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QCListenSM_swc_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "0c180bae76c11eef7e71b99b83d80bafea81ab775939a966544e2f2a4794570a"
+        }
+      ],
+      "hardware_ids": [
+        "SWC\\VEN_QCOM&DEV_QCListenSoundModel&PLAT_7280"
+      ],
+      "source_payload_basename_count": 3,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Audio/ListenSoundModel/ComponentExtension/QCListenSM7280.inf",
+      "sha256": "3c8f3ab66f4fec0c72aaacb5795e31d098e6171d4f1ac711f11145258c03c6ed",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QCListenSM7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "d02e2afe49e112c49f667d6984fddda61dce8895407fa02ad55c0dd0f4e0b519"
+        }
+      ],
+      "hardware_ids": [
+        "SWC\\VEN_QCOM&DEV_QCListenSoundModel&PLAT_7280"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Bluetooth/qcbtfmuart_ext7280.inf",
+      "sha256": "dd9f8a361c2c4d7b8886084d4e0adb74be0c500489dd18291127206814a11954",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Atheros Communications Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile.nt",
+          "declared_name": "qcbtfmuart_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "a44af3684a6f3bfac35a380ea10295e06c4aa4814019f39e686badd78ab0ec4a"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A6B&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A6B&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Camera/AVStream/qccamavs_ext7280.inf",
+      "sha256": "2bc97d04662cfb3329a052c027cce4da96cf69cce9d58755b235aa0b7494cd31",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccamavscls_extension7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "fe106c2cf43199f30d264be2a6525feec78cd661143e4dbf71661513af510b79"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Camera/AuxiliarySensor/qccamauxsensor_extension7280.inf",
+      "sha256": "9007ea4a0320a9ee526cb28c8bc1265d876072a9895c1983b3d1d15786466e7a",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccamauxsensor_extension7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "781f068ac4c72b3e452f98fa5c9569c1ec43c43503c058791c791366c9ab5e3e"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A99&SUBSYS_IDP17280"
+      ],
+      "source_payload_basename_count": 9,
+      "source_payload_basenames_absent_from_git_tree": [
+        "scfg_aux_qrd.bin"
+      ],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Camera/FrontSensor/qccamfrontsensor_extension7280.inf",
+      "sha256": "7ba35c808b569cbeffe615ebcfff63d08b1369a270576724052b47ece5611f10",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccamfrontsensor_extension7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "2b6d3feea65d651e00d21fb4eb9cd1ab492522474555c95d78281919eeab1db1"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A06&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A06&SUBSYS_IDP17280",
+        "ACPI\\VEN_QCOM&DEV_0A06&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 14,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Camera/ISP/qccamisp_ext7280.inf",
+      "sha256": "17b14a13a32bfa72489cc909db4e4ac71b533b98c824ebf865dec927e361aab0",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccamisp_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "613917c7e9384718c98867e1101212fb79e29a4fdf44d16450adc2d24921583e"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A25",
+        "ACPI\\VEN_QCOM&DEV_0A25&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A25&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 4,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Camera/JPEGEncoder/qccamjpege_ext7280.inf",
+      "sha256": "6db1496af4f0d6112b3c8c535226abbc34d237864da6605af674a2569dbfab83",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccamjpege_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "7a9568f0b3dafbfe8220bec95fa7415e2a9e674523a9a6bb0e3f089d31b072dc"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A33&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A33&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Camera/MIPICSI/qccammipicsi_ext7280.inf",
+      "sha256": "192c3d3f70b2f712a8cccd4018850199e9a7246cbec3152021325e1b953e8276",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccammipicsi_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "36b7f16f50dd7e7f1d7836fb0c0cb9d82447f4c582ddcddea24c1f06085b98dd"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A98&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A98&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Camera/Platform/qccamplatform_ext7280.inf",
+      "sha256": "ff80324221b4221fb18fa0debda5eba7b7be0c02f16d4f4b762847ed41397042",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qccamplatform_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "655c640a51106e3394be84f9b126a209fae528a3a23940d5f81dd578c6720c39"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A32&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A32&SUBSYS_IDP17280",
+        "ACPI\\VEN_QCOM&DEV_0A32&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 9,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Cellular/5GNRCoexistenceManager/qc5gnrcoexmgr_ext7280.inf",
+      "sha256": "4ab066688d6a2689cedded59c22f59bdbbbac95a75b0cfd865f9e4818e4b5ef6",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qc5gnrcoexmgr_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "be7bad0bce0600e2d5f21d7a69d8cab19aca9c764d332d2ffafc8ce7ca3207c4"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0AD6"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Cellular/EMBComponentExtension/qcwmrilextension7280.inf",
+      "sha256": "ff30b27412fbbdab7598c9abce3c2f8aa86ff12d303b7bc511d9fd3835678459",
+      "class": "Extension",
+      "driver_version": "03/18/2021, 1.0.0.0",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcwmrilextension7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "53fd548a0ca8bdf9f0db21786ca6b3b96425254ae19c1c78a8d010ed8daff561"
+        }
+      ],
+      "hardware_ids": [
+        "SWC\\VEN_QCOM&DEV_WMRIL&PLAT_7280"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Cellular/IPA/qcipaext7280.inf",
+      "sha256": "4751a84203e6eb9be19f994aae3beef672c21263bf26c0103188cdbc6ea9abe6",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcipaext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "17f62b113f6388cb1c509cffae85eea03a97465583cdddf9b4d24502dd6dc2ea"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A6A"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Cellular/MBBNetAdapter/qcmbbnetadapter_ext7280.inf",
+      "sha256": "20b254895d74c41781f24485b37699234bccdfc6424f5f7c303fe478eff89ef7",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcmbbnetadapter_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "5a1596eb870fd22694a29fd19c07da1f0ab38938ce3012c265638d4b8722c954"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Cellular/RILComponentExtension/qcWMRil_mbb_ext7280.inf",
+      "sha256": "fae717718d328b6b96cb9eb49fe50eb5e88cc3efcedf9de34911da17d821ed16",
+      "class": "Extension",
+      "driver_version": "09/08/2020, 1.0.10730.0000",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcwmril_mbb_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "d4fe3f029ea217c846a122a48ba0a8a9d3fc7c4c3f2a2ec4e77af85c6f1eac10"
+        }
+      ],
+      "hardware_ids": [
+        "SWC\\VEN_QCOM&DEV_WMRIL&PLAT_7280"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/FMRadio/qcfmtransportextension7280.inf",
+      "sha256": "1f9cc0d9276f03aa4fa9d9825d4c65cb9599f949d9cd51be5715efb0abfba650",
+      "class": "Extension",
+      "driver_version": "01/04/2018, 1.0.7900.0000",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcfmtransportextension7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "6fcef90e1e607863ddfa7df1eb12b818dfb8dd80c7aee5dedaa9868f12f803c9"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_056F"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Graphics/DXKM/IDP/qcdxext_idp7280.inf",
+      "sha256": "4992193ac6e307213ed63422396fd70f24df34f1a56553185008bd4408dc6841",
+      "class": "Extension",
+      "driver_version": "03/28/2022, 30.0.3454.5500",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcdxext_idp7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "f8dc2b5b820c757813690903b9fa8bb38f8cc918676a0ec490a83e6a75301fbe"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A36&SUBSYS_IDP07280"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Graphics/DXKM/QRD/qcdxext_qrd7280.inf",
+      "sha256": "c72fb2388951461f16e77b4215b0d6572a54dd49c30058c3f719c3b0a60d5964",
+      "class": "Extension",
+      "driver_version": "03/28/2022, 30.0.3454.5500",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcdxext_qrd7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "a5515e7723328bd71dd0d3a2330442f6a3ec5218adfe8bcf017cf8411e8260d3"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A36&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/HexagonLoader/PIL/qcpilEXT7280.inf",
+      "sha256": "4f512ffd9c86aba8ef01788d288c15ac84168d7cf7ac9711460a3cc598482845",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 2.0.4056.4400",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcpilext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "27d26f344fd5cda365f1ebe63a1572c5bcfbeb82dd50d78a15b380651c0a25dd"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/HexagonLoader/PILFilter/qcpilfilterext.inf",
+      "sha256": "798ff0b8ddf3f7e8bce69cfbf6815167e21df07897da955384f5f95c14c82e1c",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcpilfilterext.cat",
+          "present_in_git_tree": true,
+          "sha256": "691f2cd5699402154ac592a408fb85dbcc3adc89a8c2a045493c6cb841338e75"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM06E0"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/PMIC/BatteryCurrentLimiter/qcfgbclext7280.inf",
+      "sha256": "b321e8257defe08d78b0d38008540445542e9051f5107b3a8567a7722c44fba3",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcfgbclext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "8aab289fac881c15fbc21a61174c1f8e5f11132e1021d4e77e7441af2f202d24"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A77&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A77&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/PMIC/Core/qcpmicext7280.inf",
+      "sha256": "43d5fd331850b73296cb2892ac613eb9b855f37e676f836d1077929f5e59a479",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcpmicext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "580eb0f7d5f2325a84cc5f20eb87c9a42d7efd10b2afd0ab9750b01c4f20083c"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0AD3&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0AD3&SUBSYS_IDP17280",
+        "ACPI\\VEN_QCOM&DEV_0AD3&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/PowerManagement/qcpepextension7280.inf",
+      "sha256": "abe86f73f18f53cc43d3137637a0e5218018e4c80c56ea9054c7db0926a31282",
+      "class": "Extension",
+      "driver_version": "03/18/2021, 1.0.0.0",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcpepextension7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "f21eaf29d67b8ca322d9125d88ef17c1b2321b8329beee07a4c43af2937f257e"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A17"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/SOC/IOMMU/qciommuext7280.inf",
+      "sha256": "3af99a2bd0bc15743d806f9edc878d11bcb3396f7285b0a8108b70839925a3fb",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qciommuext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "49dce9253077e66381c76b07d0b30bbbc6e66c228b3e68d1a7223c4be630c5ba"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_068F&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_068F&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/SOC/TrEE/OEM/QcTreeExtOem7280.inf",
+      "sha256": "6ffaa1cca8a51e76e66cb025cc38bf79d42a4a91290aa8eeb5443e3f1ec7cd9e",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QcTreeExtOem7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "8b61dd31a757a45cf26dc510a0bd2495257e51d4ed98412aca551d2b77ad50f0"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_04DE&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_04DE&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/SOC/TrEE/QCOM/QcTreeExtQcom7280.inf",
+      "sha256": "d57d315decb4c8854b0ff45d6218a82b2e12ca034441907e38e168df842d57e8",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QcTreeExtQcom7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "44a5b148c1b749aaed2d824a5a73f3ba480816c311bdb1aa68dc900e402dbd8a"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_04DE&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_04DE&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 3,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Sensors/IDP/qcSensorsConfig7280.inf",
+      "sha256": "442161df16499d7970cd3501118c736d1ac4ba1193d367c77f604282907a082f",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies Inc",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcSensorsConfig7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "475e93c395239ce61e11a07ed5f12f8df96e61590ce7d0a11baf2f9ebb373917"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A93&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A94&SUBSYS_IDP07280"
+      ],
+      "source_payload_basename_count": 63,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Sensors/QRD/qcSensorsConfig7280.inf",
+      "sha256": "fc5ed8e579d84540ade025583a372956a5a0feed9f09d72d618178c7915fc07f",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies Inc",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcSensorsConfig7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "843381ba6f644bce5815ca3ef7eba8d792cc60697e3791019fe0f00bd8620d5a"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A93&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_0A94&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 63,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Subsystems/Audio/qcsubsys_ext_adsp7280.inf",
+      "sha256": "46c098c2164d4e4fb9b18884855661808d805c8d36aa2808471ec08f1fe03d4d",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 2.0.4056.4400",
+      "provider": "Qualcomm Technologies, Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcsubsys_ext_adsp7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "af2ea747d13a7f6a88d308d6b8740efc99e8524169ed96264cfa10d5853caa03"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_06DF&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06DF&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_0A1B&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A1B&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 40,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Subsystems/Compute/qcsubsys_ext_cdsp7280.inf",
+      "sha256": "5ea54d61c647c6616185fbb6f0ce6248bec86d187f03f4b14d4c5776776116c9",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 2.0.4056.4400",
+      "provider": "Qualcomm Technologies, Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcsubsys_ext_cdsp7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "ccf68ebff93f1717d593d0a1f24a4af7a31586e66b3a21487bbf6d74d8343dcd"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_06DF&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06DF&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_0AB0&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0AB0&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_0AC3&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0AC3&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 31,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Subsystems/Modem/qcsubsys_ext_mpss7280.inf",
+      "sha256": "b1d678850b2bd291793ea944a7f8cbd391f5dc6d8ac0092b5bb2212f3139b6e4",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 2.0.4056.4400",
+      "provider": "Qualcomm Technologies, Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcsubsys_ext_mpss7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "e16fcd833d5d309b88e86a2aae5a8a753e09aa3a8a7227c19e4c82da6f04042c"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_06DF&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06DF&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_0A1C&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A1C&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 3,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Subsystems/ModemConfig/mcfg_subsys_ext7280.inf",
+      "sha256": "bef440d0694790d3b7ef408d661d712745a9b315858b663940cae5f31cb8d8ea",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 2.0.4056.4400",
+      "provider": "Qualcomm Technologies, Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "mcfg_subsys_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "2571558476e5029b2b3b2cb9c02909efaccff21861dc5c5b22039cba5f73a6fa"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A1C&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A1C&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 161,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Subsystems/WPSS/qcsubsys_ext_wpss7280.inf",
+      "sha256": "6fbb1bc662aaf33a663dc1ac1bd4f43e2b2fb10c883e4f562fb055592749a46b",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 2.0.4056.4400",
+      "provider": "Qualcomm Technologies, Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcsubsys_ext_wpss7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "1fef23a4d11ce27436cd1aa0c40bfc0760ac27546c848b37f8476e65feb60649"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0AE2&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0AE2&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/USB/DualRoleExtension/qcursext.inf",
+      "sha256": "4194ce76d44aebd495f7c084b136a556a6d57c349cca331cc8f4dde5d7bb2ecf",
+      "class": "Extension",
+      "driver_version": "02/12/2023, 1.0.3681.5800",
+      "provider": "Qualcomm Technologies Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcursext.cat",
+          "present_in_git_tree": true,
+          "sha256": "704e064af84cf53f3f49c130241509a868d9163d7c1e29155b0376bc013288c4"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOMFFE1"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/WLAN/Core/qcwlan_ext7280.inf",
+      "sha256": "cd6dec9d626104292ee04b484778e64d339b60ef9e981ea9b4fc88a76f4e5d61",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcwlan_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "5cdc78a81cec387e89a822b99c241f3d103e0ea5310d56bb758b23ba809f0ca4"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0AD5&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0AD5&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/WLAN/WPSS/qcwlan_ext_wpss7280.inf",
+      "sha256": "c6db0e414bd20ad658c7a390c9c6559ce80fa26433ad248d278a35af5ff5370a",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Technologies, Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcwlan_ext_wpss7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "4855e5e9c3cf2eef9841ac31016aadfe18d8f928a24f4df4763f5dd0d3a20198"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_06DF&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06DF&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_0AE2&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0AE2&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Libraries/Cellular/RadioInterfaceLayer/qcWMRil7280.inf",
+      "sha256": "c3cad6e4713ec63e9a827ca769e9c195ff09799f9a2fe41f6a182384c1a690e2",
+      "class": "SoftwareComponent",
+      "driver_version": "09/08/2020, 1.0.10730.0000",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcwmril7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "40ccc8da292f42a5d84a3444cd3e27d042674752680fb78737011b139c4b3e63"
+        }
+      ],
+      "hardware_ids": [
+        "SWC\\VEN_QCOM&DEV_WMRIL&PLAT_7280"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Libraries/Cellular/VideoOverLTESink/qcimssink_mbb_ext7280.inf",
+      "sha256": "c7eeb7a6d75df1ac2f465ea9e21fa77cd2108b04d53cb8aacdcbab7c88e41265",
+      "class": "Extension",
+      "driver_version": "09/08/2020, 1.0.10730.0000",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcimssink_mbb_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "447dbc21545c6c5ebb692c1e44de247d84f39d77ec2de62cfbcdc09be0c4f2c3"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Libraries/Cellular/VideoOverLTESource/qcimssrc_mbb_ext7280.inf",
+      "sha256": "ab489e0559210127642f3c70042bb7fe0a0d3eecabd904aa666f6795a46b0de7",
+      "class": "Extension",
+      "driver_version": "09/08/2020, 1.0.10730.0000",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcimssrc_mbb_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "e08ec6f8c36451e9b2c6e86d36f6cda20d482009f00440f8f5a27ae732d3d948"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Libraries/FMRadio/qcfmminiport.inf",
+      "sha256": "5d5f4679a710f13fc17fc74de38abd9f7a7a90ac096e6ea97dfefb895da594b6",
+      "class": "SoftwareComponent",
+      "driver_version": "01/04/2018, 1.0.7900.0000",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcfmminiport.cat",
+          "present_in_git_tree": true,
+          "sha256": "e7675cac6bb057aabdb4348be22a0c3a963fec49c8adf8a1efe22cf8b075a37a"
+        }
+      ],
+      "hardware_ids": [
+        "SWC\\VID_QCOM&PID_056F&SID_0001"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "ProvisioningPkgs/qcppmsettings7280.inf",
+      "sha256": "b4c5343adcc71ecaab93f9d222921d24b32adb7f68ccd2c6a1ede507948090e5",
+      "class": "SoftwareComponent",
+      "driver_version": "01/24/2024, 1.0.2060.0000",
+      "provider": "Qualcomm Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcppmsettings7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "00873a38508f43e9dc501adad7c00f88a101f2114c1efe6d6ac1a9682cbc30b1"
+        }
+      ],
+      "hardware_ids": [
+        "SWC\\VID_QCOM&PID_0A17&SID_0001"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Services/Cellular/IMSData/QcIMSDataDaemon_mbb_ext7280.inf",
+      "sha256": "e3b94be036d8c472a7500fc1233ea95aab2e1a71e475da2e017f15c79eabe142",
+      "class": "Extension",
+      "driver_version": "09/08/2020, 1.0.10730.0000",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcimsdatadaemon_mbb_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "e886189958ea03a136cc04b4bfc36e92999ecad33773da7bb9f158ef7cfd24b0"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Services/Cellular/IMSQMI/QcIMSQMIDaemon_mbb_ext7280.inf",
+      "sha256": "17879715f412d0cbadf641a6cb4002c601249c79187aafb591f167a198f35105",
+      "class": "Extension",
+      "driver_version": "09/08/2020, 1.0.10730.0000",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcimsqmidaemon_mbb_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "71ea8117c94c4c1d3208886a1c0e058a74f5b983490b8eae8a4c89d805119b46"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Services/RCS/QcRCSPresSvc_mbb_ext7280.inf",
+      "sha256": "b665fb2504fe9bf5fd8c9a901a7bcc86d4e205535fc7140f5cf00ca3b905e333",
+      "class": "Extension",
+      "driver_version": "09/08/2020, 1.0.10730.0000",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcqcrcspressvc_mbb_ext7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "fb8daaecb16041fb0be8a4180f275ac77a653103f43efebdc53e876e639e2fe6"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 4,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Settings/USBFn/Interfaces/qcusbfndefaults7280.inf",
+      "sha256": "054479d62b608b1a201244daa5d3c86d778b5c6307e5c90c57d2288b366ce702",
+      "class": "SYSTEM",
+      "driver_version": "12/23/2024, 1.0.0.1",
+      "provider": "DuoWoA authors",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "QCUSBFnDefaults7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "84c0525feb59691f4c67e182aee7ea00c979b106b8353e1095d178764e39eece"
+        }
+      ],
+      "hardware_ids": [
+        "ROOT\\QCUSBFnDefaults"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    }
+  ],
+  "locally_inspected_sys": [
+    {
+      "path": "Drivers/Audio/ADCM/qcadcm7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "b548969a29e545c6b93073db4c4f1201c6d4120d3c68b283194601f51fb23c8e"
+    },
+    {
+      "path": "Drivers/Audio/AudMiniport/qcaudminiport7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "fa2f34d3c8b6b844b2fb0b6d73b77555503eeeca035f0521b9ce7282408f91ff"
+    },
+    {
+      "path": "Drivers/Audio/Device/qcaucd7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "1b3a23beec4f9d0217c3f4ac4eb46da11a5da4f639b91128478e8a4c3535191e"
+    },
+    {
+      "path": "Drivers/Audio/RPC/ADSPRPC/qcadsprpc7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "e1dca5f944485fd24e5095403e3545c43ff6d0c979548d670f526332810ab141"
+    },
+    {
+      "path": "Drivers/Audio/RPC/ADSPRPCD/qcadsprpcd7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "7eba132733f2cdd50f495e5f033cdfdf1d0910cef4b3f843f7ef2a9accb0350d"
+    },
+    {
+      "path": "Drivers/Audio/SlimBus/qcslimbus7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "2cd225bebb3fdfdc521e35cb5bc5cabc3cd506ac2cf3f1d5a8b6f968645ff996"
+    },
+    {
+      "path": "Drivers/Battery/BatteryCurrentLimiter/Qcfgbcl7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "c71eded772cf412fc7a393540b5c6fa7d07356cab07773ee96b6a653efce5d78"
+    },
+    {
+      "path": "Drivers/Battery/BatteryMiniclass/qcbattminiclass7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "0a59dd4999177986a1bbe24aeccbf2ab72d8ebbca3a2ecfa4015f967627a0c3d"
+    },
+    {
+      "path": "Drivers/Bluetooth/BTFMUART_HSP/qcbtfmuart_hsp7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "48f26b76a202c4d10eb7cc32a270f041660700e1e191fd44222ac1d80cc82907"
+    },
+    {
+      "path": "Drivers/Camera/AVStream/qccamavs7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "d8b99364ff835bc0d8d097df806222a37005fbeb2e5fa12292a36d49f03b8187"
+    },
+    {
+      "path": "Drivers/Camera/AuxiliarySensor/qccamauxsensor7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "7af555c072b74e3b0fa1256869a0e17a4041562218fafbbad9136dfc81576415"
+    },
+    {
+      "path": "Drivers/Camera/Flash/qccamflash7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "3a1978d3fb466e77c6b06ba46686e68d0ac31f5396ba7213726caf1234c2ed21"
+    },
+    {
+      "path": "Drivers/Camera/FrontSensor/qccamfrontsensor7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "b5d58f9e685a3ba22fc5e428b8ee7d8329be551007433abacc552f72ef320a1d"
+    },
+    {
+      "path": "Drivers/Camera/ISP/qccamisp7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "60869db54170593b387012eeb3a7740d692bc1758c4fef045f56619f510cd4d8"
+    },
+    {
+      "path": "Drivers/Camera/JPEGEncoder/qccamjpege7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "25b76a03b6676d97749e25f8d741be17be0a45b6d9523610e776254f6940f056"
+    },
+    {
+      "path": "Drivers/Camera/MIPICSI/qccammipicsi7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "4416e887a6453c250c77bcfc917c3966b0bf4b9cb582f64a899bf462523fe702"
+    },
+    {
+      "path": "Drivers/Camera/Platform/qccamplatform7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "8d4e3dc9b53041e6f1b101d5b2a93bcb42d16e7b93acf4f445e684dde45bc211"
+    },
+    {
+      "path": "Drivers/Cellular/CCID/qcccidbridge7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "1f17521963cbd04c9bf3a80161c76285cfa73d72eae2554ee02d635bccd7c007"
+    },
+    {
+      "path": "Drivers/Cellular/DPL/qcdplbridge7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "0dedb66643bd8205c8a06777187cd63bbda271d876862a15e8b86e8dcdc00e8f"
+    },
+    {
+      "path": "Drivers/Cellular/DataBus/qcdatabus7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "04455aea5c67ffe54451147fd9236f72e9049d5743ed5c3748075e506eaec56c"
+    },
+    {
+      "path": "Drivers/Cellular/DiagBridge/QCDiagBridge.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "fbd6bf1545c1740066de0f56000702a828b111e15494f9a607f2de2b54714c63"
+    },
+    {
+      "path": "Drivers/Cellular/DiagCSI/qcdiagcsi7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "bd3a08b6f35b4d33427c438194b35fce6f64d0a3f81f67a385c24099140263ef"
+    },
+    {
+      "path": "Drivers/Cellular/DiagRouter/qcdiagrouter7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "5d5515b133679c43fe7b591fa7f6d71d666819314f3886b03fbe20a51af51a7b"
+    },
+    {
+      "path": "Drivers/Cellular/IPA/qcipa7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "2b7acc62071cebb540f9eddc91efb9ac931d83a4c86631e559e4686a8325c496"
+    },
+    {
+      "path": "Drivers/Cellular/IPCRouter/qcipcrouter7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "2dff5d33b742ab2530b369359fcdf600f70ca3c8f4442768f56b1c978a394dbf"
+    },
+    {
+      "path": "Drivers/Cellular/LinkLocal/qclinklocal7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "a50341a91efc4ca5a81caf856619f0b47c4f55880f93232768762a38a511da5e"
+    },
+    {
+      "path": "Drivers/Cellular/MBBNetAdapter/qcmbbnetadapter7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "98573d36f3638c1cc717a83d174167e13361817a1ca114fdfe56057f861be1f9"
+    },
+    {
+      "path": "Drivers/Cellular/MBBNetAdapter/qcmbbnetadapterfilter7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "3bd7be710637aaa25d4afadefc50eba7aae7669c038a9686838af1973e9cadde"
+    },
+    {
+      "path": "Drivers/Cellular/ModemBridge/qcmbrg7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "0ef0fcb6ed6ddb382f687954d7fe64868e92ce623b9e47ea10fea48185a1e49d"
+    },
+    {
+      "path": "Drivers/Cellular/RemoteAT/qcremoteat7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "d7407e86c7e4201766a92a90fc1ea13fb0d457a5a4c90d303f2602ed402ef854"
+    },
+    {
+      "path": "Drivers/Cellular/RemoteFS/ExternalFS1FS2/qcremotefs7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "46bb9ba85ad36b3483130ed4ebe9540f826aeea7325ca6c01aa6fbeccd0fdbee"
+    },
+    {
+      "path": "Drivers/Cellular/RemoteFS/Normal/qcremotefs7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "8245f59801c7e74056bff53d2ca146ab49d86adc38cab121583ee2e1aeb704e9"
+    },
+    {
+      "path": "Drivers/Cellular/RemoteFS/ReadOnlyFS1FS2/qcremotefs7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "29ceec58b80c817fa276dbf85e063f4a94f76f1f16aa3c8aba3e17f21e7984c9"
+    },
+    {
+      "path": "Drivers/Cellular/RevRmnet/qcrevrmnet.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "0491c747072a150636bca1fb638fad67e2acc80fb3e47ed35ab6f512ebd041b1"
+    },
+    {
+      "path": "Drivers/Cellular/RmNetBridge/qcrmnetbridge7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "c7a10c516f67ec88133f85e55acef900d4cde10141d0fa1ad26089a8befdc8ff"
+    },
+    {
+      "path": "Drivers/Cellular/ThermalMDM/qcthermalmdm7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "3542573b69407478ce82380fbad366c45d1599f24c4bdf2f8cfa21705753f673"
+    },
+    {
+      "path": "Drivers/FMRadio/qcfmtransport7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "e56d20f49ea0be3b9e9fa57fd65a1066a4f3e4f860d8d4a112cc31b96044e829"
+    },
+    {
+      "path": "Drivers/Graphics/DXKM/qcdxkm7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "0f52f5d364ab9e1bfcfa0ef33f240807b3caf13e88dd0716e3e87f508ce690dc"
+    },
+    {
+      "path": "Drivers/SOC/ACPI/qcabd.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "1793e4115389f1cde92bbb4b6d830c58141099328882ec7181baac06cb9c5b72"
+    },
+    {
+      "path": "Drivers/SOC/Buses/GLINK/qcglink7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "f5310c867ac725f7d7c167b8e2f23df3e8539cc2654ba7eb6eb65f9a5974f416"
+    },
+    {
+      "path": "Drivers/SOC/Buses/GPI/qcgpi7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "6f41dd80947b2c1e43dbb51c371917ccc1730dad1b52184c86c92a0e3300e8da"
+    },
+    {
+      "path": "Drivers/SOC/Diagnostic/QWPP/qwpp7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "2cc7b41e47119227078537fc1071b3f022649711f8ccd036cabbb5e7afda01a9"
+    },
+    {
+      "path": "Drivers/SOC/GPIO/qcgpio.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "b3649fb0211c4e23dce086bbd341eb47b278b68fe439ed0dcd8cbfca025b0460"
+    },
+    {
+      "path": "Drivers/SOC/HexagonLoader/PIL/qcpil.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "dd9dc7a14bf5252f1879d7b165c5792f9dee2c7051984146ad6a4b6f5990a9f4"
+    },
+    {
+      "path": "Drivers/SOC/I2C/qci2c7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "968755f257f9cf6433475badf0d743f845441c504e7fd41a8d453179f6857644"
+    },
+    {
+      "path": "Drivers/SOC/IOMMU/qciommu.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "1b23d6635a0a0af786f1067b46f977af58b3ad3e8e153c9c4c863dc5486344ac"
+    },
+    {
+      "path": "Drivers/SOC/IPCC/qcipcc7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "4449aff8169004ae4094da90455f5e5a7baea6fc3557b27a06db7663fc970220"
+    },
+    {
+      "path": "Drivers/SOC/LED/qchwnled7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "e67b3ab9d726bb0fe059e4ed1f23bc74a16917432a44e5461c23afdfb2424220"
+    },
+    {
+      "path": "Drivers/SOC/PCIe/qcppx7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "9cf4ada0b78d61f650309c2c4eaa0f41a203be5b79fc1af1630548cd88818a19"
+    },
+    {
+      "path": "Drivers/SOC/PMIC/Apps/QcPmicApps7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "b122fd4aa2d058c77d69db47c09af075d3298c036fbfbad2d062774da876ab71"
+    },
+    {
+      "path": "Drivers/SOC/PMIC/Core/qcpmic7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "b274857a3d9b663a3264a993613573cf04d6b6fac8c6ce3a6715bc75ed8e9ca2"
+    },
+    {
+      "path": "Drivers/SOC/PMIC/GLINK/qcpmicglink7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "5c8464fc318e1c3cfc9cd420a95edafebdc0d6258535dac7257bbbefbde477e5"
+    },
+    {
+      "path": "Drivers/SOC/PMIC/GPIO/qcpmicgpio7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "628dd1047206d7a8fd54b0a4632afc798e43bc2d71cf454dc67172550f779b29"
+    },
+    {
+      "path": "Drivers/SOC/PowerManagement/qcpep7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "c76663dd5b0ebaf74db0f81f82c828f71621d1aa0e37e23cfd37158ab1cce6b4"
+    },
+    {
+      "path": "Drivers/SOC/Provisioning/QcSOCPartition.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "5e31724896ca7975244ae0049e63606afff8f14caef633f231161018ad517a67"
+    },
+    {
+      "path": "Drivers/SOC/ResetPower/CrashDumpInjector/qccdi7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "bbb3d9d97c345c481ae14ae4715d4e549f96f288bff5a4c03a06e2d03286fe29"
+    },
+    {
+      "path": "Drivers/SOC/ResetPower/ResetProtectionEnabler/qcrpen.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "9dfcf2d8f4137e96d004fa366796e3802210ab51ca256a1cee6ff8162c0278c3"
+    },
+    {
+      "path": "Drivers/SOC/SMMU/qcsmmu7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "dadd39a39b3734bf5a4ef01fbe87385f981f6b9623a70e4d09db5ba58b3112ab"
+    },
+    {
+      "path": "Drivers/SOC/SPI/qcspi7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "ed0ac087198fdfd6abf20689e676129cd5631220dabda2d7239490bc5ef9addf"
+    },
+    {
+      "path": "Drivers/SOC/SPMI/qcspmi7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "cb91b988c4de1ae999994a3b7799eea943c2ab5440df93341b3cd744405f3e43"
+    },
+    {
+      "path": "Drivers/SOC/System/BusAccessModule/qckmbam7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "5a3db608661587e95734a900cb7fc6617b77d51985a0bc23355240853cf6dec6"
+    },
+    {
+      "path": "Drivers/SOC/System/CacheController/qcsyscache7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "92cd5c45f6bb9bbe77a37c054c866ab241903f533e3bda475f47cff1832e9a5a"
+    },
+    {
+      "path": "Drivers/SOC/System/SCM/qcscm.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "60f66e52dbc07e4811199fb65a56b6c8eaacd5746f8178e995b162db2e0732fd"
+    },
+    {
+      "path": "Drivers/SOC/System/SecApp/qcsecapp.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "a9cf99d62abf8e45b7ea1603fcf14d9432eb3983221bf40759880e9e1348aa21"
+    },
+    {
+      "path": "Drivers/SOC/TrEE/QcTrEE.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "83f298d2a9d5fe427d95cd95fb13af5f5c1629006d5b421a7fe3ee0dbc8d7803"
+    },
+    {
+      "path": "Drivers/SOC/Transports/QcTftpKmdf.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "c185bc6d56697c1cf0b372b33fd3da882fcdc89f2ca50cf36ca7d0a1b86d4159"
+    },
+    {
+      "path": "Drivers/SOC/UART/qcuart7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "c702e813a2914b062788bd645f20261dc93f49f7aa89a65e3d09edf02240e6ea"
+    },
+    {
+      "path": "Drivers/SOC/VoltageCurrentMonitoring/qcadc7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "b5fa9cd6a30e5c08d9ed4072a86c0c733d32fe5627ee684f00e161246b2f0c20"
+    },
+    {
+      "path": "Drivers/Subsystems/ADSPDaemon/qcadspdaemon7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "4f885ac8f2e79bdc9a527565fdddeb159e53c2cf8eabd89a95b02d5ddb3e58dc"
+    },
+    {
+      "path": "Drivers/Subsystems/CombinedSubsystem/qcsubsys7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "2191d1972bfb09cdd296cc025ea09cd70a4551d7239f96fdc12e8c2809b426a3"
+    },
+    {
+      "path": "Drivers/Subsystems/ProtectionDomainServiceRegistry/qcpdsr.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "340e9dc402ccaa94820dce751710495fa7627f88b8c62a7ffa8c70bb950f7f1a"
+    },
+    {
+      "path": "Drivers/Subsystems/ThermalMgr/qcSubsysThermalMgr.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "e6c6079958ea401d81a40dba568bffbc8fb35d908c5f38c15f031756ed8f5c97"
+    },
+    {
+      "path": "Drivers/USB/UCSI/qcusbcucsi7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "70ece4b0e8966bdbab99ed65249dda6a70f875edb791e968a47fea72db358bf2"
+    },
+    {
+      "path": "Drivers/USBFn/Interfaces/ufnserialclass.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "eeba64e88c93041320fc34fa4141033f2e0b03eaecf0300f1709e8013304303b"
+    },
+    {
+      "path": "Drivers/USBFn/SuperSpeedFilter/QcUsbFnSsFilter7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "2eecd390dbd5cff4fe959f9e8285d193a2f06dd8358be3a2935e0de0d01382c0"
+    },
+    {
+      "path": "Drivers/USBHost/QcXhciFilter7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "b9db174b9ebcf9df4223cf12e9e9d8bba879a031233e7d123ededd02bdd280c3"
+    },
+    {
+      "path": "Drivers/WLAN/Core/qcwlan7280.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "ba5ce97c72c631c4cd2c57cb8588566f47a7f0720af3507cfa7c87c231e767a8"
+    }
+  ],
+  "scope": "Git source/INF/CAT presence and hashes; Windows catalog trust, rank, full payload and device compatibility unverified"
+}

@@ -1,0 +1,1139 @@
+ACPI Warning: Invalid character(s) in name (0x2E42535F) 0x7fffe016bfbc, repaired: [_SB_] (20250404/utstring-229)
+ACPI Warning: Invalid character(s) in name (0x2E42535F) 0x7fffe016bfbc, repaired: [_SB_] (20250404/utstring-229)
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    258:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.UFS0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    260:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.UFS0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    288:         Device (SDC2)
+Warning  3141 -                                    Missing dependency ^  (Device has a _DIS, missing a _SRS, required)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    299:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.SDC2._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    301:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.SDC2._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    368:             Method (PMCF, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PMIC.PMCF)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    370:                 Name (CFG0, Package (0x0B)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMIC.PMCF)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    460:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PML0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    464:                     Name (RBFC, ResourceTemplate ()
+Remark   2173 -                                                                 ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PML0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    499:                     Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                                 ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PML0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    530:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PM01._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    532:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PM01._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    542:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PM01._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    542:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Warning  3115 -                      Not all control paths return a value ^  (\_SB.PM01._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    542:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Warning  3107 -                       Reserved method must return a value ^  (Integer/String/Buffer/Package/Reference required for _DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    546:                     Name (_T_0, Buffer (0x01)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                   Use of compiler reserved name ^  (_T_0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    555:                             Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_1)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    602:             Method (GEPT, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PMAP.GEPT)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    604:                 Name (BUFF, Buffer (0x04){})
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMAP.GEPT)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    605:                 CreateByteField (BUFF, Zero, STAT)
+Remark   2089 -                                                           Object is not referenced ^  (Name [STAT] is within a method [GEPT])
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    611:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PMAP._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    613:                 Name (RBUF, Buffer (0x02)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMAP._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    626:                 "\\_SB.PMAP"
+Error    6105 -                         Invalid object type for reserved name ^  (_DEP: found String at index 0, Reference required)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    645:             Method (_GRT, 0, NotSerialized)  // _GRT: Get Real Time
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PRTC._GRT)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    647:                 Name (BUFF, Buffer (0x1A){})
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PRTC._GRT)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    649:                 CreateField (BUFF, 0x90, 0x20, ACT1)
+Remark   2089 -                                                             Object is not referenced ^  (Name [ACT1] is within a method [_GRT])
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    650:                 CreateField (BUFF, 0xB0, 0x20, ACW1)
+Remark   2089 -                                                             Object is not referenced ^  (Name [ACW1] is within a method [_GRT])
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    655:             Method (_SRT, 1, NotSerialized)  // _SRT: Set Real Time
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PRTC._SRT)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    657:                 Name (BUFF, Buffer (0x32){})
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PRTC._SRT)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    688:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PMBM._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    690:                 Name (RBUF, Buffer (0x02)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMBM._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    711:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.BCL1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    713:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.BCL1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    767:             Method (BCLQ, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.BCL1.BCLQ)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    769:                 Name (CFG0, Package (0x08)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.BCL1.BCLQ)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    794:             Method (GEPT, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PMGK.GEPT)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    796:                 Name (BUFF, Buffer (0x04){})
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMGK.GEPT)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    797:                 CreateByteField (BUFF, Zero, STAT)
+Remark   2089 -                                                           Object is not referenced ^  (Name [STAT] is within a method [GEPT])
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    821:             Method (UPAN, 1, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PMGK.UPAN)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    823:                 Name (VNTF, 0xFFFFFFFF)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMGK.UPAN)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    824:                 Name (VPRT, 0x04)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMGK.UPAN)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    825:                 Name (VMUX, Zero)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMGK.UPAN)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    826:                 Name (VCCS, 0x02)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMGK.UPAN)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    827:                 Name (VDPP, Zero)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMGK.UPAN)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    828:                 Name (VHPD, Zero)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMGK.UPAN)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    829:                 Name (VHSF, 0x02)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMGK.UPAN)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    830:                 Name (VHIQ, Zero)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMGK.UPAN)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    831:                 Name (BCCX, Zero)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMGK.UPAN)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    832:                 Name (BDIX, Zero)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMGK.UPAN)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    841:                     Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                   Use of compiler reserved name ^  (_T_0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    911:                     Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                   Use of compiler reserved name ^  (_T_1)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    936:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PMGK._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    938:                 Name (RBUF, Buffer (0x02)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PMGK._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    969:             Method (THTZ, 4, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PEP0.THTZ)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    973:                     Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                   Use of compiler reserved name ^  (_T_0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl    979:                             Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_1)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1033:                             Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1087:                             Name (_T_3, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_3)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1141:                             Name (_T_4, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_4)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1195:                             Name (_T_5, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_5)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1249:                             Name (_T_6, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_6)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1303:                             Name (_T_7, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_7)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1357:                             Name (_T_8, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_8)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1407:                             Name (_T_9, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_9)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1467:                             Name (_T_A, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_A)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1517:                             Name (_T_B, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_B)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1567:                             Name (_T_C, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_C)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1631:                             Name (_T_D, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_D)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1695:                             Name (_T_E, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_E)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1759:                             Name (_T_F, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_F)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1823:                             Name (_T_G, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_G)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1887:                             Name (_T_H, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_H)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   1951:                             Name (_T_I, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_I)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2015:                             Name (_T_J, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_J)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2079:                             Name (_T_K, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_K)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2143:                             Name (_T_L, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_L)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2197:                             Name (_T_M, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_M)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2251:                             Name (_T_N, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_N)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2305:                             Name (_T_O, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_O)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2359:                             Name (_T_P, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_P)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2413:                             Name (_T_Q, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_Q)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2467:                             Name (_T_R, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_R)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2521:                             Name (_T_S, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_S)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2575:                             Name (_T_T, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_T)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2629:                             Name (_T_U, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_U)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2683:                             Name (_T_V, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_V)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2737:                             Name (_T_W, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_W)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2800:             Method (_SUB, 0, NotSerialized)  // _SUB: Subsystem ID
+Warning  3115 -                      Not all control paths return a value ^  (\_SB.PEP0._SUB)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2800:             Method (_SUB, 0, NotSerialized)  // _SUB: Subsystem ID
+Warning  3107 -                       Reserved method must return a value ^  (String required for _SUB)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2812:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PEP0._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2816:                     Name (_T_0, Buffer (0x01)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                   Use of compiler reserved name ^  (_T_0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2821:                     If ((_T_0 == ToUUID ("8d5ca34c-ae83-4a2a-9dd1-a74ffead548b") /* Unknown UUID */))
+Remark   2184 -                                                                                              Unknown UUID string ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2825:                             Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_1)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2831:                                     Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                                   Use of compiler reserved name ^  (_T_2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   2845:                                 Name (SUBI, Package (0x06)
+Remark   2173 -                                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PEP0._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   3079:             Method (GEPT, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PEP0.GEPT)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   3081:                 Name (BUFF, Buffer (0x04){})
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PEP0.GEPT)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   3082:                 CreateByteField (BUFF, Zero, STAT)
+Remark   2089 -                                                           Object is not referenced ^  (Name [STAT] is within a method [GEPT])
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   3095:             Method (INTR, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PEP0.INTR)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   3097:                 Name (RBUF, Package (0x18)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PEP0.INTR)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   3434:             Name (PRRP, Package (0x00){})
+Remark   2095 -                                   Effective AML package length is zero ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   3555:             Method (PREL, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PEP0.PREL)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   3557:                 Name (PREX, Package (0x03)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PEP0.PREL)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   3566:             Method (G0MD, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PEP0.G0MD)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   3568:                 Name (GPCC, Package (0x01)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PEP0.G0MD)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   4192:             Method (G4MD, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PEP0.G4MD)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   4194:                 Name (GPCC, Package (0x01)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PEP0.G4MD)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   4674:             Method (G5MD, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PEP0.G5MD)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   4676:                 Name (GPCC, Package (0x01)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PEP0.G5MD)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   5237:             Name (MPCC, Package (0x00){})
+Remark   2095 -                                   Effective AML package length is zero ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl   5247:             Name (OPCC, Package (0x00){})
+Remark   2095 -                                   Effective AML package length is zero ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12611:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.BAM1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12613:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.BAM1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12634:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.BAM5._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12636:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.BAM5._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12657:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.BAME._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12659:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.BAME._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12680:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.BAMF._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12682:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.BAMF._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12710:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.I2C2._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12712:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.I2C2._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12739:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.I2C4._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12741:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.I2C4._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12767:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.UARD._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12769:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.UARD._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12801:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.UAR8._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12803:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.UAR8._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12840:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.I2C9._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12842:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.I2C9._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12868:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.IC10._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12870:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.IC10._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12896:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.IC11._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12898:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.IC11._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12926:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.IC14._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12928:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.IC14._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12997:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.ADSP._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  12999:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.ADSP._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  13013:                 Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                               ^ Control Method should be made Serialized due to creation of named objects within (\_SB.ADSP.SLM1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  13015:                     Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                                 ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.ADSP.SLM1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  13059:                     Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                                   ^ Control Method should be made Serialized due to creation of named objects within (\_SB.ADSP.ADCM.AUCD._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  13063:                             Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                                         ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.ADSP.ADCM.AUCD._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  13106:                             Name (DBUF, ResourceTemplate ()
+Remark   2173 -                                                                         ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.ADSP.ADCM.AUCD._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  13137:                     Method (CHLD, 0, NotSerialized)
+Remark   2120 -                                                                   ^ Control Method should be made Serialized due to creation of named objects within (\_SB.ADSP.ADCM.AUCD.CHLD)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  13175:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.AMSS._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  13177:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.AMSS._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  13255:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.NSP0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  13257:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.NSP0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  13288:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.WPSS._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  13290:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.WPSS._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  13320:                 Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                               ^ Control Method should be made Serialized due to creation of named objects within (\_SB.WPSS.QWLN._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  13322:                     Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                                 ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.WPSS.QWLN._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14008:             Name (_CLS, 0x0003000000000000)  // _CLS: Class Code
+Error    6105 -                                       Invalid object type for reserved name ^  (_CLS: found Integer, Package required)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14030:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GPU0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14032:                 Name (ABUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14096:             Method (RESI, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GPU0.RESI)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14098:                 Name (AINF, Package (0x10)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0.RESI)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14203:             Method (_ROM, 3, NotSerialized)  // _ROM: Read-Only Memory
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GPU0._ROM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14203:             Method (_ROM, 3, NotSerialized)  // _ROM: Read-Only Memory
+Warning  3101 -                    Reserved method has too many arguments ^  (_ROM requires 2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14205:                 Name (PCFG, Buffer (0x0F4B)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0._ROM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14700:                     Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                   Use of compiler reserved name ^  (_T_0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14744:             Method (PGRT, 2, NotSerialized)
+Remark   2146 -                             Method Argument is never used ^  (Arg0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14744:             Method (PGRT, 2, NotSerialized)
+Remark   2146 -                             Method Argument is never used ^  (Arg1)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14744:             Method (PGRT, 2, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GPU0.PGRT)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14746:                 Name (RBUF, Buffer (One)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0.PGRT)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14753:             Method (PBRT, 2, NotSerialized)
+Remark   2146 -                             Method Argument is never used ^  (Arg0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14753:             Method (PBRT, 2, NotSerialized)
+Remark   2146 -                             Method Argument is never used ^  (Arg1)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14753:             Method (PBRT, 2, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GPU0.PBRT)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14755:                 Name (RBUF, Buffer (One)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0.PBRT)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14762:             Method (ROE1, 3, NotSerialized)
+Remark   2146 -                             Method Argument is never used ^  (Arg2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14762:             Method (ROE1, 3, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GPU0.ROE1)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14764:                 Name (PCFG, Buffer (One)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0.ROE1)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14799:             Method (ROE2, 3, NotSerialized)
+Remark   2146 -                             Method Argument is never used ^  (Arg2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14799:             Method (ROE2, 3, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GPU0.ROE2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14801:                 Name (PCFG, Buffer (One)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0.ROE2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14836:             Method (ROE3, 3, NotSerialized)
+Remark   2146 -                             Method Argument is never used ^  (Arg2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14836:             Method (ROE3, 3, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GPU0.ROE3)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14838:                 Name (PCFG, Buffer (One)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0.ROE3)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14873:             Method (ROE4, 3, NotSerialized)
+Remark   2146 -                             Method Argument is never used ^  (Arg2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14873:             Method (ROE4, 3, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GPU0.ROE4)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14875:                 Name (PCFG, Buffer (One)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0.ROE4)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14910:             Method (ROE5, 3, NotSerialized)
+Remark   2146 -                             Method Argument is never used ^  (Arg2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14910:             Method (ROE5, 3, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GPU0.ROE5)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14912:                 Name (PCFG, Buffer (One)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0.ROE5)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14947:             Method (ROE6, 3, NotSerialized)
+Remark   2146 -                             Method Argument is never used ^  (Arg2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14947:             Method (ROE6, 3, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GPU0.ROE6)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14949:                 Name (PCFG, Buffer (One)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0.ROE6)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14993:             Method (_HRV, 0, NotSerialized)  // _HRV: Hardware Revision
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GPU0._HRV)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14995:                 Name (RESU, Zero)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0._HRV)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14996:                 Name (TIER, Zero)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0._HRV)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14997:                 Name (DREV, Zero)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0._HRV)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14998:                 Name (FAMI, Zero)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0._HRV)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  14999:                 Name (PROD, Zero)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0._HRV)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15028:                 Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                               ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GPU0.AVS0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15030:                     Name (RBUF, Buffer (0x02)
+Remark   2173 -                                                                 ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0.AVS0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15045:             Method (CHDV, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GPU0.CHDV)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15047:                 Name (CHIF, Package (0x02)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GPU0.CHDV)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15094:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.TREE._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15096:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.TREE._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15124:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.SPMI._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15126:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.SPMI._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15136:             Method (CONF, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.SPMI.CONF)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15138:                 Name (XBUF, Buffer (0x1A)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.SPMI.CONF)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15154:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GIO0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15156:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GIO0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15190:             Method (OFNI, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GIO0.OFNI)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15192:                 Name (RBUF, Buffer (0x02)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GIO0.OFNI)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15200:             Method (_REG, 2, NotSerialized)  // _REG: Region Availability
+Warning  3079 -                _REG has no corresponding Operation Region ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15208:             Method (_AEI, 0, NotSerialized)  // _AEI: ACPI Event Interrupts
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GIO0._AEI)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15212:                     Name (RBF0, ResourceTemplate ()
+Remark   2173 -                                                                 ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GIO0._AEI)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15225:                     Name (RBF1, ResourceTemplate ()
+Remark   2173 -                                                                 ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.GIO0._AEI)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15249:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.GIO0._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15249:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Warning  3115 -                      Not all control paths return a value ^  (\_SB.GIO0._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15249:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Warning  3107 -                       Reserved method must return a value ^  (Integer/String/Buffer/Package/Reference required for _DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15255:                         Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                       Use of compiler reserved name ^  (_T_0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15294:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.IPCC._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15296:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.IPCC._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15387:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PCI1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15389:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PCI1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15447:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PCI1._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15447:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Warning  3115 -                      Not all control paths return a value ^  (\_SB.PCI1._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15447:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Warning  3107 -                       Reserved method must return a value ^  (Integer/String/Buffer/Package/Reference required for _DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15453:                         Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                       Use of compiler reserved name ^  (_T_0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15614:                     ToUUID ("6211e2c0-58a3-4af3-90e1-927a4e0c55a4") /* Unknown UUID */, 
+Remark   2184 -                                                                                 Unknown UUID string ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15624:                 Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                               ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PCI1.RP1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15626:                     Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                                 ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PCI1.RP1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15638:                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Remark   2120 -                                                               ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PCI1.RP1._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15638:                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Warning  3115 -                          Not all control paths return a value ^  (\_SB.PCI1.RP1._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15638:                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Warning  3107 -                           Reserved method must return a value ^  (Integer/String/Buffer/Package/Reference required for _DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15644:                             Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15731:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.QPPX._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15746:             Method (_QPG, 0, Serialized)
+Warning  3133 -                                     Unknown reserved name ^  (_QPG)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15809:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.RFS0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  15811:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.RFS0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17463:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.QGP0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17490:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.QGP1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17588:                 MGPE = One
+Error    6088 -              Object is not accessible from this scope ^  (MGPE)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17593:                 MGPE = Zero
+Error    6088 -              Object is not accessible from this scope ^  (MGPE)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17612:                 Connection (\_SB.NFCD.NFCF), 
+Error    6084 -                                                       Object does not exist ^  (\_SB.NFCD.NFCF)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17626:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Warning  3115 -                      Not all control paths return a value ^  (\_SB._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17626:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Warning  3107 -                       Reserved method must return a value ^  (Integer/String/Buffer/Package/Reference required for _DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17629:                 If ((Arg0 == ToUUID ("a2e7f6c4-9638-4485-9f12-6b4e20b60d63") /* Unknown UUID */))
+Remark   2184 -                                                                                          Unknown UUID string ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17636:                             \_SB.NFCD.POOF ()
+Error    6084 -                                                       Object does not exist ^  (\_SB.NFCD.POOF)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17650:                             \_SB.NFCD.POON ()
+Error    6084 -                                                       Object does not exist ^  (\_SB.NFCD.POON)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17656:                             \_SB.NFCD.POOF ()
+Error    6084 -                                                       Object does not exist ^  (\_SB.NFCD.POOF)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17666:                             \_SB.NFCD.FWON ()
+Error    6084 -                                                       Object does not exist ^  (\_SB.NFCD.FWON)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17668:                             \_SB.NFCD.POOF ()
+Error    6084 -                                                       Object does not exist ^  (\_SB.NFCD.POOF)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17670:                             \_SB.NFCD.POON ()
+Error    6084 -                                                       Object does not exist ^  (\_SB.NFCD.POON)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17676:                             \_SB.NFCD.FWOF ()
+Error    6084 -                                                       Object does not exist ^  (\_SB.NFCD.FWOF)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17678:                             \_SB.NFCD.POOF ()
+Error    6084 -                                                       Object does not exist ^  (\_SB.NFCD.POOF)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17680:                             \_SB.NFCD.POON ()
+Error    6084 -                                                       Object does not exist ^  (\_SB.NFCD.POON)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17967:             Method (HWNL, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.HWN0.HWNL)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  17969:                 Name (CFG0, Package (0x10)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.HWN0.HWNL)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18010:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.CAMP._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18012:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.CAMP._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18361:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.FLSH._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18363:                 Name (RBUF, Buffer (0x02)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.FLSH._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18385:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.MPCS._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18387:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.MPCS._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18449:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.JPGE._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18451:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.JPGE._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18490:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.VFE0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18492:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.VFE0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18654:             Name (_HID, "SM5714F")  // _HID: Hardware ID
+Error    6136 -                                 Non-hex letters must be upper case ^  (5714F)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18660:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.BAT._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18662:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.BAT._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18692:             Name (_HID, "SM5714P")  // _HID: Hardware ID
+Error    6136 -                                 Non-hex letters must be upper case ^  (5714P)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18699:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PM3P._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18701:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PM3P._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18741:             Name (_HID, "SECHWN")  // _HID: Hardware ID
+Error    6033 -                     _HID string must be exactly 7 or 8 characters ^  (SECHWN)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18744:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.HWNS._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18746:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.HWNS._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18761:             Name (_HID, "646YD01")  // _HID: Hardware ID
+Error    6136 -                                 Non-hex letters must be upper case ^  (646YD01)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18763:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.OEM._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18765:                 Name (RBUF, Buffer (0x02)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.OEM._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18777:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PRT0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18779:                 Name (RBUF, Buffer (0x02)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PRT0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18791:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PRT1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18793:                 Name (RBUF, Buffer (0x02)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PRT1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18805:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.PRT2._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18807:                 Name (RBUF, Buffer (0x02)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.PRT2._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18935:                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Remark   2120 -                                                               ^ Control Method should be made Serialized due to creation of named objects within (\_SB.URS0.USB0._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18939:                         Name (_T_0, Buffer (0x01)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                       Use of compiler reserved name ^  (_T_0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18948:                                 Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                               Use of compiler reserved name ^  (_T_1)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18954:                                         Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                                       Use of compiler reserved name ^  (_T_2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18962:                                             Break
+Warning  3134 -                                                           Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18970:                                             Break
+Warning  3134 -                                                           Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18980:                                     Break
+Warning  3134 -                                                   Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18985:                                     Break
+Warning  3134 -                                                   Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18990:                                     Break
+Warning  3134 -                                                   Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  18995:                                     Break
+Warning  3134 -                                                   Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19003:                                     Break
+Warning  3134 -                                                   Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19015:                             Break
+Warning  3134 -                                           Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19022:                 Method (PHYC, 0, NotSerialized)
+Remark   2120 -                                                               ^ Control Method should be made Serialized due to creation of named objects within (\_SB.URS0.USB0.PHYC)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19024:                     Name (CFG0, Package (0x00){})
+Remark   2095 -                                           Effective AML package length is zero ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19024:                     Name (CFG0, Package (0x00){})
+Remark   2173 -                                                                 ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.URS0.USB0.PHYC)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19092:                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Remark   2120 -                                                               ^ Control Method should be made Serialized due to creation of named objects within (\_SB.URS0.UFN0._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19096:                         Name (_T_0, Buffer (0x01)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                       Use of compiler reserved name ^  (_T_0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19101:                         If ((_T_0 == ToUUID ("fe56cfeb-49d5-4378-a8a2-2978dbe54ad2") /* Unknown UUID */))
+Remark   2184 -                                                                                                  Unknown UUID string ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19105:                                 Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                               Use of compiler reserved name ^  (_T_1)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19111:                                         Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                                       Use of compiler reserved name ^  (_T_2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19119:                                             Break
+Warning  3134 -                                                           Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19127:                                             Break
+Warning  3134 -                                                           Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19137:                                     Break
+Warning  3134 -                                                   Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19142:                                     Break
+Warning  3134 -                                                   Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19150:                                     Break
+Warning  3134 -                                                   Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19156:                         ElseIf ((_T_0 == ToUUID ("18de299f-9476-4fc9-b43b-8aeb713ed751") /* Unknown UUID */))
+Remark   2184 -                                                                                                      Unknown UUID string ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19160:                                 Name (_T_3, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                               Use of compiler reserved name ^  (_T_3)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19166:                                         Name (_T_4, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                                       Use of compiler reserved name ^  (_T_4)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19174:                                             Break
+Warning  3134 -                                                           Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19182:                                             Break
+Warning  3134 -                                                           Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19192:                                     Break
+Warning  3134 -                                                   Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19197:                                     Break
+Warning  3134 -                                                   Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19205:                                     Break
+Warning  3134 -                                                   Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19217:                             Break
+Warning  3134 -                                           Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19224:                 Method (PHYC, 0, NotSerialized)
+Remark   2120 -                                                               ^ Control Method should be made Serialized due to creation of named objects within (\_SB.URS0.UFN0.PHYC)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19226:                     Name (CFG0, Package (0x00){})
+Remark   2095 -                                           Effective AML package length is zero ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19226:                     Name (CFG0, Package (0x00){})
+Remark   2173 -                                                                 ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.URS0.UFN0.PHYC)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19232:         Device (USB1)
+Warning  3073 -                                        Multiple types ^  (Device object requires either a _HID or _ADR, but not both)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19321:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.USB1._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19325:                     Name (_T_0, Buffer (0x01)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                   Use of compiler reserved name ^  (_T_0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19334:                             Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_1)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19340:                                     Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                                   Use of compiler reserved name ^  (_T_2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19348:                                         Break
+Warning  3134 -                                                       Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19356:                                         Break
+Warning  3134 -                                                       Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19366:                                 Break
+Warning  3134 -                                               Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19371:                                 Break
+Warning  3134 -                                               Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19376:                                 Break
+Warning  3134 -                                               Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19381:                                 Break
+Warning  3134 -                                               Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19389:                                 Break
+Warning  3134 -                                               Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19401:                         Break
+Warning  3134 -                                       Statement is unreachable ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19408:             Method (PHYC, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.USB1.PHYC)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19410:                 Name (CFG0, Package (0x00){})
+Remark   2095 -                                       Effective AML package length is zero ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19410:                 Name (CFG0, Package (0x00){})
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.USB1.PHYC)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19422:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.UCS0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19424:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.UCS0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19866:                 _SB.MBCL
+Error    6161 -      One or more objects within the Pathname do not exist ^  (_SB.MBCL)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19882:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.TZ15._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19884:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.TZ15._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19927:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.TZ15._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19931:                     Name (_T_0, Buffer (0x01)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                   Use of compiler reserved name ^  (_T_0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19936:                     If ((_T_0 == ToUUID ("c2d42c4b-e25e-471c-8a4e-290aac3a29a3") /* Unknown UUID */))
+Remark   2184 -                                                                                              Unknown UUID string ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19940:                             Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_1)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  19946:                                     Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                                   Use of compiler reserved name ^  (_T_2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  20004:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.TZ16._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  20006:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.TZ16._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  20049:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.TZ16._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  20053:                     Name (_T_0, Buffer (0x01)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                   Use of compiler reserved name ^  (_T_0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  20058:                     If ((_T_0 == ToUUID ("c2d42c4b-e25e-471c-8a4e-290aac3a29a3") /* Unknown UUID */))
+Remark   2184 -                                                                                              Unknown UUID string ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  20062:                             Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_1)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  20068:                                     Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                                   Use of compiler reserved name ^  (_T_2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  20126:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.TZ18._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  20128:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.TZ18._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  20172:             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.TZ18._DSM)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  20176:                     Name (_T_0, Buffer (0x01)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                   Use of compiler reserved name ^  (_T_0)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  20181:                     If ((_T_0 == ToUUID ("c2d42c4b-e25e-471c-8a4e-290aac3a29a3") /* Unknown UUID */))
+Remark   2184 -                                                                                              Unknown UUID string ^ 
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  20185:                             Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                           Use of compiler reserved name ^  (_T_1)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  20191:                                     Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+Remark   2011 -                                                   Use of compiler reserved name ^  (_T_2)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21016:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.HWN1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21018:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.HWN1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21030:             Method (HAPI, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.HWN1.HAPI)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21032:                 Name (CFG0, Package (0x03)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.HWN1.HAPI)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21041:             Method (HAPC, 0, NotSerialized)
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.HWN1.HAPC)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21043:                 Name (CFG0, Package (0x16)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.HWN1.HAPC)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21082:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.TSC1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21084:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.TSC1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21151:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.BTNS._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21153:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.BTNS._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21276:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.FMRT._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21278:                 Name (RBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.FMRT._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21312:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.BTH0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21314:                 Name (PBUF, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.BTH0._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21347:             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+Remark   2120 -                                                           ^ Control Method should be made Serialized due to creation of named objects within (\_SB.ADC1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21349:                 Name (INTB, ResourceTemplate ()
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.ADC1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21370:                 Name (NAM, Buffer (0x0A)
+Remark   2173 -                                                            ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.ADC1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21374:                 Name (VUSR, Buffer (0x0C)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.ADC1._CRS)
+
+/workspace/.cloud-setup/acpi-audit/DSDT.dsl  21379:                 Name (VBTM, Buffer (0x0C)
+Remark   2173 -                                                             ^ Creation of named objects within a method is highly inefficient, use globals or method local variables instead (\_SB.ADC1._CRS)
+
+
+Intel ACPI Component Architecture
+ASL+ Optimizing Compiler/Disassembler version 20250404
+Copyright (c) 2000 - 2025 Intel Corporation
+
+ASL Input:     /workspace/.cloud-setup/acpi-audit/DSDT.dsl -  803178 bytes   4295 keywords      0 source lines
+
+Compilation failed. 19 Errors, 44 Warnings, 313 Remarks
+No AML files were generated due to compiler error(s)

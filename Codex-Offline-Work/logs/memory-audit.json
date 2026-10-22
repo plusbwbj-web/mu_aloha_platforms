@@ -1,0 +1,2146 @@
+{
+  "scope": "checked-in data only; no live RAM or hardware validation",
+  "firmware_region": {
+    "name": "SM7325 UEFI FD",
+    "base": 2680426496,
+    "length": 2879488,
+    "end_exclusive": 2683305984
+  },
+  "dtbs": [
+    {
+      "path": "Platforms/KodiakPkg/Device/samsung-gts7fewifi/DeviceTreeBlob/Android/android-gts7fewifi.dtb",
+      "size": 652519,
+      "sha256": "5b2978ee329b9292fd336d479c3bafdeadc4c4190965d80932c9ee655c8ef7f1",
+      "total_size": 652519,
+      "version": 17,
+      "nop_tags": 131,
+      "model": "Samsung GTS7FEWIFI PROJECT (board-id,02)",
+      "compatible": [
+        "qcom,yupik-idp",
+        "qcom,yupik",
+        "qcom,idp"
+      ],
+      "memory": [
+        {
+          "name": "/memory",
+          "base": 2147483648,
+          "length": 999292928,
+          "end_exclusive": 3146776576
+        },
+        {
+          "name": "/memory",
+          "base": 4294967296,
+          "length": 2147483648,
+          "end_exclusive": 6442450944
+        },
+        {
+          "name": "/memory",
+          "base": 3221225472,
+          "length": 1073741824,
+          "end_exclusive": 4294967296
+        },
+        {
+          "name": "/memory",
+          "base": 3153068032,
+          "length": 31457280,
+          "end_exclusive": 3184525312
+        }
+      ],
+      "memory_bytes": 4251975680,
+      "fixed_reserved": [
+        {
+          "name": "/reserved-memory/uh_guest_region",
+          "base": 2956984320,
+          "length": 14680064,
+          "end_exclusive": 2971664384
+        },
+        {
+          "name": "/reserved-memory/uh_heap_region",
+          "base": 2954887168,
+          "length": 2097152,
+          "end_exclusive": 2956984320
+        },
+        {
+          "name": "/reserved-memory/hyp@80000000",
+          "base": 2147483648,
+          "length": 6291456,
+          "end_exclusive": 2153775104
+        },
+        {
+          "name": "/reserved-memory/xbl_aop_mem@80700000",
+          "base": 2154823680,
+          "length": 1441792,
+          "end_exclusive": 2156265472
+        },
+        {
+          "name": "/reserved-memory/cmd_db@80860000",
+          "base": 2156265472,
+          "length": 131072,
+          "end_exclusive": 2156396544
+        },
+        {
+          "name": "/reserved-memory/reserved_xbl_uefi@80880000",
+          "base": 2156396544,
+          "length": 81920,
+          "end_exclusive": 2156478464
+        },
+        {
+          "name": "/reserved-memory/secdata_apss@808ff000",
+          "base": 2156916736,
+          "length": 4096,
+          "end_exclusive": 2156920832
+        },
+        {
+          "name": "/reserved-memory/smem@80900000",
+          "base": 2156920832,
+          "length": 2097152,
+          "end_exclusive": 2159017984
+        },
+        {
+          "name": "/reserved-memory/fw@80b00000",
+          "base": 2159017984,
+          "length": 1048576,
+          "end_exclusive": 2160066560
+        },
+        {
+          "name": "/reserved-memory/wlan_fw@80c00000",
+          "base": 2160066560,
+          "length": 12582912,
+          "end_exclusive": 2172649472
+        },
+        {
+          "name": "/reserved-memory/cdsp_secure_heap@81800000",
+          "base": 2172649472,
+          "length": 31457280,
+          "end_exclusive": 2204106752
+        },
+        {
+          "name": "/reserved-memory/adsp@86700000",
+          "base": 2221932544,
+          "length": 75497472,
+          "end_exclusive": 2297430016
+        },
+        {
+          "name": "/reserved-memory/cdsp@88f00000",
+          "base": 2297430016,
+          "length": 31457280,
+          "end_exclusive": 2328887296
+        },
+        {
+          "name": "/reserved-memory/video@8ad00000",
+          "base": 2328887296,
+          "length": 5242880,
+          "end_exclusive": 2334130176
+        },
+        {
+          "name": "/reserved-memory/cvp@8b200000",
+          "base": 2334130176,
+          "length": 5242880,
+          "end_exclusive": 2339373056
+        },
+        {
+          "name": "/reserved-memory/ipa_fw@8b700000",
+          "base": 2339373056,
+          "length": 65536,
+          "end_exclusive": 2339438592
+        },
+        {
+          "name": "/reserved-memory/ipa_gsi@8b710000",
+          "base": 2339438592,
+          "length": 40960,
+          "end_exclusive": 2339479552
+        },
+        {
+          "name": "/reserved-memory/gpu_micro_code@8b71a000",
+          "base": 2339479552,
+          "length": 8192,
+          "end_exclusive": 2339487744
+        },
+        {
+          "name": "/reserved-memory/mpss@8b800000",
+          "base": 2340421632,
+          "length": 257949696,
+          "end_exclusive": 2598371328
+        },
+        {
+          "name": "/reserved-memory/wlan@9ae00000",
+          "base": 2598371328,
+          "length": 26214400,
+          "end_exclusive": 2624585728
+        },
+        {
+          "name": "/reserved-memory/removed_region@c0000000",
+          "base": 3221225472,
+          "length": 99614720,
+          "end_exclusive": 3320840192
+        },
+        {
+          "name": "/reserved-memory/pil_trustedvm_region@d0800000",
+          "base": 3498049536,
+          "length": 124743680,
+          "end_exclusive": 3622793216
+        },
+        {
+          "name": "/reserved-memory/qrtr-shmem",
+          "base": 3622793216,
+          "length": 36864,
+          "end_exclusive": 3622830080
+        },
+        {
+          "name": "/reserved-memory/neuron_block@0",
+          "base": 3622830080,
+          "length": 524288,
+          "end_exclusive": 3623354368
+        },
+        {
+          "name": "/reserved-memory/neuron_block@1",
+          "base": 3623354368,
+          "length": 524288,
+          "end_exclusive": 3623878656
+        },
+        {
+          "name": "/reserved-memory/splash_region",
+          "base": 3774873600,
+          "length": 36700160,
+          "end_exclusive": 3811573760
+        },
+        {
+          "name": "/reserved-memory/dfps_data_memory",
+          "base": 3811573760,
+          "length": 1048576,
+          "end_exclusive": 3812622336
+        },
+        {
+          "name": "/reserved-memory/sec_debug_region@F0000000",
+          "base": 4026531840,
+          "length": 9437184,
+          "end_exclusive": 4035969024
+        },
+        {
+          "name": "/reserved-memory/ss_plog@1B0900000",
+          "base": 4035969024,
+          "length": 2097152,
+          "end_exclusive": 4038066176
+        },
+        {
+          "name": "/reserved-memory/ramoops@F0B00000",
+          "base": 4038066176,
+          "length": 1048576,
+          "end_exclusive": 4039114752
+        },
+        {
+          "name": "/reserved-memory/kaslr_region@A0001000",
+          "base": 2684358656,
+          "length": 4096,
+          "end_exclusive": 2684362752
+        },
+        {
+          "name": "/reserved-memory/tima_region@B0100000",
+          "base": 2953838592,
+          "length": 1048576,
+          "end_exclusive": 2954887168
+        },
+        {
+          "name": "/reserved-memory/modem_shared_mem_region@d0000000",
+          "base": 3489660928,
+          "length": 0,
+          "end_exclusive": 3489660928
+        },
+        {
+          "name": "/reserved-memory/hdm_region@9FB00000",
+          "base": 2679111680,
+          "length": 4096,
+          "end_exclusive": 2679115776
+        },
+        {
+          "name": "/reserved-memory/dummy_mem",
+          "base": 2624585728,
+          "length": 1048576,
+          "end_exclusive": 2625634304
+        }
+      ],
+      "dynamic_reserved": [
+        {
+          "name": "/reserved-memory/adsp_region",
+          "size_cells": [
+            0,
+            12582912
+          ]
+        },
+        {
+          "name": "/reserved-memory/user_contig_region",
+          "size_cells": [
+            0,
+            16777216
+          ]
+        },
+        {
+          "name": "/reserved-memory/qseecom_region",
+          "size_cells": [
+            0,
+            29360128
+          ]
+        },
+        {
+          "name": "/reserved-memory/qseecom_ta_region",
+          "size_cells": [
+            0,
+            16777216
+          ]
+        },
+        {
+          "name": "/reserved-memory/secure_display_region",
+          "size_cells": [
+            0,
+            146800640
+          ]
+        },
+        {
+          "name": "/reserved-memory/linux,cma",
+          "size_cells": [
+            0,
+            33554432
+          ]
+        },
+        {
+          "name": "/reserved-memory/mem_dump_region",
+          "size_cells": [
+            0,
+            46137344
+          ]
+        },
+        {
+          "name": "/reserved-memory/audio_cma_region",
+          "size_cells": [
+            0,
+            29360128
+          ]
+        },
+        {
+          "name": "/reserved-memory/memshare_region",
+          "size_cells": [
+            0,
+            8388608
+          ]
+        },
+        {
+          "name": "/reserved-memory/cnss_wlan_region",
+          "size_cells": [
+            0,
+            20971520
+          ]
+        },
+        {
+          "name": "/reserved-memory/sec_debug_rdx_bootdev@0",
+          "size_cells": [
+            0,
+            0
+          ]
+        }
+      ],
+      "firmware_fixed_reserved_overlaps": []
+    }
+  ],
+  "empty_dtb_placeholders_unvalidated": [
+    "Platforms/KodiakPkg/Device/samsung-gts7fewifi/DeviceTreeBlob/Linux/linux-gts7fewifi.dtb"
+  ],
+  "static_maps": [
+    {
+      "serial_output": false,
+      "regions": [
+        {
+          "name": "HYP",
+          "base": 2147483648,
+          "length": 6291456,
+          "end_exclusive": 2153775104,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "BOOT",
+          "base": 2153775104,
+          "length": 2097152,
+          "end_exclusive": 2155872256,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "AOP CMD",
+          "base": 2155872256,
+          "length": 393216,
+          "end_exclusive": 2156265472,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "AOP CMD DB",
+          "base": 2156265472,
+          "length": 131072,
+          "end_exclusive": 2156396544,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "Reserved",
+          "base": 2156396544,
+          "length": 16384,
+          "end_exclusive": 2156412928,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "XBL Log Buffer",
+          "base": 2156412928,
+          "length": 65536,
+          "end_exclusive": 2156478464,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "GPU PRR",
+          "base": 2156478464,
+          "length": 4096,
+          "end_exclusive": 2156482560,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "HLOS1",
+          "base": 2156482560,
+          "length": 61440,
+          "end_exclusive": 2156544000,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "TPMControl",
+          "base": 2156544000,
+          "length": 65536,
+          "end_exclusive": 2156609536,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "HLOS2",
+          "base": 2156609536,
+          "length": 307200,
+          "end_exclusive": 2156916736,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "APSS",
+          "base": 2156916736,
+          "length": 4096,
+          "end_exclusive": 2156920832,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "SMEM",
+          "base": 2156920832,
+          "length": 2097152,
+          "end_exclusive": 2159017984,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "CPUCP",
+          "base": 2159017984,
+          "length": 1048576,
+          "end_exclusive": 2160066560,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "WLAN FW",
+          "base": 2160066560,
+          "length": 12582912,
+          "end_exclusive": 2172649472,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "LPASS_ML",
+          "base": 2172649472,
+          "length": 15728640,
+          "end_exclusive": 2188378112,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "CDSP Secure Heap",
+          "base": 2188378112,
+          "length": 65536,
+          "end_exclusive": 2188443648,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "HLOS3",
+          "base": 2188443648,
+          "length": 15663104,
+          "end_exclusive": 2204106752,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "Sched Heap",
+          "base": 2204106752,
+          "length": 4194304,
+          "end_exclusive": 2208301056,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "BsData",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "RAM Partition",
+          "base": 2208301056,
+          "length": 13631488,
+          "end_exclusive": 2221932544,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "PIL Reserved",
+          "base": 2221932544,
+          "length": 424673280,
+          "end_exclusive": 2646605824,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "TGCM",
+          "base": 2646605824,
+          "length": 29360128,
+          "end_exclusive": 2675965952,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "FV Region",
+          "base": 2675965952,
+          "length": 2097152,
+          "end_exclusive": 2678063104,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "BsData",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "ABOOT FV",
+          "base": 2678063104,
+          "length": 2097152,
+          "end_exclusive": 2680160256,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "UEFI FD",
+          "base": 2680160256,
+          "length": 3145728,
+          "end_exclusive": 2683305984,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "BsData",
+          "attributes": "WRITE_BACK"
+        },
+        {
+          "name": "SEC Heap",
+          "base": 2683305984,
+          "length": 573440,
+          "end_exclusive": 2683879424,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "BsData",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "CPU Vectors",
+          "base": 2683879424,
+          "length": 4096,
+          "end_exclusive": 2683883520,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "BsData",
+          "attributes": "WRITE_BACK"
+        },
+        {
+          "name": "MMU PageTables",
+          "base": 2683883520,
+          "length": 12288,
+          "end_exclusive": 2683895808,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "BsData",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "UEFI Stack",
+          "base": 2683895808,
+          "length": 262144,
+          "end_exclusive": 2684157952,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "BsData",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "RAM Partition",
+          "base": 2684157952,
+          "length": 159744,
+          "end_exclusive": 2684317696,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "Log Buffer",
+          "base": 2684317696,
+          "length": 32768,
+          "end_exclusive": 2684350464,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "RtData",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "Info Blk",
+          "base": 2684350464,
+          "length": 4096,
+          "end_exclusive": 2684354560,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "RtData",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "USB UCSI Temp",
+          "base": 2684354560,
+          "length": 8192,
+          "end_exclusive": 2684362752,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "RAM Partition",
+          "base": 2684362752,
+          "length": 8380416,
+          "end_exclusive": 2692743168,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "MPSS_EFS",
+          "base": 2692743168,
+          "length": 3145728,
+          "end_exclusive": 2695888896,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "DXE Heap",
+          "base": 2695888896,
+          "length": 256901120,
+          "end_exclusive": 2952790016,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "HYP RESERVED",
+          "base": 2952790016,
+          "length": 268435456,
+          "end_exclusive": 3221225472,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "Reserv",
+          "base": 3221225472,
+          "length": 16777216,
+          "end_exclusive": 3238002688,
+          "hob": "NoHob",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "TAGS",
+          "base": 3222274048,
+          "length": 18874368,
+          "end_exclusive": 3241148416,
+          "hob": "NoHob",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "QTEE",
+          "base": 3241148416,
+          "length": 5242880,
+          "end_exclusive": 3246391296,
+          "hob": "NoHob",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "TZApps Reserved",
+          "base": 3246391296,
+          "length": 74448896,
+          "end_exclusive": 3320840192,
+          "hob": "NoHob",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "RAM Partition",
+          "base": 3320840192,
+          "length": 6291456,
+          "end_exclusive": 3327131648,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "ADSP RPC",
+          "base": 3327131648,
+          "length": 8388608,
+          "end_exclusive": 3335520256,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "RAM Partition",
+          "base": 3335520256,
+          "length": 422576128,
+          "end_exclusive": 3758096384,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "DBI Dump",
+          "base": 3758096384,
+          "length": 15728640,
+          "end_exclusive": 3773825024,
+          "hob": "NoHob",
+          "resource": "MMAP_IO",
+          "memory_type": "Conv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "RAM Partition",
+          "base": 3773825024,
+          "length": 1048576,
+          "end_exclusive": 3774873600,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "Display Reserved",
+          "base": 3774873600,
+          "length": 37748736,
+          "end_exclusive": 3812622336,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "WRITE_THROUGH_XN"
+        },
+        {
+          "name": "APSS Ext",
+          "base": 3812622336,
+          "length": 24117248,
+          "end_exclusive": 3836739584,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "RAM Partition",
+          "base": 3836739584,
+          "length": 2605711360,
+          "end_exclusive": 6442450944,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "IMEM Base",
+          "base": 342360064,
+          "length": 176128,
+          "end_exclusive": 342536192,
+          "hob": "NoHob",
+          "resource": "MMAP_IO",
+          "memory_type": "Conv",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "IMEM Cookie Base",
+          "base": 342532096,
+          "length": 4096,
+          "end_exclusive": 342536192,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "Conv",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "IPC_ROUTER_TOP",
+          "base": 4194304,
+          "length": 1048576,
+          "end_exclusive": 5242880,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "SECURITY CONTROL",
+          "base": 7864320,
+          "length": 65536,
+          "end_exclusive": 7929856,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "QUP",
+          "base": 9437184,
+          "length": 2097152,
+          "end_exclusive": 11534336,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "PRNG_CFG_PRNG",
+          "base": 17629184,
+          "length": 65536,
+          "end_exclusive": 17694720,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "CRYPTO0 CRYPTO",
+          "base": 31195136,
+          "length": 262144,
+          "end_exclusive": 31457280,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "TCSR_TCSR_REGS",
+          "base": 33292288,
+          "length": 196608,
+          "end_exclusive": 33488896,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "PERIPH_SS_SDC1",
+          "base": 8126464,
+          "length": 1048576,
+          "end_exclusive": 9175040,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "PERIPH_SS",
+          "base": 142606336,
+          "length": 2097152,
+          "end_exclusive": 144703488,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "USB",
+          "base": 174063616,
+          "length": 67108864,
+          "end_exclusive": 241172480,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "AOSS",
+          "base": 184549376,
+          "length": 67108864,
+          "end_exclusive": 251658240,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "TLMM",
+          "base": 252706816,
+          "length": 3145728,
+          "end_exclusive": 255852544,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "SMMU",
+          "base": 352321536,
+          "length": 2097152,
+          "end_exclusive": 354418688,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "APSS_HM",
+          "base": 394264576,
+          "length": 14680064,
+          "end_exclusive": 408944640,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "PCIE_1_AXI",
+          "base": 1073741824,
+          "length": 33554432,
+          "end_exclusive": 1107296256,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "PCIE_1_AHB",
+          "base": 29392896,
+          "length": 32768,
+          "end_exclusive": 29425664,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        }
+      ],
+      "overlapping_pairs": [
+        {
+          "a": {
+            "name": "Reserv",
+            "base": 3221225472,
+            "length": 16777216,
+            "end_exclusive": 3238002688,
+            "hob": "NoHob",
+            "resource": "SYS_MEM",
+            "memory_type": "Reserv",
+            "attributes": "NS_DEVICE"
+          },
+          "b": {
+            "name": "TAGS",
+            "base": 3222274048,
+            "length": 18874368,
+            "end_exclusive": 3241148416,
+            "hob": "NoHob",
+            "resource": "SYS_MEM",
+            "memory_type": "Reserv",
+            "attributes": "NS_DEVICE"
+          }
+        },
+        {
+          "a": {
+            "name": "IMEM Base",
+            "base": 342360064,
+            "length": 176128,
+            "end_exclusive": 342536192,
+            "hob": "NoHob",
+            "resource": "MMAP_IO",
+            "memory_type": "Conv",
+            "attributes": "NS_DEVICE"
+          },
+          "b": {
+            "name": "IMEM Cookie Base",
+            "base": 342532096,
+            "length": 4096,
+            "end_exclusive": 342536192,
+            "hob": "AddDev",
+            "resource": "MMAP_IO",
+            "memory_type": "Conv",
+            "attributes": "NS_DEVICE"
+          }
+        },
+        {
+          "a": {
+            "name": "USB",
+            "base": 174063616,
+            "length": 67108864,
+            "end_exclusive": 241172480,
+            "hob": "AddDev",
+            "resource": "MMAP_IO",
+            "memory_type": "MmIO",
+            "attributes": "NS_DEVICE"
+          },
+          "b": {
+            "name": "AOSS",
+            "base": 184549376,
+            "length": 67108864,
+            "end_exclusive": 251658240,
+            "hob": "AddDev",
+            "resource": "MMAP_IO",
+            "memory_type": "MmIO",
+            "attributes": "NS_DEVICE"
+          }
+        }
+      ],
+      "conventional_bytes": 3354853376
+    },
+    {
+      "serial_output": true,
+      "regions": [
+        {
+          "name": "HYP",
+          "base": 2147483648,
+          "length": 6291456,
+          "end_exclusive": 2153775104,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "BOOT",
+          "base": 2153775104,
+          "length": 2097152,
+          "end_exclusive": 2155872256,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "AOP CMD",
+          "base": 2155872256,
+          "length": 393216,
+          "end_exclusive": 2156265472,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "AOP CMD DB",
+          "base": 2156265472,
+          "length": 131072,
+          "end_exclusive": 2156396544,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "Reserved",
+          "base": 2156396544,
+          "length": 16384,
+          "end_exclusive": 2156412928,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "XBL Log Buffer",
+          "base": 2156412928,
+          "length": 65536,
+          "end_exclusive": 2156478464,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "GPU PRR",
+          "base": 2156478464,
+          "length": 4096,
+          "end_exclusive": 2156482560,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "HLOS1",
+          "base": 2156482560,
+          "length": 61440,
+          "end_exclusive": 2156544000,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "TPMControl",
+          "base": 2156544000,
+          "length": 65536,
+          "end_exclusive": 2156609536,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "HLOS2",
+          "base": 2156609536,
+          "length": 307200,
+          "end_exclusive": 2156916736,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "APSS",
+          "base": 2156916736,
+          "length": 4096,
+          "end_exclusive": 2156920832,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "SMEM",
+          "base": 2156920832,
+          "length": 2097152,
+          "end_exclusive": 2159017984,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "CPUCP",
+          "base": 2159017984,
+          "length": 1048576,
+          "end_exclusive": 2160066560,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "WLAN FW",
+          "base": 2160066560,
+          "length": 12582912,
+          "end_exclusive": 2172649472,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "LPASS_ML",
+          "base": 2172649472,
+          "length": 15728640,
+          "end_exclusive": 2188378112,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "CDSP Secure Heap",
+          "base": 2188378112,
+          "length": 65536,
+          "end_exclusive": 2188443648,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "HLOS3",
+          "base": 2188443648,
+          "length": 15663104,
+          "end_exclusive": 2204106752,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "Sched Heap",
+          "base": 2204106752,
+          "length": 4194304,
+          "end_exclusive": 2208301056,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "BsData",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "RAM Partition",
+          "base": 2208301056,
+          "length": 13631488,
+          "end_exclusive": 2221932544,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "PIL Reserved",
+          "base": 2221932544,
+          "length": 424673280,
+          "end_exclusive": 2646605824,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "TGCM",
+          "base": 2646605824,
+          "length": 29360128,
+          "end_exclusive": 2675965952,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "FV Region",
+          "base": 2675965952,
+          "length": 2097152,
+          "end_exclusive": 2678063104,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "BsData",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "ABOOT FV",
+          "base": 2678063104,
+          "length": 2097152,
+          "end_exclusive": 2680160256,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "UEFI FD",
+          "base": 2680160256,
+          "length": 3145728,
+          "end_exclusive": 2683305984,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "BsData",
+          "attributes": "WRITE_BACK"
+        },
+        {
+          "name": "SEC Heap",
+          "base": 2683305984,
+          "length": 573440,
+          "end_exclusive": 2683879424,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "BsData",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "CPU Vectors",
+          "base": 2683879424,
+          "length": 4096,
+          "end_exclusive": 2683883520,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "BsData",
+          "attributes": "WRITE_BACK"
+        },
+        {
+          "name": "MMU PageTables",
+          "base": 2683883520,
+          "length": 12288,
+          "end_exclusive": 2683895808,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "BsData",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "UEFI Stack",
+          "base": 2683895808,
+          "length": 262144,
+          "end_exclusive": 2684157952,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "BsData",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "RAM Partition",
+          "base": 2684157952,
+          "length": 159744,
+          "end_exclusive": 2684317696,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "Log Buffer",
+          "base": 2684317696,
+          "length": 32768,
+          "end_exclusive": 2684350464,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "RtData",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "Info Blk",
+          "base": 2684350464,
+          "length": 4096,
+          "end_exclusive": 2684354560,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "RtData",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "USB UCSI Temp",
+          "base": 2684354560,
+          "length": 8192,
+          "end_exclusive": 2684362752,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "RAM Partition",
+          "base": 2684362752,
+          "length": 8380416,
+          "end_exclusive": 2692743168,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "MPSS_EFS",
+          "base": 2692743168,
+          "length": 3145728,
+          "end_exclusive": 2695888896,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "DXE Heap",
+          "base": 2695888896,
+          "length": 256901120,
+          "end_exclusive": 2952790016,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "HYP RESERVED",
+          "base": 2952790016,
+          "length": 268435456,
+          "end_exclusive": 3221225472,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "Reserv",
+          "base": 3221225472,
+          "length": 16777216,
+          "end_exclusive": 3238002688,
+          "hob": "NoHob",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "TAGS",
+          "base": 3222274048,
+          "length": 18874368,
+          "end_exclusive": 3241148416,
+          "hob": "NoHob",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "QTEE",
+          "base": 3241148416,
+          "length": 5242880,
+          "end_exclusive": 3246391296,
+          "hob": "NoHob",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "TZApps Reserved",
+          "base": 3246391296,
+          "length": 74448896,
+          "end_exclusive": 3320840192,
+          "hob": "NoHob",
+          "resource": "SYS_MEM",
+          "memory_type": "Reserv",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "RAM Partition",
+          "base": 3320840192,
+          "length": 6291456,
+          "end_exclusive": 3327131648,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "ADSP RPC",
+          "base": 3327131648,
+          "length": 8388608,
+          "end_exclusive": 3335520256,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "RAM Partition",
+          "base": 3335520256,
+          "length": 422576128,
+          "end_exclusive": 3758096384,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "DBI Dump",
+          "base": 3758096384,
+          "length": 15728640,
+          "end_exclusive": 3773825024,
+          "hob": "NoHob",
+          "resource": "MMAP_IO",
+          "memory_type": "Conv",
+          "attributes": "UNCACHED_UNBUFFERED_XN"
+        },
+        {
+          "name": "RAM Partition",
+          "base": 3773825024,
+          "length": 1048576,
+          "end_exclusive": 3774873600,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "Display Reserved",
+          "base": 3774873600,
+          "length": 37748736,
+          "end_exclusive": 3812622336,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "WRITE_THROUGH_XN"
+        },
+        {
+          "name": "APSS Ext",
+          "base": 3812622336,
+          "length": 24117248,
+          "end_exclusive": 3836739584,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "PStore",
+          "base": 3836739584,
+          "length": 4194304,
+          "end_exclusive": 3840933888,
+          "hob": "AddMem",
+          "resource": "MEM_RES",
+          "memory_type": "Reserv",
+          "attributes": "WRITE_THROUGH_XN"
+        },
+        {
+          "name": "RAM Partition",
+          "base": 3837001728,
+          "length": 2605449216,
+          "end_exclusive": 6442450944,
+          "hob": "AddMem",
+          "resource": "SYS_MEM",
+          "memory_type": "Conv",
+          "attributes": "WRITE_BACK_XN"
+        },
+        {
+          "name": "IMEM Base",
+          "base": 342360064,
+          "length": 176128,
+          "end_exclusive": 342536192,
+          "hob": "NoHob",
+          "resource": "MMAP_IO",
+          "memory_type": "Conv",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "IMEM Cookie Base",
+          "base": 342532096,
+          "length": 4096,
+          "end_exclusive": 342536192,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "Conv",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "IPC_ROUTER_TOP",
+          "base": 4194304,
+          "length": 1048576,
+          "end_exclusive": 5242880,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "SECURITY CONTROL",
+          "base": 7864320,
+          "length": 65536,
+          "end_exclusive": 7929856,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "QUP",
+          "base": 9437184,
+          "length": 2097152,
+          "end_exclusive": 11534336,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "PRNG_CFG_PRNG",
+          "base": 17629184,
+          "length": 65536,
+          "end_exclusive": 17694720,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "CRYPTO0 CRYPTO",
+          "base": 31195136,
+          "length": 262144,
+          "end_exclusive": 31457280,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "TCSR_TCSR_REGS",
+          "base": 33292288,
+          "length": 196608,
+          "end_exclusive": 33488896,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "PERIPH_SS_SDC1",
+          "base": 8126464,
+          "length": 1048576,
+          "end_exclusive": 9175040,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "PERIPH_SS",
+          "base": 142606336,
+          "length": 2097152,
+          "end_exclusive": 144703488,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "USB",
+          "base": 174063616,
+          "length": 67108864,
+          "end_exclusive": 241172480,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "AOSS",
+          "base": 184549376,
+          "length": 67108864,
+          "end_exclusive": 251658240,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "TLMM",
+          "base": 252706816,
+          "length": 3145728,
+          "end_exclusive": 255852544,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "SMMU",
+          "base": 352321536,
+          "length": 2097152,
+          "end_exclusive": 354418688,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "APSS_HM",
+          "base": 394264576,
+          "length": 14680064,
+          "end_exclusive": 408944640,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "PCIE_1_AXI",
+          "base": 1073741824,
+          "length": 33554432,
+          "end_exclusive": 1107296256,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        },
+        {
+          "name": "PCIE_1_AHB",
+          "base": 29392896,
+          "length": 32768,
+          "end_exclusive": 29425664,
+          "hob": "AddDev",
+          "resource": "MMAP_IO",
+          "memory_type": "MmIO",
+          "attributes": "NS_DEVICE"
+        }
+      ],
+      "overlapping_pairs": [
+        {
+          "a": {
+            "name": "Reserv",
+            "base": 3221225472,
+            "length": 16777216,
+            "end_exclusive": 3238002688,
+            "hob": "NoHob",
+            "resource": "SYS_MEM",
+            "memory_type": "Reserv",
+            "attributes": "NS_DEVICE"
+          },
+          "b": {
+            "name": "TAGS",
+            "base": 3222274048,
+            "length": 18874368,
+            "end_exclusive": 3241148416,
+            "hob": "NoHob",
+            "resource": "SYS_MEM",
+            "memory_type": "Reserv",
+            "attributes": "NS_DEVICE"
+          }
+        },
+        {
+          "a": {
+            "name": "PStore",
+            "base": 3836739584,
+            "length": 4194304,
+            "end_exclusive": 3840933888,
+            "hob": "AddMem",
+            "resource": "MEM_RES",
+            "memory_type": "Reserv",
+            "attributes": "WRITE_THROUGH_XN"
+          },
+          "b": {
+            "name": "RAM Partition",
+            "base": 3837001728,
+            "length": 2605449216,
+            "end_exclusive": 6442450944,
+            "hob": "AddMem",
+            "resource": "SYS_MEM",
+            "memory_type": "Conv",
+            "attributes": "WRITE_BACK_XN"
+          }
+        },
+        {
+          "a": {
+            "name": "IMEM Base",
+            "base": 342360064,
+            "length": 176128,
+            "end_exclusive": 342536192,
+            "hob": "NoHob",
+            "resource": "MMAP_IO",
+            "memory_type": "Conv",
+            "attributes": "NS_DEVICE"
+          },
+          "b": {
+            "name": "IMEM Cookie Base",
+            "base": 342532096,
+            "length": 4096,
+            "end_exclusive": 342536192,
+            "hob": "AddDev",
+            "resource": "MMAP_IO",
+            "memory_type": "Conv",
+            "attributes": "NS_DEVICE"
+          }
+        },
+        {
+          "a": {
+            "name": "USB",
+            "base": 174063616,
+            "length": 67108864,
+            "end_exclusive": 241172480,
+            "hob": "AddDev",
+            "resource": "MMAP_IO",
+            "memory_type": "MmIO",
+            "attributes": "NS_DEVICE"
+          },
+          "b": {
+            "name": "AOSS",
+            "base": 184549376,
+            "length": 67108864,
+            "end_exclusive": 251658240,
+            "hob": "AddDev",
+            "resource": "MMAP_IO",
+            "memory_type": "MmIO",
+            "attributes": "NS_DEVICE"
+          }
+        }
+      ],
+      "conventional_bytes": 3354591232
+    }
+  ],
+  "acpi": [
+    {
+      "path": "Platforms/KodiakPkg/Device/samsung-gts7fewifi/ACPI/DSDT.aml",
+      "signature": "DSDT",
+      "file_size": 83917,
+      "declared_length": 83917,
+      "length_matches": true,
+      "sha256": "f4e2efda79fec4f47f1c082f550b5dc9774b368a4138049277a1bfc92527f03e",
+      "checksum_ok": true,
+      "checksum_field": 65,
+      "oem_id": "QCOMM",
+      "oem_table_id": "SDM7280"
+    },
+    {
+      "path": "Platforms/SurfaceDuoACPI/7325/builtin/MADT.aml",
+      "signature": "APIC",
+      "file_size": 748,
+      "declared_length": 748,
+      "length_matches": true,
+      "sha256": "c7c74c5949f4fdf524f5a3eee3f0b0d4ea70da122fb8a8c2850faa495380bb5c",
+      "checksum_ok": true,
+      "checksum_field": 144,
+      "oem_id": "QCOM",
+      "oem_table_id": "QCOMEDK2"
+    },
+    {
+      "path": "Platforms/SurfaceDuoACPI/7325/builtin/CSRT.aml",
+      "signature": "CSRT",
+      "file_size": 69258,
+      "declared_length": 69258,
+      "length_matches": true,
+      "sha256": "985ad9a77c258e1f86dea5a5e6713ef6da38f3711d2619cddc8cd9fa1fa8f998",
+      "checksum_ok": false,
+      "checksum_field": 0,
+      "oem_id": "QCOM",
+      "oem_table_id": "QCOMEDK2"
+    },
+    {
+      "path": "Platforms/SurfaceDuoACPI/7325/builtin/DBG2.aml",
+      "signature": "DBG2",
+      "file_size": 816,
+      "declared_length": 816,
+      "length_matches": true,
+      "sha256": "52165b81612c14ba9b08e599efbf34265b434de3e789c6f566c0def423492e13",
+      "checksum_ok": false,
+      "checksum_field": 0,
+      "oem_id": "QCOM",
+      "oem_table_id": "QCOMEDK2"
+    },
+    {
+      "path": "Platforms/SurfaceDuoACPI/7325/builtin/FACP.aml",
+      "signature": "FACP",
+      "file_size": 276,
+      "declared_length": 276,
+      "length_matches": true,
+      "sha256": "088d3546904deb59c3acfbdcfa99108b9a021428baef524f1f1223c4ef9159a0",
+      "checksum_ok": false,
+      "checksum_field": 0,
+      "oem_id": "QCOM",
+      "oem_table_id": "QCOMEDK2"
+    },
+    {
+      "path": "Platforms/SurfaceDuoACPI/7325/builtin/FACS.aml",
+      "signature": "FACS",
+      "file_size": 64,
+      "declared_length": 64,
+      "length_matches": true,
+      "sha256": "8a2f3c6d08a637005f7be37885075749128a34fb49e941a47c82848fcd15fdda"
+    },
+    {
+      "path": "Platforms/SurfaceDuoACPI/7325/builtin/GTDT.aml",
+      "signature": "GTDT",
+      "file_size": 156,
+      "declared_length": 156,
+      "length_matches": true,
+      "sha256": "9f700fea15fe4508c67e94ce98c0e02af50a7b633a47131bdfd6e9befcdd0318",
+      "checksum_ok": false,
+      "checksum_field": 0,
+      "oem_id": "QCOM",
+      "oem_table_id": "QCOMEDK2"
+    },
+    {
+      "path": "Platforms/SurfaceDuoACPI/7325/builtin/IORT.aml",
+      "signature": "IORT",
+      "file_size": 4954,
+      "declared_length": 4954,
+      "length_matches": true,
+      "sha256": "52febfc1763229c6e9d9a96550ccf74b8b1bc9f8544e4987d3442710d6cb90a6",
+      "checksum_ok": false,
+      "checksum_field": 0,
+      "oem_id": "QCOM",
+      "oem_table_id": "QCOMEDK2"
+    },
+    {
+      "path": "Platforms/SurfaceDuoACPI/7325/builtin/MCFG.aml",
+      "signature": "MCFG",
+      "file_size": 76,
+      "declared_length": 76,
+      "length_matches": true,
+      "sha256": "afb7a28cddb7bcb9c9e25d39eabec53cdf0050d463682d9a7d55cf2038120737",
+      "checksum_ok": false,
+      "checksum_field": 0,
+      "oem_id": "QCOM",
+      "oem_table_id": "QCOMEDK2"
+    },
+    {
+      "path": "Platforms/SurfaceDuoACPI/7325/builtin/PPTT.aml",
+      "signature": "PPTT",
+      "file_size": 414,
+      "declared_length": 414,
+      "length_matches": true,
+      "sha256": "b9600ee621baa75d7f9853ec0dff84b9d35d40e2662205c361be18979fcc1f82",
+      "checksum_ok": false,
+      "checksum_field": 0,
+      "oem_id": "QCOM",
+      "oem_table_id": "QCOMEDK2"
+    },
+    {
+      "path": "Platforms/SurfaceDuoACPI/7325/builtin/SPCR.aml",
+      "signature": "SPCR",
+      "file_size": 80,
+      "declared_length": 80,
+      "length_matches": true,
+      "sha256": "4ff8d5c8a1c47f85f118e4c30394fcfb2abea29d73285d514729c834690d5589",
+      "checksum_ok": false,
+      "checksum_field": 0,
+      "oem_id": "QCOM",
+      "oem_table_id": "QCOMEDK2"
+    },
+    {
+      "path": "Platforms/SurfaceDuoACPI/7325/builtin/TPM2.aml",
+      "signature": "TPM2",
+      "file_size": 84,
+      "declared_length": 84,
+      "length_matches": true,
+      "sha256": "e59a80cf91a4d6577450d67b6549b1d4f03d9b0804c54bcc742d157426581a4f",
+      "checksum_ok": false,
+      "checksum_field": 0,
+      "oem_id": "QCOM",
+      "oem_table_id": "QCOMEDK2"
+    }
+  ],
+  "conventional_vs_android_fixed_reservation_overlaps_require_review": [
+    {
+      "uefi": {
+        "name": "APSS",
+        "base": 2156916736,
+        "length": 4096,
+        "end_exclusive": 2156920832,
+        "hob": "AddMem",
+        "resource": "SYS_MEM",
+        "memory_type": "Conv",
+        "attributes": "WRITE_BACK_XN"
+      },
+      "android": {
+        "name": "/reserved-memory/secdata_apss@808ff000",
+        "base": 2156916736,
+        "length": 4096,
+        "end_exclusive": 2156920832
+      }
+    },
+    {
+      "uefi": {
+        "name": "HLOS3",
+        "base": 2188443648,
+        "length": 15663104,
+        "end_exclusive": 2204106752,
+        "hob": "AddMem",
+        "resource": "SYS_MEM",
+        "memory_type": "Conv",
+        "attributes": "WRITE_BACK_XN"
+      },
+      "android": {
+        "name": "/reserved-memory/cdsp_secure_heap@81800000",
+        "base": 2172649472,
+        "length": 31457280,
+        "end_exclusive": 2204106752
+      }
+    },
+    {
+      "uefi": {
+        "name": "RAM Partition",
+        "base": 3335520256,
+        "length": 422576128,
+        "end_exclusive": 3758096384,
+        "hob": "AddMem",
+        "resource": "SYS_MEM",
+        "memory_type": "Conv",
+        "attributes": "WRITE_BACK_XN"
+      },
+      "android": {
+        "name": "/reserved-memory/pil_trustedvm_region@d0800000",
+        "base": 3498049536,
+        "length": 124743680,
+        "end_exclusive": 3622793216
+      }
+    },
+    {
+      "uefi": {
+        "name": "RAM Partition",
+        "base": 3335520256,
+        "length": 422576128,
+        "end_exclusive": 3758096384,
+        "hob": "AddMem",
+        "resource": "SYS_MEM",
+        "memory_type": "Conv",
+        "attributes": "WRITE_BACK_XN"
+      },
+      "android": {
+        "name": "/reserved-memory/qrtr-shmem",
+        "base": 3622793216,
+        "length": 36864,
+        "end_exclusive": 3622830080
+      }
+    },
+    {
+      "uefi": {
+        "name": "RAM Partition",
+        "base": 3335520256,
+        "length": 422576128,
+        "end_exclusive": 3758096384,
+        "hob": "AddMem",
+        "resource": "SYS_MEM",
+        "memory_type": "Conv",
+        "attributes": "WRITE_BACK_XN"
+      },
+      "android": {
+        "name": "/reserved-memory/neuron_block@0",
+        "base": 3622830080,
+        "length": 524288,
+        "end_exclusive": 3623354368
+      }
+    },
+    {
+      "uefi": {
+        "name": "RAM Partition",
+        "base": 3335520256,
+        "length": 422576128,
+        "end_exclusive": 3758096384,
+        "hob": "AddMem",
+        "resource": "SYS_MEM",
+        "memory_type": "Conv",
+        "attributes": "WRITE_BACK_XN"
+      },
+      "android": {
+        "name": "/reserved-memory/neuron_block@1",
+        "base": 3623354368,
+        "length": 524288,
+        "end_exclusive": 3623878656
+      }
+    },
+    {
+      "uefi": {
+        "name": "RAM Partition",
+        "base": 3836739584,
+        "length": 2605711360,
+        "end_exclusive": 6442450944,
+        "hob": "AddMem",
+        "resource": "SYS_MEM",
+        "memory_type": "Conv",
+        "attributes": "WRITE_BACK_XN"
+      },
+      "android": {
+        "name": "/reserved-memory/sec_debug_region@F0000000",
+        "base": 4026531840,
+        "length": 9437184,
+        "end_exclusive": 4035969024
+      }
+    },
+    {
+      "uefi": {
+        "name": "RAM Partition",
+        "base": 3836739584,
+        "length": 2605711360,
+        "end_exclusive": 6442450944,
+        "hob": "AddMem",
+        "resource": "SYS_MEM",
+        "memory_type": "Conv",
+        "attributes": "WRITE_BACK_XN"
+      },
+      "android": {
+        "name": "/reserved-memory/ss_plog@1B0900000",
+        "base": 4035969024,
+        "length": 2097152,
+        "end_exclusive": 4038066176
+      }
+    },
+    {
+      "uefi": {
+        "name": "RAM Partition",
+        "base": 3836739584,
+        "length": 2605711360,
+        "end_exclusive": 6442450944,
+        "hob": "AddMem",
+        "resource": "SYS_MEM",
+        "memory_type": "Conv",
+        "attributes": "WRITE_BACK_XN"
+      },
+      "android": {
+        "name": "/reserved-memory/ramoops@F0B00000",
+        "base": 4038066176,
+        "length": 1048576,
+        "end_exclusive": 4039114752
+      }
+    }
+  ],
+  "raw_acpi_checksum_warnings_require_runtime_recompute": [
+    "Platforms/SurfaceDuoACPI/7325/builtin/CSRT.aml",
+    "Platforms/SurfaceDuoACPI/7325/builtin/DBG2.aml",
+    "Platforms/SurfaceDuoACPI/7325/builtin/FACP.aml",
+    "Platforms/SurfaceDuoACPI/7325/builtin/GTDT.aml",
+    "Platforms/SurfaceDuoACPI/7325/builtin/IORT.aml",
+    "Platforms/SurfaceDuoACPI/7325/builtin/MCFG.aml",
+    "Platforms/SurfaceDuoACPI/7325/builtin/PPTT.aml",
+    "Platforms/SurfaceDuoACPI/7325/builtin/SPCR.aml",
+    "Platforms/SurfaceDuoACPI/7325/builtin/TPM2.aml"
+  ]
+}

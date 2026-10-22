@@ -1,0 +1,177 @@
+name: Deliver SM-T733 offline candidates
+
+# Rebuilds the reviewed commit; it does not upload the earlier cloud ZIP.
+# workflow_dispatch becomes available once this workflow is registered on main.
+on:
+  push:
+    branches:
+      - codex/sm-t733-offline-prep
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sm-t733-offline-delivery-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-and-deliver:
+    runs-on: ubuntu-latest
+    container: debian:13
+    timeout-minutes: 45
+    defaults:
+      run:
+        shell: bash
+    env:
+      DEBIAN_FRONTEND: noninteractive
+
+    steps:
+      - name: Install host prerequisites
+        run: |
+          set -euo pipefail
+          apt-get update
+          apt-get install --no-install-recommends -y \
+            build-essential git ca-certificates curl python3 python3-venv \
+            python3-pip file xz-utils
+
+      - name: Check out the delivery commit
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          submodules: false
+
+      - name: Prepare the tested cloud directory layout
+        run: |
+          set -euo pipefail
+          mkdir -p /workspace
+          test ! -e /workspace/mu_aloha_platforms
+          ln -s "$GITHUB_WORKSPACE" /workspace/mu_aloha_platforms
+          git rev-parse HEAD
+          mkdir -p /workspace/.cloud-setup/logs
+
+      - name: Initialize the verified firmware tools and dependencies
+        working-directory: /workspace/mu_aloha_platforms
+        run: |
+          set -euo pipefail
+          bash Codex-Offline-Work/tools/setup-cloud.sh \
+            2>&1 | tee /workspace/.cloud-setup/logs/actions-setup.log
+
+      - name: Run offline regression tests
+        working-directory: /workspace/mu_aloha_platforms
+        run: |
+          set -euo pipefail
+          source Codex-Offline-Work/tools/activate.sh
+          python -m unittest discover -s Codex-Offline-Work/tests -v \
+            > /workspace/.cloud-setup/logs/actions-unit-tests.log 2>&1
+          python Codex-Offline-Work/tools/test_ram_partition.py \
+            > /workspace/.cloud-setup/logs/actions-ram-partition-test.log 2>&1
+          python Codex-Offline-Work/tools/check-windows-media.py self-test \
+            > /workspace/.cloud-setup/logs/actions-media-selftest.json
+
+      # SB and NOSB share a build directory; they must run sequentially.
+      - name: Build and validate SM-T733 NOSB
+        working-directory: /workspace/mu_aloha_platforms
+        run: bash Codex-Offline-Work/tools/build-sm-t733.sh nosb
+
+      - name: Build and validate SM-T733 SB
+        working-directory: /workspace/mu_aloha_platforms
+        run: bash Codex-Offline-Work/tools/build-sm-t733.sh sb
+
+      - name: Record remote build provenance and download checksums
+        working-directory: /workspace/mu_aloha_platforms
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib
+          import json
+          import os
+          import shutil
+
+          root = Path.cwd()
+          artifacts = root / 'Build/SM-T733-Codex'
+          run_url = (
+              f"{os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}"
+              f"/actions/runs/{os.environ['GITHUB_RUN_ID']}"
+          )
+          reports = {}
+          for variant in ('nosb', 'sb'):
+              report = root / f'Codex-Offline-Work/logs/{variant}-artifacts.json'
+              reports[variant] = json.loads(report.read_text())
+              assert reports[variant]['result'] == 'passed'
+          provenance = {
+              'source_commit': os.environ['GITHUB_SHA'],
+              'workflow_run': run_url,
+              'kind': 'remote rebuild of the delivery commit',
+              'scope': 'offline build and format checks; no hardware boot validation',
+              'previous_cloud_zip': (
+                  'Not uploaded by this workflow. These are newly built candidates; '
+                  'their hashes may differ from the earlier cloud build.'
+              ),
+              'validation_reports': reports,
+          }
+          (artifacts / 'REMOTE-DELIVERY.json').write_text(
+              json.dumps(provenance, indent=2, ensure_ascii=False) + '\n'
+          )
+          (artifacts / 'REMOTE-DELIVERY.txt').write_text(
+              'SM-T733 offline development candidates, rebuilt in GitHub Actions.\n'
+              f"Source commit: {os.environ['GITHUB_SHA']}\n"
+              f'Run: {run_url}\n'
+              'This is not the earlier cloud ZIP. Consult the included validation\n'
+              'JSON and SHA256SUMS for this run. No device boot, AVB acceptance or\n'
+              'Windows compatibility has been established. Do not infer safe flashing.\n'
+          )
+          run_logs = artifacts / 'actions-logs'
+          run_logs.mkdir()
+          for source in Path('/workspace/.cloud-setup/logs').glob('actions-*'):
+              if source.is_file():
+                  shutil.copy2(source, run_logs / source.name)
+          checksum_lines = []
+          for path in sorted(artifacts.rglob('*')):
+              if path.is_file() and path.name != 'SHA256SUMS':
+                  checksum_lines.append(
+                      f"{hashlib.sha256(path.read_bytes()).hexdigest()}  "
+                      f"{path.relative_to(artifacts)}"
+                  )
+          (artifacts / 'SHA256SUMS').write_text('\n'.join(checksum_lines) + '\n')
+          PY
+
+      - name: Upload newly rebuilt candidates and offline handoff
+        id: candidates
+        uses: actions/upload-artifact@v4
+        with:
+          name: sm-t733-offline-rebuilt-${{ github.sha }}
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            Build/SM-T733-Codex/
+            Codex-Offline-Work/
+            PythonLibs/PostBuild.py
+            Platforms/AndromedaPkg/Driver/RamPartitionDxe/RamPartitionDxe.c
+            LICENSE
+
+      - name: Publish the artifact download link in the job summary
+        env:
+          ARTIFACT_URL: ${{ steps.candidates.outputs.artifact-url }}
+        run: |
+          printf '%s\n' \
+            '## SM-T733 offline candidates' \
+            "Source commit: $GITHUB_SHA" \
+            "[Download this run's rebuilt candidates]($ARTIFACT_URL)" \
+            'Retention: 30 days. See REMOTE-DELIVERY.json and SHA256SUMS.' \
+            'These are newly built offline candidates, not the earlier cloud ZIP.' \
+            'No device boot, AVB acceptance, flashing or Windows runtime validation.' \
+            >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Preserve diagnostic logs if delivery fails
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sm-t733-offline-failure-logs-${{ github.run_id }}
+          retention-days: 30
+          if-no-files-found: warn
+          path: |
+            /workspace/.cloud-setup/logs/
+            Build/SM-T733-Codex/*/build.log
+            Build/BUILDLOG_*.txt

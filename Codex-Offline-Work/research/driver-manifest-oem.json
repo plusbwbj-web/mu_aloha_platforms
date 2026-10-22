@@ -1,0 +1,757 @@
+{
+  "source_root": "/workspace/.cloud-setup/references/windows_oem_samsung_gts7fewifi",
+  "commit": "9abbaab8bd658d81b300349961d116adb407a35c",
+  "inf_count": 30,
+  "inf": [
+    {
+      "path": "Drivers/Battery/SM5714Battery.inf",
+      "sha256": "be1b70d968af56f58924244ac5ad69dd51169a97ebca9a2c38c53d7c6726d965",
+      "class": "Battery",
+      "driver_version": "08/11/2026,19.6.47.544",
+      "provider": "Siliconmitus",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "SM5714Battery.cat",
+          "present_in_git_tree": true,
+          "sha256": "07f554064d21bb7e674ed0d69a35ef8223f3ba0675ad58a40b224c2bbb5801ad"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\SM5714F"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Pen/WacomPenI2C.inf",
+      "sha256": "670964048eb8cab4c7efd1589f4fe2014d6d1789a012bdab936ce940176a2ea8",
+      "class": "HIDClass",
+      "driver_version": "08/09/2026,21.43.21.203",
+      "provider": "xyz",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "WacomPenI2C.cat",
+          "present_in_git_tree": true,
+          "sha256": "1c3f1f28219b6fb86eb777bcae9f582b7bf268b3cea6b506a081eb02565bf0c0"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\WCP9021"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/SM5714Pmic/SM5714Pmic.inf",
+      "sha256": "24d32a5b288a43da9c4421c62b5705140ac1f95f6045eff5b52e8ed8debea991",
+      "class": "System",
+      "driver_version": "08/11/2026,19.6.47.422",
+      "provider": "Siliconmitus",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "SM5714Pmic.cat",
+          "present_in_git_tree": true,
+          "sha256": "3c386928aed5f767387ac252971ea7c8265c4b1d6312cb1282bc575d753a6ea2"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\SM5714P"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/Touch/FocalTechTouch.inf",
+      "sha256": "81ffd26b3e8a03afcd68a7a32d358152eaf9db7cabb3d8034eb8b67ebbb576a4",
+      "class": "HIDClass",
+      "driver_version": "08/09/2026,21.41.39.76",
+      "provider": "xyz",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "FocalTechTouch.cat",
+          "present_in_git_tree": true,
+          "sha256": "6751f4b1afcb6975513f8b79fe8225b47cae8ed1fadd8eded041bc01bc65f8a7"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\FT8203"
+      ],
+      "source_payload_basename_count": 2,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Drivers/TypeC/PS5169.inf",
+      "sha256": "5001b5b550f8148003e5dbf24cd4afbbaf65083d6cd344796f6da7e11bf2b472",
+      "class": "USBDevice",
+      "driver_version": "08/11/2026,19.6.14.181",
+      "provider": "Project Aloha",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "PS5169.cat",
+          "present_in_git_tree": true,
+          "sha256": "6bac58dc7023f48b64ab118d1eae160f317063419262f83b710ca06aa97ea5c0"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\PS5169"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Graphics/Monitor/Gts7fewifi_panel.inf",
+      "sha256": "9413a4883d96c2f93dcc729edb5e546f47b083255dcf6aaeaa1b606d89de6dfb",
+      "class": "Monitor",
+      "driver_version": "02/26/2025, 6.81.139.0",
+      "provider": "Samsung Electronics Co., Ltd.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "Gts7fewifi_panel.cat",
+          "present_in_git_tree": true,
+          "sha256": "63c90a86ced0ed6927249b040db6c64bdfdb6bc03071efe7f1cc41217036ac6b"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\646YD01"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Extensions/Subsystems/Gts7fewifi_subsys_ext.inf",
+      "sha256": "d978f13550f6ac0d05497dbdd424f016d23154e606b9ffc15d354bb62526efe4",
+      "class": "Extension",
+      "driver_version": "06/02/2025, 1.0.0.0",
+      "provider": "WOA-A52S",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "Gts7fewifi_subsys_ext.cat",
+          "present_in_git_tree": true,
+          "sha256": "a6f883b31e7067f51bda885a509ff0c3d25391c4a0547c74a73c1ca4f7217655"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOM0A1E"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Drivers/Audio/ADCM/qcadcm7280.inf",
+      "sha256": "9f87d86fcda08018c2da1705fe81fe29f0c2b570a8621388c346e8cedb2eb73a",
+      "class": "SYSTEM",
+      "driver_version": "11/19/2024,1.0.1030.0000",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcadcm7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "111bf57ac780f8aa2f8ba6e25217939432df6334d579983f178ea9e09cbc0081"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Drivers/Audio/AudMiniport/qcaudminiport_Base7280.inf",
+      "sha256": "8f81e9793b9327ba71fbc0b2d7df6c12351adfa795bcad6502033913eca20a3b",
+      "class": "MEDIA",
+      "driver_version": "11/19/2024,1.0.1030.0000",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcaudminiport7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "d2a001b2bf9405d6ccb63c01c5d07b1ec753ec34fbfb3dc180a6e3b1109fe3d3"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 3,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Drivers/Audio/Device/qcauddev7280.inf",
+      "sha256": "50d4c74e7d44d4fe74b9e1ffaebe5caec4878d28db75626b80dc3d1b0150a237",
+      "class": "Media",
+      "driver_version": "11/19/2024,1.0.1030.0000",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcauddev7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "48974597567d328b20556f0b60be4ca226f7d00bdfbd3784f220fc8a94d567d2"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Drivers/Bluetooth/BTFMUART_HSP/Gts7fewifi_btfmuart_hsp.inf",
+      "sha256": "817c4970e7a457dcb61c91a0d6dd7c3c5f2798542b2834d030ba15bd5b498223",
+      "class": "Bluetooth",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Atheros Communications Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile.nt",
+          "declared_name": "Gts7fewifi_btfmuart_hsp.cat",
+          "present_in_git_tree": true,
+          "sha256": "5e528ec251106c5e268a0302733c5b070beb83d2c38d73faf828f789b12c91ac"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A6B&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A6B&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 4,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Drivers/Graphics/DXKM/qcdx6490.inf",
+      "sha256": "4cecb40b94944a946114c64181d2b29c8470f60e757eda610310b435d21dd096",
+      "class": "Display",
+      "driver_version": "10/02/2025,30.0.4444.9300",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcdx6490.cat",
+          "present_in_git_tree": true,
+          "sha256": "01b647c4f4bf4c1ec949a070487a56e31d474194067d444ecbe485c998a305ff"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A36",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0100",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0110",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0112",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0201",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0202",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0205",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0210",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0212",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0310",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0313",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0410",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0411",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0500",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0501",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0502",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0503",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0504",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0510",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0511",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0512",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0600",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0601",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0602",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0603",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0900",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0910",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0912",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0A01",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0A02",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0A05",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0A10",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0A12",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0B10",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0B13",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0C10",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0C11",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0D00",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0D01",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0D02",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0D03",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0D04",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0D10",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0D11",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0D12",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0E00",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0E01",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0E02",
+        "ACPI\\VEN_QCOM&DEV_0A36&REV_0E03"
+      ],
+      "source_payload_basename_count": 54,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Drivers/WLAN/Core/Gts7fewifi_wlan.inf",
+      "sha256": "5189e5c32f5da615ab97005c3e9ce16e0e4ce3c7b84dae690b64980b8528e4c0",
+      "class": "Net",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Qualcomm Communications Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "Gts7fewifi_wlan.cat",
+          "present_in_git_tree": true,
+          "sha256": "d82a6dcfe5c709ec4a54ff342198e1d127a6c0917c12901799846c7b3112ecc0"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 9,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Extensions/Audio/ACDB/qcacsp_idp7280.inf",
+      "sha256": "4718dc1fe052e1cd6a0084b808256dc638644bc5c2885bbe306777ec86d856a4",
+      "class": "Extension",
+      "driver_version": "11/19/2024,1.0.1030.0000",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcacsp7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "0d9e619ccf552e46eaf0e9f79341de57c236c071ebae179c4b5daa49eb818e2e"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 9,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Extensions/Audio/AudMiniport/qcaudminiportIDP_Extension7280.inf",
+      "sha256": "953937c314f5c031a30bc938f8cda4b5eedc2f3c60d3f85abc9896a99b60b150",
+      "class": "Extension",
+      "driver_version": "11/19/2024,1.0.1030.0000",
+      "provider": "Qualcomm Technologies, Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcaudminiportidp_Extension7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "53ced7c9b18b64b0bb8e5b1c9460b11b57027e6c9f1651b840cdd8a63b4e7e85"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Extensions/Audio/Device/qcauddev_ext7280.inf",
+      "sha256": "3a09d2a05a81ec6d934b8baaeeece5c13adab112cbd07c5ebee8bc1e08c65eac",
+      "class": "Extension",
+      "driver_version": "11/19/2024,1.0.1030.0000",
+      "provider": "Qualcomm",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcauddev7280_ext.cat",
+          "present_in_git_tree": true,
+          "sha256": "600cd16d6631ec59710c17fabc50b5170e9e015f01343858eee0631cc77b0be8"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Extensions/Graphics/DXKM/qcdxext_idp7280.inf",
+      "sha256": "0068f1dd2e88571ee418c9e31cd3a349d3b09e99fe7eb37f6f794a9e095a87bf",
+      "class": "Extension",
+      "driver_version": "03/28/2022, 30.0.3454.5500",
+      "provider": "Qualcomm Incorporated",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcdxext_idp7280.cat",
+          "present_in_git_tree": true,
+          "sha256": "f8dc2b5b820c757813690903b9fa8bb38f8cc918676a0ec490a83e6a75301fbe"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A36&SUBSYS_IDP07280"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Extensions/HexagonLoader/PIL/Gts7fewifi_pilext.inf",
+      "sha256": "8d9dfe33fa5707b0b1ebc797e7212de9f8332b164708fecf0ca4b3f2ef2e5fe9",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 2.0.4056.4400",
+      "provider": "Samsung Electronics Co., Ltd.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "Gts7fewifi_pilext.cat",
+          "present_in_git_tree": true,
+          "sha256": "6047b264c25d76e5e04cce84aa7edb59d37d0147fc96d42d160356cbb0a6c90a"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Extensions/SOC/TrEE/OEM/Gts7fewifi_TreeExtOem.inf",
+      "sha256": "e7a75404c20e76946ab6cb04f6beb0dbedb4c8f2d4fbeb1b0c1ca7e4ba154c2c",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Samsung Electronics Co., Ltd.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "Gts7fewifi_treeextoem.cat",
+          "present_in_git_tree": true,
+          "sha256": "aa2d353b54e2a9c620e29276c74bf3dec28f76764b8865c138a57803c2cd62aa"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_04DE&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_04DE&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 1,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Extensions/SOC/TrEE/QCOM/Gts7fewifi_TreeExtQcom.inf",
+      "sha256": "ab3a555437f237787cbfd0eca6328c26781eb504ce9600c163f0b1b56145776a",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Samsung Electronics Co., Ltd.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "Gts7fewifi_treeextqcom.cat",
+          "present_in_git_tree": true,
+          "sha256": "fe14611b212631aee83c8e643b0d90031588641b033b904df680811a47f6be5e"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_04DE&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_04DE&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 3,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Extensions/Sensors/IDP/Gts7fewifi_SensorsConfig.inf",
+      "sha256": "e433d597cd8f72ea3d13a69abf2b4d148daa80e6c97ee8c9e4b35961b036d66c",
+      "class": "Extension",
+      "driver_version": "06/12/2024, 1.0.4056.4400",
+      "provider": "Samsung Electronics Co., Ltd.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "Gts7fewifi_sensorsconfig.cat",
+          "present_in_git_tree": true,
+          "sha256": "159a2f74fb2946f6af69dd3fb571275f0555861bec08a5e8a59a80a8b455e8dc"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A93&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A94&SUBSYS_IDP07280"
+      ],
+      "source_payload_basename_count": 51,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Extensions/Subsystems/Audio/Gts7fewifi_subsys_ext_adsp.inf",
+      "sha256": "cc8584a111437b89582b8432c31044375da697f1875c06c8e1a26d27ade7f5d3",
+      "class": "Extension",
+      "driver_version": "06/03/2025, 4912.1634.0.0",
+      "provider": "Samsung Electronics Co., Ltd.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "Gts7fewifi_subsys_ext_adsp.cat",
+          "present_in_git_tree": true,
+          "sha256": "287c63c7879bc6265c490759d211a1c736e46f27ee7bbfd8f44f88389bf821b8"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_06DF&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06DF&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_0A1B&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A1B&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 40,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Extensions/Subsystems/Compute/Gts7fewifi_subsys_ext_cdsp.inf",
+      "sha256": "c1daa1a4f447aaa74106dc685ea5262505c8d5bcf73762124535fe904121e006",
+      "class": "Extension",
+      "driver_version": "06/03/2025, 4912.1634.0.0",
+      "provider": "Samsung Electronics Co., Ltd.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "Gts7fewifi_subsys_ext_cdsp.cat",
+          "present_in_git_tree": true,
+          "sha256": "d85540a712ee644180c4e88ef7c7410e773c95a87cbbdb6e0c37712623472c50"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_06DF&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06DF&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_0AB0&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0AB0&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_0AC3&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0AC3&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 31,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Extensions/Subsystems/Modem/Gts7fewifi_subsys_ext_mpss.inf",
+      "sha256": "65914343249472a8cc44962f1f7e6fb07f50ccb3b710a44b43706458b3f7d48c",
+      "class": "Extension",
+      "driver_version": "06/03/2025, 4912.1634.0.0",
+      "provider": "Samsung Electronics Co., Ltd.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "Gts7fewifi_subsys_ext_mpss.cat",
+          "present_in_git_tree": true,
+          "sha256": "5a0f4ffcebba68db4ad0f22a4b0800170a91add4b1122f4c38483e4758c2dfb0"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_06DF&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06DF&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_06E0&SUBSYS_QRD07280",
+        "ACPI\\VEN_QCOM&DEV_0A1C&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A1C&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 3,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Extensions/Subsystems/ModemConfig/Gts7fewifi_mcfg_subsys_ext.inf",
+      "sha256": "b8ee2d1f42207c43541bf259e37344715ff3e5692b8b96abfac56028373cdc81",
+      "class": "Extension",
+      "driver_version": "06/11/2025,4920.1822.0.0",
+      "provider": "Samsung Electronics Co., Ltd.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "Gts7fewifi_mcfg_subsys_ext.cat",
+          "present_in_git_tree": true,
+          "sha256": "d35729381e48f9e87e7ee595b41aec0343cd984bf077aa1b067d7f726929f80c"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\VEN_QCOM&DEV_0A1C&SUBSYS_IDP07280",
+        "ACPI\\VEN_QCOM&DEV_0A1C&SUBSYS_QRD07280"
+      ],
+      "source_payload_basename_count": 13,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Platform/Extensions/USB/DualRoleExtension/qcursext.inf",
+      "sha256": "d49ff3270e95b1343a159398999aa50482765a4a75136c3112b675b80fd648b9",
+      "class": "Extension",
+      "driver_version": "02/12/2023, 1.0.3681.5800",
+      "provider": "Qualcomm Technologies Inc.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "qcursext.cat",
+          "present_in_git_tree": true,
+          "sha256": "704e064af84cf53f3f49c130241509a868d9163d7c1e29155b0376bc013288c4"
+        }
+      ],
+      "hardware_ids": [
+        "ACPI\\QCOMFFE1"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Settings/Gts7fewifi_DeviceInfo.inf",
+      "sha256": "6f0beaf15c6da784ae57e0fb85e8397ce2e9d71cdf6ba74f1bd38f4a8a49d5c8",
+      "class": "SYSTEM",
+      "driver_version": "01/08/2021, 1.0.0.0000",
+      "provider": "Samsung Electronics Co., Ltd.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "Gts7fewifi_deviceinfo.cat",
+          "present_in_git_tree": true,
+          "sha256": "70ada88449a471a97e345f159daabad59ac02df80f03ee659febb1bf51af696f"
+        }
+      ],
+      "hardware_ids": [
+        "ROOT\\A52s_DeviceInfo"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Setup/BypassNRO/BypassNRO.inf",
+      "sha256": "a22a5df104320814b8a73448488559bc47310a83f5f82dfd3a3d0ac7a5d8a6d7",
+      "class": "System",
+      "driver_version": "07/07/2024, 1.0.0.0",
+      "provider": "DuoWoA authors",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "BypassNRO.cat",
+          "present_in_git_tree": true,
+          "sha256": "da27bfc542c47f8ecff880c19be885f5b32f5f9512e6de71f87cd47a8bf0f41a"
+        }
+      ],
+      "hardware_ids": [],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Setup/DesktopSetup/desktopsetup.inf",
+      "sha256": "47a62e399d9b6fae9ca70a82d2d8e486b3f2e57d32bdaff462650ab97a10a64b",
+      "class": "SYSTEM",
+      "driver_version": "07/23/2024, 1.0.0.5",
+      "provider": "Samsung Electronics Co., Ltd.",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "desktopsetup.cat",
+          "present_in_git_tree": true,
+          "sha256": "1a47c671c80525bfb2ab05e05056b99a1a6d863a08a551c37a60a6cd769df16a"
+        }
+      ],
+      "hardware_ids": [
+        "ROOT\\DesktopSetup"
+      ],
+      "source_payload_basename_count": 7,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    },
+    {
+      "path": "Signature/DesktopSignature/Gts7fewifi_desktopsignature.inf",
+      "sha256": "888d9c23d10749ed76084ab71011ff04b4750095b637652927e42c42863b4f87",
+      "class": "SYSTEM",
+      "driver_version": "04/05/2024, 1.0.0.0",
+      "provider": "WOA-A52S",
+      "arm64_section_present": true,
+      "catalogs": [
+        {
+          "directive": "catalogfile",
+          "declared_name": "Gts7fewifi_desktopsignature.cat",
+          "present_in_git_tree": true,
+          "sha256": "3d288f4ca981e59dfa9d6fba82e672ea17d583ca719abd39f9115416a201d212"
+        }
+      ],
+      "hardware_ids": [
+        "ROOT\\Certificates\\4A3C218FE50D368B3D7B4FD7E405B2847F98AEBE",
+        "ROOT\\Certificates\\5DE37AAE40E0A32850F54000C54C1EEEB4AFC130",
+        "ROOT\\Certificates\\5FC5A91F35435D242AC987319FB2BFD88954F208",
+        "ROOT\\Certificates\\717ACA3D5BAC6F571AF291CA1EAF4AA8C4FBDB31",
+        "ROOT\\Certificates\\87244E78E029B37903D5F1A51EBB360177848232",
+        "ROOT\\Certificates\\8B5C7C7CD311A96FD7838E19FB8CEF2B2D1B941F",
+        "ROOT\\Certificates\\98B14A150104A40ADD72E1E71CCA60B8A99D4FC6",
+        "ROOT\\Certificates\\A1777996258026F9C1C5CFBAE377015EEEBD97B9"
+      ],
+      "source_payload_basename_count": 0,
+      "source_payload_basenames_absent_from_git_tree": [],
+      "source_payload_check_scope": "basename inventory only; not full INF package or Windows staging validation"
+    }
+  ],
+  "locally_inspected_sys": [
+    {
+      "path": "Drivers/Battery/SM5714Battery.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "ae85a21a4145a9601a7d657bcc93d086a48ec74ff651f47a503142b2266c0b34"
+    },
+    {
+      "path": "Drivers/Pen/WacomPenI2C.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "33cf6eab37a65ca10b29e1e94663edac6caf5eaa070476baba7833d1bf556e71"
+    },
+    {
+      "path": "Drivers/SM5714Pmic/SM5714Pmic.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "15e6763d2dfe2292a047f5d19836b7e592c3b1c7a0436d0bcfe7a6ac598cf9bb"
+    },
+    {
+      "path": "Drivers/Touch/FocalTechTouch.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "bab7ba8cde65dcfaa1d339b7453e15e9a66e58564ca0d42c6ec96d8d39f29aa8"
+    },
+    {
+      "path": "Drivers/TypeC/PS5169.sys",
+      "pe_machine": "0xaa64",
+      "sha256": "411d34c6e2363bbd0997131c43869d15921c0b24b70256cd9110ed53a7be5a64"
+    }
+  ],
+  "scope": "Git source/INF/CAT presence and hashes; Windows catalog trust, rank, full payload and device compatibility unverified"
+}

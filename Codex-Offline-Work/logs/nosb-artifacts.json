@@ -1,0 +1,56 @@
+{
+  "result": "passed",
+  "scope": "offline format and integrity only; no hardware boot or AVB approval",
+  "device": "SM-T733/samsung-gts7fewifi",
+  "artifacts": {
+    "/workspace/mu_aloha_platforms/Build/SM-T733-Codex/nosb/samsung-gts7fewifi_NOSB.img": {
+      "bytes": 2748416,
+      "sha256": "bf54c037f65b36f411aa9affe77a908801e742059e10ff2ebf3d7a95acdba138"
+    },
+    "/workspace/mu_aloha_platforms/Build/SM-T733-Codex/nosb/SM7325_EFI_NOSB.fd": {
+      "bytes": 2879488,
+      "sha256": "5caecf881ec7288602368eacb4b15d8df9b67d8e416e8f7c286a19bb95a91f41"
+    }
+  },
+  "boot_header": {
+    "version": 0,
+    "page_size": 4096,
+    "kernel_size": 2736135,
+    "kernel_addr": "0x8000",
+    "kernel_offset": 4096,
+    "ramdisk_size": 6,
+    "ramdisk_addr": "0x1000000",
+    "ramdisk_offset": 2744320,
+    "tags_addr": "0x100",
+    "os_version": "11.0.0",
+    "os_patch_level": "2023-04",
+    "image_id": "passed"
+  },
+  "bootshim": {
+    "bytes": 112,
+    "sha256": "75f09f1effaf4462033a9cb1f2265c5571360e58c181384df431fbbb8c4ab698",
+    "copy_base": "0x9fc41000",
+    "copy_size": 2879488,
+    "copy_end": "0x9ff00000",
+    "payload_equals_inputs": true
+  },
+  "gzip": {
+    "crc_and_length": "passed",
+    "uncompressed_bytes": 2879600,
+    "compressed_bytes": 2083616
+  },
+  "dtb": {
+    "bytes": 652519,
+    "sha256": "5b2978ee329b9292fd336d479c3bafdeadc4c4190965d80932c9ee655c8ef7f1",
+    "totalsize": 652519,
+    "matches_source": true
+  },
+  "firmware_volumes": [
+    {
+      "offset": 0,
+      "length": 2879488,
+      "header_length": 72,
+      "header_checksum": "passed"
+    }
+  ]
+}

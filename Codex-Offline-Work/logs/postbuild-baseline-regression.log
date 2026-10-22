@@ -1,0 +1,15 @@
+test_valid_small_payload_is_visible_to_mkbootimg (postbuild_regression.PostBuildValidationTests.test_valid_small_payload_is_visible_to_mkbootimg) ... FAIL
+
+======================================================================
+FAIL: test_valid_small_payload_is_visible_to_mkbootimg (postbuild_regression.PostBuildValidationTests.test_valid_small_payload_is_visible_to_mkbootimg)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/mu_aloha_platforms/Codex-Offline-Work/tests/test_postbuild_validation.py", line 64, in test_valid_small_payload_is_visible_to_mkbootimg
+    self.assertGreater(kernel_size, 0)
+AssertionError: 0 not greater than 0
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (failures=1)
+EXPECTED BASELINE FAILURE: mkbootimg saw zero bytes while payload writer remained buffered.

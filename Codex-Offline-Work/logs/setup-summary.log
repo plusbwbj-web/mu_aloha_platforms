@@ -1,0 +1,34 @@
+No broken requirements found.
+SECTION - Init Self Describing Environment
+SECTION - Loading Plugins
+SECTION - Start Invocable Tool
+PROGRESS - ## Resolving Git Submodule: Binaries
+PROGRESS - ## Done.
+PROGRESS - ## Resolving Git Submodule: Common/MU_OEM_SAMPLE
+PROGRESS - ## Done.
+PROGRESS - ## Resolving Git Submodule: Common/MU
+PROGRESS - ## Done.
+PROGRESS - ## Resolving Git Submodule: Features/CONFIG
+PROGRESS - ## Done.
+PROGRESS - ## Resolving Git Submodule: Features/DFCI
+PROGRESS - ## Done.
+PROGRESS - ## Resolving Git Submodule: MU_BASECORE
+PROGRESS - ## Done.
+PROGRESS - ## Resolving Git Submodule: Platforms/OpensslPkg/Library/OpensslLib/openssl
+PROGRESS - ## Done.
+PROGRESS - ## Resolving Git Submodule: Platforms/MbedTlsPkg/Library/MbedTlsLib/mbedtls
+PROGRESS - ## Done.
+PROGRESS - ## Resolving Git Submodule: Platforms/SurfaceDuoACPI
+PROGRESS - ## Done.
+PROGRESS - ## Resolving Git Submodule: Platforms/CranePkg
+PROGRESS - ## Done.
+SECTION - Summary
+PROGRESS - Success
+SECTION - Init Self Describing Environment
+SECTION - Loading Plugins
+SECTION - Start Invocable Tool
+SECTION - Initial update of environment
+SECTION - Second pass update of environment
+SECTION - Summary
+PROGRESS - Success
+PASS: Python dependencies, NuGet, Stuart setup/update, AArch64 GCC, ARM64 PE/COFF link, UUID and BootShim

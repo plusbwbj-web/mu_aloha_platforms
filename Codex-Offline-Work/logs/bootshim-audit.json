@@ -1,0 +1,21 @@
+{
+  "validation_type": "binary inspection and data-copy model; no CPU/cache/loader simulation",
+  "shim_bytes": 112,
+  "payload_offset": 112,
+  "uefi_base": "0x9fc41000",
+  "uefi_size": 2879488,
+  "uefi_end": "0x9ff00000",
+  "copy_iterations": 179968,
+  "model_data_matches": {
+    "disjoint_destination_above_source": true,
+    "disjoint_destination_below_source": true,
+    "already_in_place": true,
+    "overlap_destination_above_source": false,
+    "overlap_destination_below_source_data_only": true
+  },
+  "known_risks": [
+    "Forward copy corrupts source when source < destination < source + size.",
+    "The model excludes executing-shim overwrite, CPU state and cache coherency.",
+    "Actual Samsung bootloader decompression source and entry state are unknown."
+  ]
+}

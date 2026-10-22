@@ -1,0 +1,19 @@
+SECTION - Init Self Describing Environment
+SECTION - Loading Plugins
+SECTION - Start Invocable Tool
+SECTION - Loading Plugins
+SECTION - Kicking off build
+PROGRESS - Start time: 2026-10-21 15:58:36.681267
+PROGRESS - Setting up the Environment
+PROGRESS - Running Pre Build
+PROGRESS - Checking DEBUG Macros
+PROGRESS - Running Build RELEASE
+INFO - FVMAIN [99%Full] 11448320 (0xaeb000) total, 11445104 (0xaea370) used, 3216 (0xc90) free
+INFO - FVMAIN_COMPACT [73%Full] 2879488 (0x2bf000) total, 2120816 (0x205c70) used, 758672 (0xb9390) free
+INFO - Build total time: 00:00:23
+PROGRESS - Running Post Build
+INFO - ------------------0120 Images Verified-------------------
+PROGRESS - End time: 2026-10-21 15:59:04.122264	 Total time Elapsed: 0:00:27
+SECTION - Log file is located at: /workspace/mu_aloha_platforms/Build/BUILDLOG_KodiakPkg.txt
+SECTION - Summary
+PROGRESS - Success
