@@ -96,19 +96,29 @@ PrePiMain (
   UINTN UefiMemoryBase = 0;
   UINTN UefiMemorySize = 0;
   UINTN StacksBase     = 0;
+  UINTN HobFreeMemoryTop = 0;
 
   ARM_MEMORY_REGION_DESCRIPTOR_EX DxeHeap;
   ARM_MEMORY_REGION_DESCRIPTOR_EX UefiStack;
   ARM_MEMORY_REGION_DESCRIPTOR_EX UefiFd;
 
   Status = LocateMemoryMapAreaByName("DXE Heap", &DxeHeap);
-  ASSERT_EFI_ERROR (Status);
+  if (EFI_ERROR (Status)) {
+    DEBUG ((DEBUG_ERROR, "Missing DXE Heap memory region\n"));
+    CpuDeadLoop ();
+  }
 
   Status = LocateMemoryMapAreaByName("UEFI Stack", &UefiStack);
-  ASSERT_EFI_ERROR (Status);
+  if (EFI_ERROR (Status)) {
+    DEBUG ((DEBUG_ERROR, "Missing UEFI Stack memory region\n"));
+    CpuDeadLoop ();
+  }
 
   Status = LocateMemoryMapAreaByName("UEFI FD", &UefiFd);
-  ASSERT_EFI_ERROR (Status);
+  if (EFI_ERROR (Status)) {
+    DEBUG ((DEBUG_ERROR, "Missing UEFI FD memory region\n"));
+    CpuDeadLoop ();
+  }
 
   // Declare UEFI region
   MemoryBase     = FixedPcdGet32(PcdSystemMemoryBase);
@@ -117,7 +127,12 @@ PrePiMain (
   UefiMemorySize = DxeHeap.Length;
   StacksBase     = UefiStack.Address;
   StacksSize     = UefiStack.Length;
-  StacksBase     = UefiMemoryBase + UefiMemorySize - StacksSize;
+  if ((StacksSize == 0) || (UefiMemorySize < StacksSize) ||
+      (UefiMemoryBase > MAX_UINTN - UefiMemorySize)) {
+    DEBUG ((DEBUG_ERROR, "Invalid PrePi heap/stack geometry\n"));
+    CpuDeadLoop ();
+  }
+  HobFreeMemoryTop = UefiMemoryBase + UefiMemorySize - StacksSize;
 
   // If ensure the FD is either part of the System Memory or totally outside of the System Memory (XIP)
   ASSERT (
@@ -152,13 +167,16 @@ PrePiMain (
               (VOID *)UefiMemoryBase,
               UefiMemorySize,
               (VOID *)UefiMemoryBase,
-              (VOID *)StacksBase // The top of the UEFI Memory is reserved for the stacks
+              (VOID *)HobFreeMemoryTop // Preserve the existing heap allocation ceiling
               );
   PrePeiSetHobList (HobList);
 
   // Initialize MMU and Memory HOBs (Resource Descriptor HOBs)
   Status = MemoryPeim (UefiMemoryBase, UefiMemorySize);
-  ASSERT_EFI_ERROR (Status);
+  if (EFI_ERROR (Status)) {
+    DEBUG ((DEBUG_ERROR, "MemoryPeim failed: %r\n", Status));
+    CpuDeadLoop ();
+  }
 
   BuildStackHob (StacksBase, StacksSize);
 
@@ -280,7 +298,10 @@ CEntryPoint ()
   }
 
   Status = LocateMemoryMapAreaByName("UEFI FD", &UefiFd);
-  ASSERT_EFI_ERROR (Status);
+  if (EFI_ERROR (Status)) {
+    DEBUG ((DEBUG_ERROR, "Missing UEFI FD memory region\n"));
+    CpuDeadLoop ();
+  }
 
   InvalidateDataCacheRange (
     (VOID *)UefiFd.Address,

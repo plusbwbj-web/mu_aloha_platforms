@@ -22,7 +22,7 @@ BuildMemoryTypeInformationHob (
   );
 
 STATIC
-VOID
+EFI_STATUS
 InitMmu (
   IN ARM_MEMORY_REGION_DESCRIPTOR  *MemoryTable
   )
@@ -37,6 +37,7 @@ InitMmu (
   if (EFI_ERROR (Status)) {
     DEBUG ((DEBUG_ERROR, "Error: Failed to enable MMU\n"));
   }
+  return Status;
 }
 
 STATIC
@@ -83,12 +84,24 @@ MemoryPeim (
   ARM_MEMORY_REGION_DESCRIPTOR
         MemoryTable[MAX_ARM_MEMORY_REGION_DESCRIPTOR_COUNT];
   UINTN Index = 0;
+  UINTN DescriptorCount = 0;
+  EFI_STATUS Status;
+
+  if (MemoryDescriptorEx == NULL) {
+    return EFI_NOT_FOUND;
+  }
 
   // Ensure PcdSystemMemorySize has been set
   ASSERT (PcdGet64 (PcdSystemMemorySize) != 0);
 
   // Run through each memory descriptor
   while (MemoryDescriptorEx->Length != 0) {
+    // Bound the descriptor walk and leave one output slot for the terminator.
+    if ((DescriptorCount++ >= MAX_ARM_MEMORY_REGION_DESCRIPTOR_COUNT) ||
+        ((MemoryDescriptorEx->HobOption != HobOnlyNoCacheSetting) &&
+         (Index >= MAX_ARM_MEMORY_REGION_DESCRIPTOR_COUNT - 1))) {
+      return EFI_BAD_BUFFER_SIZE;
+    }
     switch (MemoryDescriptorEx->HobOption) {
     case AddMem:
     case AddDev:
@@ -126,7 +139,10 @@ MemoryPeim (
   MemoryTable[Index].Attributes   = 0;
 
   // Build Memory Allocation Hob
-  InitMmu (MemoryTable);
+  Status = InitMmu (MemoryTable);
+  if (EFI_ERROR (Status)) {
+    return Status;
+  }
 
   if (FeaturePcdGet (PcdPrePiProduceMemoryTypeInformationHob)) {
     // Optional feature that helps prevent EFI memory map fragmentation.
