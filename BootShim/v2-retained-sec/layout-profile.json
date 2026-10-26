@@ -1,0 +1,30 @@
+{
+  "target": "samsung-gts7fewifi",
+  "status": "OFFLINE_SOURCE_EXPERIMENT_HOLD",
+  "UEFI_BASE": "0x9fc43000",
+  "UEFI_SIZE": "0x2bd000",
+  "UEFI_END": "0x9ff00000",
+  "IMAGE_SIZE": "0x2be000",
+  "retained_sec_end": "0x9fc43000",
+  "stock_sec_te_sha256": "a05fdf55e6e3663df271e9956626b0bcc305555be8505b887d02717837ca62c8",
+  "stock_xbl_sha256": "adbb058a6af128b9489961f051094dfdcc27cf2fb6b0565ed909ac0566e5eb5b",
+  "derivation": "page-align the measured original SEC end; use remaining bytes of the original static UEFI FD descriptor; does not establish live ownership",
+  "full_fd_built": false,
+  "retained_sections": [
+    {
+      "name": ".text",
+      "start": "0x9fc02000",
+      "end": "0x9fc37000"
+    },
+    {
+      "name": ".data",
+      "start": "0x9fc37000",
+      "end": "0x9fc42000"
+    },
+    {
+      "name": ".reloc",
+      "start": "0x9fc42000",
+      "end": "0x9fc43000"
+    }
+  ]
+}
