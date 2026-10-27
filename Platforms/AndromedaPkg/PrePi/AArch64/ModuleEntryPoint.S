@@ -12,7 +12,62 @@
 
 .set CTRL_SPAN_BIT, (1 << 23)
 
+// EXPERIMENTAL BRANCH ONLY: the checkpoint cannot return to normal PrePi.
+// This proves only FD reset-vector / SEC entry execution. No UEFI services run.
+#define T733_SEC_CHECKPOINT_SECONDS 12
 ASM_FUNC(_ModuleEntryPoint)
+    mrs x9, CurrentEL
+    cmp x9, #4
+    b.eq 1f
+    cmp x9, #8
+    b.ne _T733SecCheckpointHalt
+1:  msr daifset, #0xf
+    mov w0, #0
+    movk w0, #0x8400, lsl #16    /* PSCI_VERSION */
+    mov x1, xzr
+    mov x2, xzr
+    mov x3, xzr
+    smc #0
+    tbnz w0, #31, _T733SecCheckpointHalt
+    mov w8, #0x10000
+    cmp w0, w8
+    b.lo _T733SecCheckpointHalt
+    mov w0, #0xa
+    movk w0, #0x8400, lsl #16    /* PSCI_FEATURES */
+    mov w1, #9
+    movk w1, #0x8400, lsl #16    /* SYSTEM_RESET */
+    mov x2, xzr
+    mov x3, xzr
+    smc #0
+    tbnz w0, #31, _T733SecCheckpointHalt
+    mrs x9, cntfrq_el0
+    cbz x9, _T733SecCheckpointHalt
+    mov x10, #0xca00
+    movk x10, #0x3b9a, lsl #16   /* 1,000,000,000 Hz sanity bound */
+    cmp x9, x10
+    b.hi _T733SecCheckpointHalt
+    mov x10, #T733_SEC_CHECKPOINT_SECONDS
+    mul x19, x9, x10
+    isb
+    mrs x20, cntvct_el0
+2:  isb
+    mrs x9, cntvct_el0
+    sub x9, x9, x20
+    cmp x9, x19
+    b.lo 2b
+_T733SecCheckpointReset:
+    mov w0, #9
+    movk w0, #0x8400, lsl #16
+    mov x1, xzr
+    mov x2, xzr
+    mov x3, xzr
+    smc #0
+_T733SecCheckpointHalt:
+    wfe
+    b _T733SecCheckpointHalt
+
+// Original initialization is retained for provenance, but unreachable from the
+// checkpoint's control flow. Never flash this branch as a normal UEFI image.
   // Do early platform specific actions
   bl    ASM_PFX(ArmPlatformPeiBootAction)
 
