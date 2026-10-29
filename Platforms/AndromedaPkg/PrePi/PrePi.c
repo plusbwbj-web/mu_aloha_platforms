@@ -7,6 +7,7 @@
 **/
 
 #include <PiPei.h>
+#include <Library/T733SecIsolationPolicy.h>
 
 #include <Library/CacheMaintenanceLib.h>
 #include <Library/DebugAgentLib.h>
@@ -84,8 +85,10 @@ PrePiMain (
   FIRMWARE_SEC_PERFORMANCE    Performance;
 /////////////////////////////////////////////
 // Patch: call lk scheduler related function.
+#if !T733_SEC_ISOLATION_HOLD
   STATIC BOOLEAN              SchedulerBooted      = FALSE;
   UINT32                      EnableMultiThreading = 0;
+#endif
 /////////////////////////////////////////////
 
   DXE_MEMORY_PROTECTION_SETTINGS DxeSettings;
@@ -232,6 +235,7 @@ PrePiMain (
 // Patch: call lk scheduler related function.
 //
   // Try start scheduler
+#if !T733_SEC_ISOLATION_HOLD
   Status = LocateConfigurationMapUINT32ByName("EnableMultiThreading", &EnableMultiThreading);
   if (!EFI_ERROR(Status) && EnableMultiThreading && !SchedulerBooted){
     // Start up scheduler
@@ -241,6 +245,7 @@ PrePiMain (
     StartUpScheduler(PeiContinueBoot, &_ModuleEntryPoint);
   }
 
+#endif
   PeiContinueBoot(NULL);
 }
 
@@ -325,3 +330,4 @@ SecondaryCoreCEntry (
   BootSecondaryCpu (CpuIdx);
 }
 ////////////////////////////////////////////
+

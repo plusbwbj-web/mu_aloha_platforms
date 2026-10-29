@@ -1,0 +1,91 @@
+name: SM-T733 SEC isolation compile audit - HOLD NOT BOOTABLE
+on:
+  push:
+    branches: [codex/sm-t733-sec-isolation-hold]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: t733-sec-isolation-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  build-fd-only:
+    strategy:
+      fail-fast: false
+      matrix:
+        profile: [control, isolation]
+    runs-on: ubuntu-latest
+    container: debian:13
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+    env:
+      DEBIAN_FRONTEND: noninteractive
+    steps:
+      - name: Install disposable container prerequisites
+        run: |
+          set -euo pipefail
+          apt-get update
+          apt-get install --no-install-recommends -y build-essential git ca-certificates curl python3 python3-venv python3-pip file xz-utils
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          submodules: false
+      - name: Prepare isolated build paths
+        run: |
+          set -euo pipefail
+          mkdir -p /workspace/.cloud-setup/logs
+          ln -s "$GITHUB_WORKSPACE" /workspace/mu_aloha_platforms
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config --global --add safe.directory /workspace/mu_aloha_platforms
+      - name: Prepare pinned dependencies and compiler
+        working-directory: /workspace/mu_aloha_platforms
+        run: |
+          set -euo pipefail
+          bash Codex-Offline-Work/tools/setup-cloud.sh 2>&1 | tee /workspace/.cloud-setup/logs/retained-setup.log
+      - name: Select compile-only isolation profile
+        working-directory: /workspace/mu_aloha_platforms
+        run: |
+          set -euo pipefail
+          python3 Codex-Offline-Work/tools/t733_sec_isolation.py configure --profile ${{ matrix.profile }}
+      - name: Rebuild HOLD FD with unreachable diagnostic C code
+        working-directory: /workspace/mu_aloha_platforms
+        run: |
+          set -euo pipefail
+          source Codex-Offline-Work/tools/activate.sh
+          stuart_build -c Platforms/KodiakPkg/PlatformBuildT733RetainedSec.py TARGET=RELEASE TARGET_DEVICE=samsung-gts7fewifi MAX_CONCURRENT_THREAD_NUMBER=4
+          python3 Codex-Offline-Work/tools/t733_sec_isolation.py verify --profile ${{ matrix.profile }}
+          git rev-parse HEAD > Build/KodiakT733RetainedSec/source-head.txt
+          git submodule status --recursive > Build/KodiakT733RetainedSec/submodules.txt
+      - name: Retain FD and audit as HOLD artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: T733-SEC-ISOLATION-${{ matrix.profile }}-COMPILE-ONLY-HOLD
+          if-no-files-found: error
+          path: |
+            Build/KodiakT733RetainedSec/RELEASE_CLANGPDB/FV/SM7325_EFI.fd
+            Build/KodiakT733RetainedSec/RELEASE_CLANGPDB/FV/retained-sec-audit.json
+            t733-sec-isolation-inputs.json
+            t733-sec-isolation-objects.json
+            Platforms/AndromedaPkg/Include/Library/T733SecIsolationPolicy.h
+            Platforms/AndromedaPkg/PrePi/AArch64/ModuleEntryPoint.S
+            Build/KodiakT733RetainedSec/**/PrePi.obj
+            Build/KodiakT733RetainedSec/**/PlatformPeiLib.obj
+            Build/KodiakT733RetainedSec/**/*.map
+            Build/KodiakT733RetainedSec/source-head.txt
+            Build/KodiakT733RetainedSec/submodules.txt
+      - name: Retain diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: T733-SEC-ISOLATION-${{ matrix.profile }}-LOGS
+          path: |
+            /workspace/.cloud-setup/logs/
+            Build/BUILDLOG*.txt
+            t733-sec-isolation-inputs.json
+            t733-sec-isolation-objects.json
+            Build/KodiakT733RetainedSec/**/PrePi.obj
+            Build/KodiakT733RetainedSec/**/PlatformPeiLib.obj
+            Build/KodiakT733RetainedSec/**/*.map
+

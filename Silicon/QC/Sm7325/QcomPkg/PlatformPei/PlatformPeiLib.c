@@ -8,6 +8,7 @@
 **/
 
 #include <PiPei.h>
+#include <Library/T733SecIsolationPolicy.h>
 
 #include <Library/DebugLib.h>
 #include <Library/HobLib.h>
@@ -131,8 +132,10 @@ VOID BuildMemHobForFv(IN UINT16 Type)
   }
 }
 
+#if !T733_SEC_ISOLATION_HOLD
 STATIC GUID gEfiInfoBlkHobGuid   = EFI_INFORMATION_BLOCK_GUID;
 STATIC GUID gFvDecompressHobGuid = EFI_FV_DECOMPRESS_GUID;
+#endif
 STATIC GUID gEfiShLibHobGuid     = EFI_SHIM_LIBRARY_GUID;
 
 VOID InstallPlatformHob()
@@ -140,6 +143,13 @@ VOID InstallPlatformHob()
   static int initialized = 0;
 
   if (!initialized) {
+#if T733_SEC_ISOLATION_HOLD
+    UINTN ShLibAddress = (UINTN)&ShLib;
+
+    BuildMemHobForFv(EFI_HOB_TYPE_FV2);
+    // This is our own config/serial shim, not a retained SEC object.
+    BuildGuidDataHob(&gEfiShLibHobGuid, &ShLibAddress, sizeof(ShLibAddress));
+#else
     ARM_MEMORY_REGION_DESCRIPTOR_EX InfoBlk;
     LocateMemoryMapAreaByName("Info Blk", &InfoBlk);
     UINTN Data3 = 0x9D1C4000;
@@ -156,6 +166,7 @@ VOID InstallPlatformHob()
         &gEfiSchedIntfGuid, &SchedIntfAddress, sizeof(SchedIntfAddress));
     BuildGuidDataHob(&gEfiShLibHobGuid, &ShLibAddress, sizeof(ShLibAddress));
     BuildGuidDataHob(&gFvDecompressHobGuid, &Data3, sizeof(Data3));
+#endif
 
     initialized = 1;
   }
@@ -172,3 +183,4 @@ PlatformPeim(VOID)
 
   return EFI_SUCCESS;
 }
+
