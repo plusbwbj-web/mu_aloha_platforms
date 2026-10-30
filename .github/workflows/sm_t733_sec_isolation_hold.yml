@@ -57,6 +57,11 @@ jobs:
           stuart_build -c Platforms/KodiakPkg/PlatformBuildT733RetainedSec.py TARGET=RELEASE TARGET_DEVICE=samsung-gts7fewifi MAX_CONCURRENT_THREAD_NUMBER=4
           git rev-parse HEAD > Build/KodiakT733RetainedSec/source-head.txt
           git submodule status --recursive > Build/KodiakT733RetainedSec/submodules.txt
+          # Archive the original PE before FDF strips SEC relocations. No firmware changes.
+          sec_root=Build/KodiakT733RetainedSec/RELEASE_CLANGPDB/AARCH64/AndromedaPkg/PrePi/PeiUniCore
+          test -s "$sec_root/DEBUG/ArmPlatformPrePiUniCore.dll"
+          test -s "$sec_root/OUTPUT/ArmPlatformPrePiUniCore.efi"
+          sha256sum "$sec_root/DEBUG/ArmPlatformPrePiUniCore.dll" "$sec_root/OUTPUT/ArmPlatformPrePiUniCore.efi" > Build/KodiakT733RetainedSec/sec-pe-inputs.sha256
           python3 Codex-Offline-Work/tools/t733_sec_isolation.py verify --profile ${{ matrix.profile }}
       - name: Retain FD and audit as HOLD artifacts
         if: ${{ always() && hashFiles('Build/KodiakT733RetainedSec/RELEASE_CLANGPDB/FV/SM7325_EFI.fd') != '' }}
@@ -75,6 +80,10 @@ jobs:
             Build/KodiakT733RetainedSec/**/PlatformPeiLib.obj
             Build/KodiakT733RetainedSec/**/*.obj.ll
             Build/KodiakT733RetainedSec/**/*.map
+            Build/KodiakT733RetainedSec/**/PeiUniCore/DEBUG/ArmPlatformPrePiUniCore.dll
+            Build/KodiakT733RetainedSec/**/PeiUniCore/OUTPUT/ArmPlatformPrePiUniCore.efi
+            Build/KodiakT733RetainedSec/**/PeiUniCore/OUTPUT/static_library_files.lst
+            Build/KodiakT733RetainedSec/sec-pe-inputs.sha256
             Build/KodiakT733RetainedSec/source-head.txt
             Build/KodiakT733RetainedSec/submodules.txt
       - name: Retain diagnostics
@@ -91,4 +100,8 @@ jobs:
             Build/KodiakT733RetainedSec/**/PlatformPeiLib.obj
             Build/KodiakT733RetainedSec/**/*.obj.ll
             Build/KodiakT733RetainedSec/**/*.map
+            Build/KodiakT733RetainedSec/**/PeiUniCore/DEBUG/ArmPlatformPrePiUniCore.dll
+            Build/KodiakT733RetainedSec/**/PeiUniCore/OUTPUT/ArmPlatformPrePiUniCore.efi
+            Build/KodiakT733RetainedSec/**/PeiUniCore/OUTPUT/static_library_files.lst
+            Build/KodiakT733RetainedSec/sec-pe-inputs.sha256
 
