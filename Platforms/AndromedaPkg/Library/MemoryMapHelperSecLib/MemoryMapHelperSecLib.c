@@ -11,12 +11,20 @@
 #include <Library/MemoryMapHelperLib.h>
 #include <Library/PlatformMemoryMapLib.h>
 
+#if T733_SEC_ISOLATION_HOLD
+STATIC T733_ARENA_LOOKUP_NAME mArenaByName;
+STATIC T733_ARENA_LOOKUP_ADDRESS mArenaByAddress;
+VOID EFIAPI T733SetArenaLookupCallbacks(T733_ARENA_LOOKUP_NAME ByName, T733_ARENA_LOOKUP_ADDRESS ByAddress) {
+  mArenaByName=ByName;
+  mArenaByAddress=ByAddress;
+}
+#endif
+
 EFI_STATUS EFIAPI LocateMemoryMapAreaByName(
     CHAR8 *MemoryMapAreaName, ARM_MEMORY_REGION_DESCRIPTOR_EX *MemoryDescriptor)
 {
 #if T733_SEC_ISOLATION_HOLD
-  EFI_STATUS ArenaStatus = T733ArenaLookupByName(MemoryMapAreaName, MemoryDescriptor);
-  if (ArenaStatus != EFI_NOT_READY) return ArenaStatus;
+  if (mArenaByName != NULL) return mArenaByName(MemoryMapAreaName, MemoryDescriptor);
 #endif
   PARM_MEMORY_REGION_DESCRIPTOR_EX MemoryDescriptorEx = GetPlatformMemoryMap();
 
@@ -37,8 +45,7 @@ EFI_STATUS EFIAPI LocateMemoryMapAreaByAddress(
     ARM_MEMORY_REGION_DESCRIPTOR_EX *MemoryDescriptor)
 {
 #if T733_SEC_ISOLATION_HOLD
-  EFI_STATUS ArenaStatus = T733ArenaLookupByAddress(MemoryMapAreaAddress, MemoryDescriptor);
-  if (ArenaStatus != EFI_NOT_READY) return ArenaStatus;
+  if (mArenaByAddress != NULL) return mArenaByAddress(MemoryMapAreaAddress, MemoryDescriptor);
 #endif
   PARM_MEMORY_REGION_DESCRIPTOR_EX MemoryDescriptorEx = GetPlatformMemoryMap();
 

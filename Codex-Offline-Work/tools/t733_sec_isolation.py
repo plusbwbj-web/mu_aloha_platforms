@@ -73,7 +73,7 @@ if a.profile=='isolation':
   md5=hashlib.md5(src.read_bytes()).hexdigest()
   matches=[l for l in text.splitlines() if '!DIFile(' in l and '/T733ImageArena.c"' in l]
   assert matches and all('checksum: "'+md5+'"' in l for l in matches)
-  for name in ['T733ArenaPrepare','T733ArenaLookupByName','T733ArenaLookupByAddress','T733ArenaReset']:
+  for name in ['T733ArenaPrepare','T733ArenaLookupByName','T733ArenaLookupByAddress','T733ArenaReset','T733ArenaAllocatePages']:
    assert re.search(r'^define[^\n]*@'+name+r'\(',text,re.M)
   forbidden=['ArmPlatformInitialize','ArchInitialize','MemoryPeim','LoadDxeCoreFromFv','DecompressFirstFv','StartUpScheduler','InitProtocolFinder','SerialPortInitialize','SerialPortWrite','TimerConstructor']
   for name in forbidden:assert not re.search(r'\b(?:call|invoke)\b[^\n]*@'+name+r'\(',text)

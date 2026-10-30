@@ -107,4 +107,4 @@
   gArmTokenSpaceGuid.PcdSystemMemorySize
 
 [BuildOptions]
-  *_CLANGPDB_AARCH64_DLINK_FLAGS = /INCLUDE:T733ArenaPrepare /INCLUDE:T733ArenaLookupByName /INCLUDE:T733ArenaLookupByAddress /INCLUDE:T733ArenaReset
+  *_CLANGPDB_AARCH64_DLINK_FLAGS = /INCLUDE:T733ArenaPrepare /INCLUDE:T733ArenaLookupByName /INCLUDE:T733ArenaLookupByAddress /INCLUDE:T733ArenaReset /INCLUDE:T733ArenaAllocatePages

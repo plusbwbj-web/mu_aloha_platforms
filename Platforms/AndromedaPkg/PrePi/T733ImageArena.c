@@ -11,10 +11,12 @@
 #include <Library/HobLib.h>
 #include <Library/PrePiHobListPointerLib.h>
 #include <Library/PrePiLib.h>
+#include <Library/MemoryAllocationLib.h>
 
 #if T733_SEC_ISOLATION_HOLD
 STATIC T733_IMAGE_ARENA mArena;
 STATIC BOOLEAN mArenaActive;
+STATIC EFI_HOB_HANDOFF_INFO_TABLE *mArenaHob;
 STATIC BOOLEAN ValidRange(CONST T733_ARENA_RANGE *R) {
   return R->Base != 0 && R->Length != 0 && R->Base <= 0xFFFFFFFFULL &&
          R->Length <= 0x100000000ULL - R->Base;
@@ -99,7 +101,9 @@ EFI_STATUS EFIAPI T733ArenaPrepare(CONST T733_IMAGE_ARENA *Arena, UINTN Bytes, T
   PrePeiSetHobList(Previous);
   Result->HobBase=(UINTN)Hob; Result->HobEnd=Hob->EfiEndOfHobList;
   Result->FreeBottom=Hob->EfiFreeMemoryBottom; Result->FreeTop=Hob->EfiFreeMemoryTop;
+  mArenaHob=Hob;
   mArenaActive=TRUE;
+  T733SetArenaLookupCallbacks(T733ArenaLookupByName,T733ArenaLookupByAddress);
   return EFI_SUCCESS;
 #else
   (VOID)Arena; (VOID)Bytes; (VOID)Result;
@@ -120,9 +124,43 @@ EFI_STATUS EFIAPI T733ArenaLookupByAddress(UINT64 Address, ARM_MEMORY_REGION_DES
   (VOID)Address; (VOID)Region; return EFI_NOT_READY;
 #endif
 }
+EFI_STATUS EFIAPI T733ArenaAllocatePages(UINTN Pages, UINT64 *Address) {
+#if T733_SEC_ISOLATION_HOLD
+  UINT64 Top, Bottom, Available;
+  VOID *Previous, *Allocated;
+  if (!mArenaActive) return EFI_NOT_READY;
+  if (Address==NULL || !Contains(&mArena.Stack,(UINTN)Address,sizeof(*Address)) || Pages==0)
+    return EFI_INVALID_PARAMETER;
+  if (!Contains(&mArena.Heap,(UINTN)mArenaHob,sizeof(*mArenaHob)) ||
+      mArenaHob->Header.HobType!=EFI_HOB_TYPE_HANDOFF ||
+      mArenaHob->Header.HobLength!=sizeof(*mArenaHob)) return EFI_COMPROMISED_DATA;
+  Top=mArenaHob->EfiFreeMemoryTop & ~0xFFFULL;
+  Bottom=mArenaHob->EfiFreeMemoryBottom;
+  if (Top > mArena.Heap.Base+mArena.Heap.Length || Bottom < mArena.Heap.Base ||
+      Top < Bottom || sizeof(EFI_HOB_MEMORY_ALLOCATION)>Top-Bottom)
+    return EFI_COMPROMISED_DATA;
+  Available=Top-Bottom-sizeof(EFI_HOB_MEMORY_ALLOCATION);
+  /* Divide before multiplication/subtraction in the underlying legacy allocator. */
+  if (Pages > Available/0x1000) return EFI_OUT_OF_RESOURCES;
+  Previous=PrePeiGetHobList();
+  PrePeiSetHobList(mArenaHob);
+  Allocated=AllocatePages(Pages);
+  PrePeiSetHobList(Previous);
+  if (Allocated==NULL) return EFI_OUT_OF_RESOURCES;
+  if ((UINTN)Allocated != Top-(UINT64)Pages*0x1000 ||
+      !Contains(&mArena.Heap,(UINTN)Allocated,(UINT64)Pages*0x1000))
+    return EFI_COMPROMISED_DATA;
+  *Address=(UINTN)Allocated;
+  return EFI_SUCCESS;
+#else
+  (VOID)Pages; (VOID)Address; return EFI_UNSUPPORTED;
+#endif
+}
 VOID EFIAPI T733ArenaReset(VOID) {
 #if T733_SEC_ISOLATION_HOLD
+  T733SetArenaLookupCallbacks(NULL,NULL);
   mArenaActive=FALSE;
+  mArenaHob=NULL;
   ZeroMem(&mArena,sizeof(mArena));
 #endif
 }
