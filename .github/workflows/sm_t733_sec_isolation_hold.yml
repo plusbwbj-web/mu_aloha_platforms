@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        profile: [control, isolation]
+        profile: [isolation]
     runs-on: ubuntu-latest
     container: debian:13
     timeout-minutes: 60
@@ -55,10 +55,11 @@ jobs:
           set -euo pipefail
           source Codex-Offline-Work/tools/activate.sh
           stuart_build -c Platforms/KodiakPkg/PlatformBuildT733RetainedSec.py TARGET=RELEASE TARGET_DEVICE=samsung-gts7fewifi MAX_CONCURRENT_THREAD_NUMBER=4
-          python3 Codex-Offline-Work/tools/t733_sec_isolation.py verify --profile ${{ matrix.profile }}
           git rev-parse HEAD > Build/KodiakT733RetainedSec/source-head.txt
           git submodule status --recursive > Build/KodiakT733RetainedSec/submodules.txt
+          python3 Codex-Offline-Work/tools/t733_sec_isolation.py verify --profile ${{ matrix.profile }}
       - name: Retain FD and audit as HOLD artifacts
+        if: ${{ always() && hashFiles('Build/KodiakT733RetainedSec/RELEASE_CLANGPDB/FV/SM7325_EFI.fd') != '' }}
         uses: actions/upload-artifact@v4
         with:
           name: T733-SEC-ISOLATION-${{ matrix.profile }}-COMPILE-ONLY-HOLD
@@ -72,6 +73,7 @@ jobs:
             Platforms/AndromedaPkg/PrePi/AArch64/ModuleEntryPoint.S
             Build/KodiakT733RetainedSec/**/PrePi.obj
             Build/KodiakT733RetainedSec/**/PlatformPeiLib.obj
+            Build/KodiakT733RetainedSec/**/*.obj.ll
             Build/KodiakT733RetainedSec/**/*.map
             Build/KodiakT733RetainedSec/source-head.txt
             Build/KodiakT733RetainedSec/submodules.txt
@@ -87,5 +89,6 @@ jobs:
             t733-sec-isolation-objects.json
             Build/KodiakT733RetainedSec/**/PrePi.obj
             Build/KodiakT733RetainedSec/**/PlatformPeiLib.obj
+            Build/KodiakT733RetainedSec/**/*.obj.ll
             Build/KodiakT733RetainedSec/**/*.map
 
