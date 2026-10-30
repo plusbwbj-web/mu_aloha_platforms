@@ -76,7 +76,12 @@ jobs:
             t733-sec-isolation-objects.json
             Platforms/AndromedaPkg/Include/Library/T733SecIsolationPolicy.h
             Platforms/AndromedaPkg/PrePi/AArch64/ModuleEntryPoint.S
+            Platforms/AndromedaPkg/Include/Library/T733ImageArena.h
+            Platforms/AndromedaPkg/PrePi/T733ImageArena.c
+            Platforms/AndromedaPkg/PrePi/PeiUniCore.inf
+            Platforms/AndromedaPkg/Library/MemoryMapHelperSecLib/MemoryMapHelperSecLib.c
             Build/KodiakT733RetainedSec/**/PrePi.obj
+            Build/KodiakT733RetainedSec/**/T733ImageArena.obj
             Build/KodiakT733RetainedSec/**/PlatformPeiLib.obj
             Build/KodiakT733RetainedSec/**/*.obj.ll
             Build/KodiakT733RetainedSec/**/*.map
@@ -97,6 +102,7 @@ jobs:
             t733-sec-isolation-inputs.json
             t733-sec-isolation-objects.json
             Build/KodiakT733RetainedSec/**/PrePi.obj
+            Build/KodiakT733RetainedSec/**/T733ImageArena.obj
             Build/KodiakT733RetainedSec/**/PlatformPeiLib.obj
             Build/KodiakT733RetainedSec/**/*.obj.ll
             Build/KodiakT733RetainedSec/**/*.map

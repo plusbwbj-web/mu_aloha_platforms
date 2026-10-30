@@ -6,6 +6,7 @@ p.add_argument('--zig-ir-reader',type=Path,help='Explicit local fallback when ll
 a=p.parse_args();H=R/'Platforms/AndromedaPkg/Include/Library/T733SecIsolationPolicy.h';entry=R/'Platforms/AndromedaPkg/PrePi/AArch64/ModuleEntryPoint.S'
 sha=lambda b:hashlib.sha256(b).hexdigest()
 SOURCES={'PlatformPeiLib.obj':'Silicon/QC/Sm7325/QcomPkg/PlatformPei/PlatformPeiLib.c','PrePi.obj':'Platforms/AndromedaPkg/PrePi/PrePi.c'}
+SOURCES['T733ImageArena.obj']='Platforms/AndromedaPkg/PrePi/T733ImageArena.c'
 ENTRY_SHA='0ae14a28c23050b748eadbcc55a24c241b3400557a563aeac2c2c6126a6be809'
 if a.mode=='configure':
  s=H.read_text();assert s.count('#define T733_SEC_ISOLATION_HOLD 0')==1
@@ -62,7 +63,24 @@ for name,forbidden in [('PlatformPeiLib.obj','InitProtocolFinder'),('PrePi.obj',
   else:raise RuntimeError('Unsupported object format: '+str(f))
   assert present==(a.profile=='control'),(str(f),forbidden,present,a.profile)
   row['present']=present;rows.append(row)
-out={'status':'COMPILE_OBJECT_AUDIT_PASS','profile':a.profile,'objects':rows,
+arena_rows=[]
+if a.profile=='isolation':
+ for f in root.rglob('T733ImageArena.obj'):
+  raw=f.read_bytes();assert raw[:4]==b'BC\xc0\xde'
+  text,ir=lto_ir(f)
+  src=R/SOURCES['T733ImageArena.obj']
+  assert sha(src.read_bytes())==receipt['source_sha256'][SOURCES['T733ImageArena.obj']]
+  md5=hashlib.md5(src.read_bytes()).hexdigest()
+  matches=[l for l in text.splitlines() if '!DIFile(' in l and '/T733ImageArena.c"' in l]
+  assert matches and all('checksum: "'+md5+'"' in l for l in matches)
+  for name in ['T733ArenaPrepare','T733ArenaLookupByName','T733ArenaLookupByAddress','T733ArenaReset']:
+   assert re.search(r'^define[^\n]*@'+name+r'\(',text,re.M)
+  forbidden=['ArmPlatformInitialize','ArchInitialize','MemoryPeim','LoadDxeCoreFromFv','DecompressFirstFv','StartUpScheduler','InitProtocolFinder','SerialPortInitialize','SerialPortWrite','TimerConstructor']
+  for name in forbidden:assert not re.search(r'\b(?:call|invoke)\b[^\n]*@'+name+r'\(',text)
+  assert re.search(r'\bcall\b[^\n]*@HobConstructor\(',text)
+  arena_rows.append({'file':str(f.relative_to(R)),'sha256':sha(raw),'IR_sha256':sha(ir.read_bytes()),'source_sha256':sha(src.read_bytes()),'compiler_source_MD5_matches':True,'forbidden_direct_calls':0})
+ assert arena_rows,'missing actual arena object'
+out={'arena_objects':arena_rows,'status':'COMPILE_OBJECT_AUDIT_PASS','profile':a.profile,'objects':rows,
  'scope':'Two source objects only; not all drivers, linked FD ownership or runtime independence.',
  'checkpoint_retained':True,'entry_sha256':sha(entry.read_bytes()),'HOLD':True,'no_BOOT_package':True,'no_device_operation':True}
 (R/'t733-sec-isolation-objects.json').write_text(json.dumps(out,indent=2));print(json.dumps(out,indent=2))

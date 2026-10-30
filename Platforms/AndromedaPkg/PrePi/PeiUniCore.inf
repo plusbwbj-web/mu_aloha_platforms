@@ -18,6 +18,7 @@
 [Sources]
   PrePi.h
   PrePi.c
+  T733ImageArena.c
 
 [Sources.AArch64]
   AArch64/ArchPrePi.c
@@ -104,3 +105,6 @@
 [Pcd]
   gArmTokenSpaceGuid.PcdSystemMemoryBase
   gArmTokenSpaceGuid.PcdSystemMemorySize
+
+[BuildOptions]
+  *_CLANGPDB_AARCH64_DLINK_FLAGS = /INCLUDE:T733ArenaPrepare /INCLUDE:T733ArenaLookupByName /INCLUDE:T733ArenaLookupByAddress /INCLUDE:T733ArenaReset
