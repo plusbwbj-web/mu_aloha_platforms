@@ -106,16 +106,22 @@ DisplayQueryMode(
     OUT UINTN *SizeOfInfo, OUT EFI_GRAPHICS_OUTPUT_MODE_INFORMATION **Info)
 {
   EFI_STATUS Status;
+  if (This == NULL || This->Mode == NULL || This->Mode->Info == NULL ||
+      SizeOfInfo == NULL || Info == NULL) return EFI_INVALID_PARAMETER;
+  if (ModeNumber != 0) return EFI_UNSUPPORTED;
+  *Info = NULL;
   Status = gBS->AllocatePool(
       EfiBootServicesData, sizeof(EFI_GRAPHICS_OUTPUT_MODE_INFORMATION),
       (VOID **)Info);
 
   ASSERT_EFI_ERROR(Status);
 
+  if (EFI_ERROR(Status)) return Status;
   *SizeOfInfo                   = sizeof(EFI_GRAPHICS_OUTPUT_MODE_INFORMATION);
   (*Info)->Version              = This->Mode->Info->Version;
   (*Info)->HorizontalResolution = This->Mode->Info->HorizontalResolution;
   (*Info)->VerticalResolution   = This->Mode->Info->VerticalResolution;
+  (*Info)->PixelInformation = This->Mode->Info->PixelInformation;
   (*Info)->PixelFormat          = This->Mode->Info->PixelFormat;
   (*Info)->PixelsPerScanLine    = This->Mode->Info->PixelsPerScanLine;
 
@@ -127,7 +133,8 @@ EFI_STATUS
 EFIAPI
 DisplaySetMode(IN EFI_GRAPHICS_OUTPUT_PROTOCOL *This, IN UINT32 ModeNumber)
 {
-  return EFI_SUCCESS;
+  if (This == NULL || This->Mode == NULL) return EFI_INVALID_PARAMETER;
+  return ModeNumber == 0 ? EFI_SUCCESS : EFI_UNSUPPORTED;
 }
 
 STATIC
@@ -171,8 +178,9 @@ SimpleFbDxeInitialize(
       (EFI_D_INFO,
        "SimpleFbDxe: Retrieve MIPI FrameBuffer parameters from PCD\n"));
   ARM_MEMORY_REGION_DESCRIPTOR_EX DisplayMemoryRegion;
-  LocateMemoryMapAreaByName("Display Reserved", &DisplayMemoryRegion);
-  UINT32 MipiFrameBufferAddr   = DisplayMemoryRegion.Address;
+  Status = LocateMemoryMapAreaByName("Display Reserved", &DisplayMemoryRegion);
+  if (EFI_ERROR(Status)) return Status;
+  EFI_PHYSICAL_ADDRESS MipiFrameBufferAddr = DisplayMemoryRegion.Address;
   UINT32 MipiFrameBufferWidth  = FixedPcdGet32(PcdMipiFrameBufferWidth);
   UINT32 MipiFrameBufferHeight = FixedPcdGet32(PcdMipiFrameBufferHeight);
 
@@ -182,6 +190,19 @@ SimpleFbDxeInitialize(
     DEBUG((EFI_D_ERROR, "SimpleFbDxe: Invalid FrameBuffer parameters\n"));
     return EFI_DEVICE_ERROR;
   }
+
+  /* Validate before allocation or framebuffer access. Ownership/scanning is
+   * a separate release condition; valid geometry alone does not enable it. */
+  if ((MipiFrameBufferAddr & 3) != 0 || DisplayMemoryRegion.Length == 0 ||
+      MipiFrameBufferAddr > MAX_UINTN ||
+      DisplayMemoryRegion.Length > MAX_UINTN - (UINTN)MipiFrameBufferAddr ||
+      (UINT64)MipiFrameBufferWidth > MAX_UINTN / FB_BYTES_PER_PIXEL ||
+      (UINT64)MipiFrameBufferHeight > MAX_UINTN /
+          ((UINTN)MipiFrameBufferWidth * FB_BYTES_PER_PIXEL))
+    return EFI_INVALID_PARAMETER;
+  UINTN LineLength = (UINTN)MipiFrameBufferWidth * FB_BYTES_PER_PIXEL;
+  UINTN FrameBufferSize = LineLength * MipiFrameBufferHeight;
+  if (FrameBufferSize > DisplayMemoryRegion.Length) return EFI_BAD_BUFFER_SIZE;
 
   /* Prepare struct */
   if (mDisplay.Mode == NULL) {
@@ -217,8 +238,6 @@ SimpleFbDxeInitialize(
   mDisplay.Mode->Info->VerticalResolution   = MipiFrameBufferHeight;
 
   /* SimpleFB runs on a8r8g8b8 (VIDEO_BPP32) for WoA devices */
-  UINT32               LineLength = MipiFrameBufferWidth * VNBYTES(VIDEO_BPP32);
-  UINT32               FrameBufferSize    = LineLength * MipiFrameBufferHeight;
   EFI_PHYSICAL_ADDRESS FrameBufferAddress = MipiFrameBufferAddr;
 
   mDisplay.Mode->Info->PixelsPerScanLine = MipiFrameBufferWidth;
@@ -234,6 +253,7 @@ SimpleFbDxeInitialize(
 
   if (Status == RETURN_BUFFER_TOO_SMALL) {
     mFrameBufferBltLibConfigure = AllocatePool(mFrameBufferBltLibConfigureSize);
+    if (mFrameBufferBltLibConfigure == NULL) return EFI_OUT_OF_RESOURCES;
     if (mFrameBufferBltLibConfigure != NULL) {
       Status = FrameBufferBltConfigure(
           (VOID *)(UINTN)mDisplay.Mode->FrameBufferBase, mDisplay.Mode->Info,
@@ -242,7 +262,9 @@ SimpleFbDxeInitialize(
   }
 
   ASSERT_EFI_ERROR(Status);
-  ZeroMem((VOID *)FrameBufferAddress, FrameBufferSize);
+  if (EFI_ERROR(Status)) return Status;
+  /* Preserve bootloader scanout contents. GOP registration must not clear
+   * an entire externally owned region as an initialization side effect. */
 
   /* Register handle */
   Status = gBS->InstallMultipleProtocolInterfaces(
